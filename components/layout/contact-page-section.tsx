@@ -25,7 +25,7 @@ export default async function ContactCard({ locale }: Props) {
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="bg-white rounded-lg shadow-xl flex flex-wrap lg:flex-nowrap">
         {/* Left Side */}
-        <div className="w-full lg:w-1/2 bg-[#278083] text-white p-8 flex flex-col justify-center rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none">
+        <div className="w-full lg:w-1/2 bg-[#12E193] text-white p-8 flex flex-col justify-center rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               {t("home.contactheading")}
@@ -34,7 +34,7 @@ export default async function ContactCard({ locale }: Props) {
             <div className="space-y-6">
               {/* Email */}
               <div className="flex items-center space-x-4">
-                <div className="bg-[#29A1B6] p-3 rounded-full hover:bg-[#236B7A] transition">
+                <div className="bg-[#29A1B6] p-3 rounded-full hover:bg-[#12E193] transition">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export default async function ContactCard({ locale }: Props) {
 
               {/* Phone */}
               <div className="flex items-center space-x-4">
-                <div className="bg-[#29A1B6] p-3 rounded-full hover:bg-[#236B7A] transition">
+                <div className="bg-[#29A1B6] p-3 rounded-full hover:bg-[#12E193] transition">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
@@ -103,7 +103,7 @@ export default async function ContactCard({ locale }: Props) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="p-2 bg-[#29A1B6] rounded-full hover:bg-[#236B7A] transition"
+                    className="p-2 bg-[#29A1B6] rounded-full hover:bg-[#12E193] transition"
                   >
                     <Icon className="h-5 w-5 text-white" />
                   </Link>
@@ -131,7 +131,7 @@ export default async function ContactCard({ locale }: Props) {
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12E193] transition"
                   required
                 />
               </div>
@@ -145,7 +145,7 @@ export default async function ContactCard({ locale }: Props) {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12E193] transition"
                   required
                 />
               </div>
@@ -160,7 +160,7 @@ export default async function ContactCard({ locale }: Props) {
               <input
                 type="text"
                 id="subject"
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12E193] transition"
                 required
               />
             </div>
@@ -174,13 +174,13 @@ export default async function ContactCard({ locale }: Props) {
               <textarea
                 id="message"
                 rows={5}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12E193] transition"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full md:w-auto bg-[#278083] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1f6f69] transition duration-300 transform hover:scale-105 cursor-pointer"
+              className="w-full md:w-auto bg-[#12E193] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1f6f69] transition duration-300 transform hover:scale-105 cursor-pointer"
             >
               {t("home.sendmessage")}
             </button>

@@ -170,7 +170,7 @@ export default function NavbarHome() {
                 <Link
                   href="/contact-us"
                   onClick={toggleMenu}
-                  className="bg-[#278083] text-white px-4 py-2 rounded-md transition hover:bg-[#278083]"
+                  className="bg-[#12E193] text-white px-4 py-2 rounded-md transition hover:bg-[#12E193]"
                 >
                   Contact Us
                 </Link>

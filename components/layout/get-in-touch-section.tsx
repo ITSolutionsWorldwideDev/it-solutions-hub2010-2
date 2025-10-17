@@ -32,7 +32,7 @@ export default async function GetInTouchSection({
   const t = await i18nInstance.getFixedT(locale, "common");
 
   return (
-    <section className="max-w-[1152px] mx-auto bg-[#278083] flex flex-col md:flex-row items-stretch justify-between p-8 lg:p-12 rounded-lg py-12">
+    <section className="max-w-[1152px] mx-auto bg-[#12E193] flex flex-col md:flex-row items-stretch justify-between p-8 lg:p-12 rounded-lg py-12">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 bg-[#29A1B6] text-white p-8 lg:p-12 rounded-lg shadow-md flex flex-col space-y-6">
         <div>
@@ -42,7 +42,7 @@ export default async function GetInTouchSection({
 
           {/* Email */}
           <div className="flex items-center space-x-4 mb-6">
-            <div className="bg-[#278083] p-3 rounded-full hover:bg-[#236B7A]">
+            <div className="bg-[#12E193] p-3 rounded-full hover:bg-[#236B7A]">
               <Mail className="h-6 w-6" />
             </div>
             <div>
@@ -62,7 +62,7 @@ export default async function GetInTouchSection({
 
           {/* Phone */}
           <div className="flex items-center space-x-4">
-            <div className="bg-[#278083] p-3 rounded-full hover:bg-[#236B7A]">
+            <div className="bg-[#12E193] p-3 rounded-full hover:bg-[#236B7A]">
               <Phone className="h-6 w-6" />
             </div>
             <div>
@@ -91,7 +91,7 @@ export default async function GetInTouchSection({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="p-2 bg-[#278083] rounded-full hover:bg-[#236B7A]"
+                className="p-2 bg-[#12E193] rounded-full hover:bg-[#236B7A]"
               >
                 <Facebook className="h-5 w-5 text-white" />
               </Link>
@@ -102,7 +102,7 @@ export default async function GetInTouchSection({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="p-2 bg-[#278083] rounded-full hover:bg-[#236B7A]"
+                className="p-2 bg-[#12E193] rounded-full hover:bg-[#236B7A]"
               >
                 <Twitter className="h-5 w-5 text-white" />
               </Link>
@@ -113,7 +113,7 @@ export default async function GetInTouchSection({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2 bg-[#278083] rounded-full hover:bg-[#236B7A]"
+                className="p-2 bg-[#12E193] rounded-full hover:bg-[#236B7A]"
               >
                 <Linkedin className="h-5 w-5 text-white" />
               </Link>
@@ -124,7 +124,7 @@ export default async function GetInTouchSection({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="p-2 bg-[#278083] rounded-full hover:bg-[#236B7A]"
+                className="p-2 bg-[#12E193] rounded-full hover:bg-[#236B7A]"
               >
                 <Instagram className="h-5 w-5 text-white" />
               </Link>

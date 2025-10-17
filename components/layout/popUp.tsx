@@ -20,7 +20,7 @@ const PopUp: React.FC<PopUpProps> = ({ showPopup, onClose }) => {
       aria-modal="true"
       aria-labelledby="popup-title"
     >
-      <div className="relative bg-[#236b7a] rounded-lg shadow-lg p-6 w-11/12 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+      <div className="relative bg-[#12E193] rounded-lg shadow-lg p-6 w-11/12 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
         {/* Logo Header */}
         <div className="flex justify-center mb-4">
           <Image

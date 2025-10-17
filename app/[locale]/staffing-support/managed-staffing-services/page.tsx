@@ -171,7 +171,7 @@ export default async function ManagedStaffingServices({
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <ConsultationSection
         slides={slidesData2}
-        hoverBgColor="#278083"
+        hoverBgColor="#12E193"
         hoverTextColor="#FFFFFF"
       />
     </div>

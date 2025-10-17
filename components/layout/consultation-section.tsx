@@ -99,7 +99,7 @@ const ConsultationSection: React.FC<ConsultationSectionProps> = ({
           {popup && ctabuttontext && (
             <button
               onClick={handlePopupOpen}
-              className="mt-4 ml-4 px-4 py-2 rounded font-semibold transition-colors bg-white text-[#236b7a] hover:bg-gray-200 cursor-pointer"
+              className="mt-4 ml-4 px-4 py-2 rounded font-semibold transition-colors bg-white text-[#12E193] hover:bg-gray-200 cursor-pointer"
               type="button"
             >
               {ctabuttontext}

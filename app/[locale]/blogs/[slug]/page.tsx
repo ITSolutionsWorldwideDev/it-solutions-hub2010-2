@@ -27,7 +27,7 @@ export default async function BlogPostPage({
   return (
     <>
       <div className="max-w-7xl mx-auto p-6 space-y-8 mt-20">
-        <h1 className="text-4xl font-bold text-center text-[#278083]">
+        <h1 className="text-4xl font-bold text-center text-[#12E193]">
           {blog.content.title}
         </h1>
         <p className="text-gray-500 text-sm mb-8">
@@ -37,7 +37,7 @@ export default async function BlogPostPage({
         {blog.content.sections?.map((section, index) => (
           <div key={index} className="bg-white">
             {section.title && (
-              <h2 className="text-2xl font-semibold text-[#278083]">
+              <h2 className="text-2xl font-semibold text-[#12E193]">
                 {section.title}
               </h2>
             )}

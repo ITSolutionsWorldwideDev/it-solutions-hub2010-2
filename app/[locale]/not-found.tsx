@@ -14,7 +14,7 @@ export default async function NotFound() {
       <p className="text-xl text-gray-600 mb-8 mt-2">{t("notfound.message")}</p>
       <Link
         href={`/${locale}`}
-        className="mt-4 px-6 py-2 bg-[#236B7A] hover:bg-[#29A1B6] text-white rounded-lg"
+        className="mt-4 px-6 py-2 bg-[#12E193] hover:bg-[#29A1B6] text-white rounded-lg"
       >
         {t("notfound.homeButton")}
       </Link>
@@ -43,7 +43,7 @@ export default async function NotFound({ params }: Props) {
       </p>
       <Link
         href={`/${locale}`}
-        className="mt-4 px-6 py-2 bg-[#236B7A] hover:bg-[#29A1B6] text-white rounded-lg no-underline"
+        className="mt-4 px-6 py-2 bg-[#12E193] hover:bg-[#29A1B6] text-white rounded-lg no-underline"
       >
         {t("notfound.homeButton")}
       </Link>
