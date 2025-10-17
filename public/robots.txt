@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://itsolutionsworldwide.com
+
+# Sitemaps
+Sitemap: https://itsolutionsworldwide.com/sitemap.xml

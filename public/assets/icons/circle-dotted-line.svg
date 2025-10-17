@@ -1,0 +1,10 @@
+<svg width="200" height="20" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left circle -->
+  <circle cx="10" cy="10" r="5" fill="#18B0A8"/>
+  
+  <!-- Dotted line -->
+  <line x1="20" y1="10" x2="180" y2="10" stroke="#DDF4F5" stroke-width="3" stroke-dasharray="6 6"/>
+
+  <!-- Right circle -->
+  <circle cx="190" cy="10" r="5" fill="#16666F"/>
+</svg>

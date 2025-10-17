@@ -1,0 +1,108 @@
+/* import { Button } from "@/components/ui/button";
+import {  ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
+// import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
+import React from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import CurrencySwitcher from "@/components/CurrencySwitcher";
+import { useB2BStore } from "@/store/useB2BStore";
+
+const announcements = [
+  "Return extended to 60 days",
+  "Life-time Guarantee",
+  "Limited-Time Offer",
+];
+
+type TopBarProps = {
+  locale: string;
+  dictionary: any;
+};
+
+export default function TopBar({ locale, dictionary }: TopBarProps) {
+  const { isB2BMode, setB2BMode } = useB2BStore();
+
+  return (
+    <div className="bg-background text-foreground border-b border-border text-sm">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="flex items-center h-10 gap-2 flex-nowrap md:gap-0">
+
+
+          <Button
+            variant="link"
+            className="text-foreground md:hidden flex-shrink-0"
+            onClick={() => setB2BMode(!isB2BMode)}
+          >
+            {isB2BMode ? (
+              <>
+                <span>Client shop</span>
+                <ChevronLeftIcon className="ml-1 h-4 w-4 inline" />
+              </>
+            ) : (
+              <>
+                <span>Wholesale (B2B)</span>
+                <ChevronRightIcon className="ml-1 h-4 w-4 inline" />
+              </>
+            )}
+          </Button>
+
+          <div className="flex-1 flex justify-center min-w-0">
+            <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] overflow-hidden relative h-10">
+              <div
+                className="absolute left-0 top-0 flex items-center whitespace-nowrap animate-marquee"
+                style={{ minWidth: "200%", height: "100%" }}
+              >
+                {[...announcements, ...announcements].map((text, index) => (
+                  <span key={index} className="mx-4 inline-block">
+                    {index % announcements.length < announcements.length && (
+                      <span className="inline-block align-middle mx-2 w-1 h-1 bg-foreground rounded-full" />
+                    )}
+                    {text}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+
+          <div className="flex items-center space-x-2 flex-shrink-0">
+
+
+            <Button
+              variant="link"
+              className="text-foreground hidden md:inline-flex"
+              onClick={() => setB2BMode(!isB2BMode)}
+            >
+              {isB2BMode ? (
+                <>
+                  <span>Client shop</span>
+                  <ChevronLeftIcon className="ml-1 h-4 w-4 inline" />
+                </>
+              ) : (
+                <>
+                  <span>Wholesale (B2B)</span>
+                  <ChevronRightIcon className="ml-1 h-4 w-4 inline" />
+                </>
+              )}
+            </Button>
+
+            <ThemeToggle />
+
+
+            <div className="flex flex-col gap-2">
+              <LanguageSwitcher currentLocale={locale} />
+            </div>
+            <CurrencySwitcher></CurrencySwitcher>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} */
