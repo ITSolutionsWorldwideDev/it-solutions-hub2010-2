@@ -25,7 +25,7 @@ export default function AnimationArea() {
           }}
           viewport={{ once: true }} // Ensures animation runs only once
         >
-          <span className="bg-[#12E193] text-white px-4 py-1 rounded-md inline-block">
+          <span className="bg-[#175864] text-white px-4 py-1 rounded-md inline-block">
             OUR SERVICES
           </span>
         </motion.h2>
@@ -45,11 +45,11 @@ export default function AnimationArea() {
             }}
             viewport={{ once: true }} // Ensures animation runs only once
           >
-            <span className="bg-[#12E193] text-white px-4 py-1 rounded-md inline-block">
+            <span className="bg-[#175864] text-white px-4 py-1 rounded-md inline-block">
               Our Clients
             </span>
           </motion.h2>
-          <h2 className="text-center text-2xl md:text-3xl lg:text-3xl font-medium text-[#12E193] w-11/12 lg:w-8/12 mx-auto">
+          <h2 className="text-center text-2xl md:text-3xl lg:text-3xl font-medium text-[#175864] w-11/12 lg:w-8/12 mx-auto">
             Empowering Customers, Automating Success Smart Solutions for Smarter
             Businesses
           </h2>

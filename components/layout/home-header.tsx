@@ -46,7 +46,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link href="/contact-us" target="_blank">
-            <button className="bg-[#12E193] hover:bg-white text-white hover:text-black px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer">{/* 0FB6AE */}
+            <button className="bg-[#175864] hover:bg-white text-white hover:text-black px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer">{/* 0FB6AE */}
               Get FREE Consultation
             </button>
           </Link>

@@ -32,8 +32,8 @@ const cards = [
 const CardSection: React.FC<CardSectionProps> = ({ heading, text }) => {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl text-[#12E193] text-center mb-2">{heading}</h2>
-      <p className="text-center text-[#12E193] mb-8">{text}</p>
+      <h2 className="text-3xl text-[#175864] text-center mb-2">{heading}</h2>
+      <p className="text-center text-[#175864] mb-8">{text}</p>
 
       <div className="flex flex-col sm:flex-row gap-8">
         {cards.map((card, index) => (
@@ -56,7 +56,7 @@ const CardSection: React.FC<CardSectionProps> = ({ heading, text }) => {
               <div className="flex justify-around text-center text-sm gap-4 flex-wrap">
                 {/* Phone */}
                 <div className="flex flex-col items-center" itemProp="telephone">
-                  <Phone className="text-[#12E193] w-6 h-6" />
+                  <Phone className="text-[#175864] w-6 h-6" />
                   <Link
                     href={card.phoneLink}
                     target="_blank"
@@ -69,7 +69,7 @@ const CardSection: React.FC<CardSectionProps> = ({ heading, text }) => {
 
                 {/* Address */}
                 <div className="flex flex-col items-center" itemProp="address">
-                  <MapPin className="text-[#12E193] w-6 h-6" />
+                  <MapPin className="text-[#175864] w-6 h-6" />
                   <span className="mt-2 max-w-[200px] text-center text-gray-700">
                     {card.address}
                   </span>

@@ -564,7 +564,7 @@ const ProcureToPay: React.FC<Props> = ({ onSubmit }) => {
 
       <div className="w-full bg-gray-300 h-4 rounded mt-4">
         <div
-          className="bg-[#12E193] h-4 rounded"
+          className="bg-[#175864] h-4 rounded"
           style={{ width: `${progressPercentage}%` }}
         />
       </div>
@@ -576,7 +576,7 @@ const ProcureToPay: React.FC<Props> = ({ onSubmit }) => {
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={!answered}
             className={`p-2 rounded cursor-pointer ${
-              answered ? "bg-[#12E193] text-white" : "bg-gray-300 text-gray-500"
+              answered ? "bg-[#175864] text-white" : "bg-gray-300 text-gray-500"
             }`}
           >
             Next Page
@@ -587,7 +587,7 @@ const ProcureToPay: React.FC<Props> = ({ onSubmit }) => {
             onClick={handleSubmit}
             disabled={!answered}
             className={`p-2 rounded cursor-pointer ${
-              answered ? "bg-[#12E193] text-white" : "bg-gray-300 text-gray-500"
+              answered ? "bg-[#175864] text-white" : "bg-gray-300 text-gray-500"
             }`}
           >
             Submit

@@ -28,14 +28,14 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-gray-500">
               <li>
-                <Link href="/about-us" className="text-base hover:text-[#12E193]">
+                <Link href="/about-us" className="text-base hover:text-[#175864]">
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/scm-services"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   SCM Services
                 </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/supply-health-check-info"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Supply Health Check
                 </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact-us"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Contact Us
                 </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/digital-services"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Digital Services
                 </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
                <li>
                 <Link
                   href="/blogs"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Blogs
                 </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/scm-services"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   SCM Services
                 </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/it-support"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   IT Support
                 </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/oracle-cloud"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Oracle Cloud
                 </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/digital-services"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Digital Services
                 </Link>
@@ -116,7 +116,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/staffing-support"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Staffing Support
                 </Link>
@@ -133,7 +133,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact-us"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Help Center
                 </Link>
@@ -141,20 +141,20 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about-us/#faq"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/career" className="text-base hover:text-[#12E193]">
+                <Link href="/career" className="text-base hover:text-[#175864]">
                   Career
                 </Link>
               </li>
               <li>
                 <Link
                   href="/terms-and-conditions"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Terms & Conditions
                 </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-base hover:text-[#12E193]"
+                  className="text-base hover:text-[#175864]"
                 >
                   Privacy Policy
                 </Link>
@@ -176,10 +176,10 @@ export default function Footer() {
 
         {/* Bottom row: disclaimers/contact info */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-evenly space-y-4 md:space-y-0 md:space-x-6">
-          <p className="text-sm text-[#12E193]">
+          <p className="text-sm text-[#175864]">
             © IT Solutions Worldwide. All rights reserved
           </p>
-          <span className="text-sm text-[#12E193]">
+          <span className="text-sm text-[#175864]">
             <Link
               href="mailto:info@itsolutionsworldwide.com"
               target="_blank"
@@ -188,7 +188,7 @@ export default function Footer() {
               info@itsolutionsworldwide.com
             </Link>
           </span>
-          <span className="text-sm text-[#12E193]">
+          <span className="text-sm text-[#175864]">
             Chamber of Commerce No. 72768916
           </span>
         </div>

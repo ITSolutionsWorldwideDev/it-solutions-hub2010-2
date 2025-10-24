@@ -257,7 +257,7 @@ export function AnimatedList() {
       <div className="flex flex-col items-center space-y-0 px-4 pt-0">
         <div
           className="w-[180px] aspect-square flex items-center justify-center font-bold text-white rounded-full shadow-lg"
-          style={{ background: "#12E193" }}
+          style={{ background: "#175864" }}
         >
           <h2 className="w-[58%] text-center text-[clamp(1rem,4vw,2.5rem)]">
             HOW WE WORK?
@@ -303,7 +303,7 @@ export function AnimatedList() {
       <section className="relative flex flex-col items-center md:flex-row md:justify-center lg:-space-x-16 md:-space-x-28 px-4 pt-20">
         <div
           className="w-[280px] lg:w-[345px] aspect-square flex items-center justify-center font-bold text-white rounded-full shadow-lg"
-          style={{ background: "#12E193" }}
+          style={{ background: "#175864" }}
         >
           <h2 className="w-[58%] text-center text-[clamp(1rem,4vw,2.5rem)]">
             HOW WE WORK?
@@ -899,15 +899,15 @@ export function PinnedProgressSection() {
 export function AnimatedGlobe() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#12E193",
+    globeColor: "#175864",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
-    emissive: "#12E193",
+    emissive: "#175864",
     emissiveIntensity: 0.1,
     shininess: 0.9,
     polygonColor: "rgba(255,255,255,1)",
-    ambientLight: "#12E193",
+    ambientLight: "#175864",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#ffffff",
@@ -1284,7 +1284,7 @@ export function AnimatedGlobe() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-[90vh] md:h-auto bg-[#12E193] relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 h-[90vh] md:h-auto bg-[#175864] relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
@@ -1307,7 +1307,7 @@ export function AnimatedGlobe() {
             Tailored Solutions for Unique Market Needs
           </p>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-[#12E193] z-40" />
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-[#175864] z-40" />
         <div className="absolute w-full -bottom-1 md:-bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
