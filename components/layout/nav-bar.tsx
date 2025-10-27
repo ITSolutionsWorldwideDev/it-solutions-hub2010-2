@@ -42,7 +42,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-2 w-32">
             <Link href="/">
               <img
-                src="/assets/images/logo.png"
+                src="/assets/images/main-logo.svg"
                 alt="IT Solutions Worldwide Logo"
               />
             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
             </button> */}
 
             <button
-              className="lg:hidden text-[#175864] focus:outline-none cursor-pointer"
+              className="lg:hidden text-[#278083] focus:outline-none cursor-pointer"
               onClick={toggleMenu}
             >
               <svg
@@ -104,7 +104,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.link}
-                  className="text-[#175864] hover:text-[#175864] font-medium px-3 py-2 rounded-md transition"
+                  className="text-[#278083] hover:text-[#278083] font-medium px-3 py-2 rounded-md transition"
                 >
                   {item.label}
                 </Link>
@@ -132,12 +132,12 @@ export default function Navbar() {
 
           <div className="hidden xl:block">
             <Link href="/supply-health-check-info">
-              <button className="bg-[#175864] text-white px-4 py-2 rounded-md hover:bg-[#175864] transition mr-2 cursor-pointer">
+              <button className="bg-[#278083] text-white md:my-2 px-4 py-2 rounded-md hover:bg-[#278083] transition mr-2 cursor-pointer">
                 Free SCM Check
               </button>
             </Link>
             <Link href="/contact-us">
-              <button className="bg-[#175864] text-white px-4 py-2 rounded-md hover:bg-[#175864] transition cursor-pointer">
+              <button className="bg-[#278083] text-white px-4 py-2 md:my-2 rounded-md hover:bg-[#278083] transition cursor-pointer">
                 Contact Us
               </button>
             </Link>
@@ -160,7 +160,7 @@ export default function Navbar() {
                     <Link
                       href={item.link}
                       onClick={toggleMenu}
-                      className="text-[#175864] font-medium  py-1 text-lg"
+                      className="text-[#278083] font-medium  py-1 text-lg"
                     >
                       {item.label}
                     </Link>
@@ -208,7 +208,7 @@ export default function Navbar() {
                 <Link
                   href="/supply-health-check-info"
                   onClick={toggleMenu}
-                  className="bg-[#175864] flex text-white px-4 py-2 rounded-md transition hover:bg-[#175864] w-full"
+                  className="bg-[#278083] flex text-white px-4 py-2 rounded-md transition hover:bg-[#278083] w-full"
                 >
                   Free SCM Check
                 </Link>
@@ -217,7 +217,7 @@ export default function Navbar() {
                 <Link
                   href="/contact-us"
                   onClick={toggleMenu}
-                  className="bg-[#175864] flex text-white px-4 py-2 rounded-md transition hover:bg-[#175864] w-full"
+                  className="bg-[#278083] flex text-white px-4 py-2 rounded-md transition hover:bg-[#278083] w-full"
                 >
                   Contact Us
                 </Link>

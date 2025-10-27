@@ -84,7 +84,7 @@ export default async function SupplyHealth() {
             {sections.map((section, idx) => (
               <div key={idx} className="bg-white">
                 {section.title && (
-                  <h2 className="text-2xl font-semibold text-[#175864]">
+                  <h2 className="text-2xl font-semibold text-[#278083]">
                     {section.title}
                   </h2>
                 )}
@@ -106,7 +106,7 @@ export default async function SupplyHealth() {
             <div className="mt-10 flex justify-center">
               <Link
                 href="/supply-health-check"
-                className="bg-[#175864] text-white py-3 px-6 rounded-full text-lg items-center gap-2 shadow-md hover:bg-[#1f6460] transition"
+                className="bg-[#278083] text-white py-3 px-6 rounded-full text-lg items-center gap-2 shadow-md hover:bg-[#1f6460] transition"
               >
                 Click Here To Start Your Free Scan
               </Link>

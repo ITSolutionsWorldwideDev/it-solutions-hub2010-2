@@ -142,7 +142,7 @@ export default async function SpecializedIndustryStaffing({
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <ConsultationSection
         slides={slidesData2}
-        hoverBgColor="#175864"
+        hoverBgColor="#278083"
         hoverTextColor="#FFFFFF"
       />
     </div>

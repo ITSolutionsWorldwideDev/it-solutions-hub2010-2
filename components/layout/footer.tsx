@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <img
               className="w-auto"
-              src="/assets/footer-logo.png"
+              src="/assets/footer-logo.svg"
               alt="IT Solutions Worldwide"
             />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
@@ -28,14 +28,14 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-gray-500">
               <li>
-                <Link href="/about-us" className="text-base hover:text-[#175864]">
+                <Link href="/about-us" className="text-base hover:text-[#236b7a]">
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/scm-services"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   SCM Services
                 </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/supply-health-check-info"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Supply Health Check
                 </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact-us"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Contact Us
                 </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/digital-services"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Digital Services
                 </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
                <li>
                 <Link
                   href="/blogs"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Blogs
                 </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/scm-services"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   SCM Services
                 </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/it-support"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   IT Support
                 </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/oracle-cloud"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Oracle Cloud
                 </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/digital-services"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Digital Services
                 </Link>
@@ -116,7 +116,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/staffing-support"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Staffing Support
                 </Link>
@@ -133,7 +133,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact-us"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Help Center
                 </Link>
@@ -141,20 +141,20 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about-us/#faq"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/career" className="text-base hover:text-[#175864]">
+                <Link href="/career" className="text-base hover:text-[#236b7a]">
                   Career
                 </Link>
               </li>
               <li>
                 <Link
                   href="/terms-and-conditions"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Terms & Conditions
                 </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-base hover:text-[#175864]"
+                  className="text-base hover:text-[#236b7a]"
                 >
                   Privacy Policy
                 </Link>
@@ -176,10 +176,10 @@ export default function Footer() {
 
         {/* Bottom row: disclaimers/contact info */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-evenly space-y-4 md:space-y-0 md:space-x-6">
-          <p className="text-sm text-[#175864]">
+          <p className="text-sm text-[#236b7a]">
             © IT Solutions Worldwide. All rights reserved
           </p>
-          <span className="text-sm text-[#175864]">
+          <span className="text-sm text-[#236b7a]">
             <Link
               href="mailto:info@itsolutionsworldwide.com"
               target="_blank"
@@ -188,7 +188,7 @@ export default function Footer() {
               info@itsolutionsworldwide.com
             </Link>
           </span>
-          <span className="text-sm text-[#175864]">
+          <span className="text-sm text-[#236b7a]">
             Chamber of Commerce No. 72768916
           </span>
         </div>

@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => {
     <div
       style={{
         background: `radial-gradient(circle, #0A8F89 0%, rgba(15, 182, 174, 0.08) 100%)`,
-        backgroundColor: '#175864',
+        backgroundColor: '#194A59',
       }} className="lg:min-h-[600px] flex items-center justify-center w-full">
     <div className="py-16 lg:py-32 xl:py-20 md:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white  m-auto">

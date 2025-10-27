@@ -52,14 +52,14 @@ const FAQSection = ({
           <div className="flex gap-4">
             <Link
               href={helpCenterLink}
-              className="flex items-center gap-2 px-4 py-2 bg-[#175864] text-white rounded hover:bg-opacity-90"
+              className="flex items-center gap-2 px-4 py-2 bg-[#278083] text-white rounded hover:bg-opacity-90"
               aria-label="Go to Help Center"
             >
               Help Center
             </Link>
             <Link
               href={privacyPolicyLink}
-              className="px-4 py-2 border-2 border-[#175864] text-[#175864] rounded hover:bg-[#f0fdfc]"
+              className="px-4 py-2 border-2 border-[#278083] text-[#278083] rounded hover:bg-[#f0fdfc]"
               aria-label="Read Privacy Policy"
             >
               Privacy Policy
@@ -68,7 +68,7 @@ const FAQSection = ({
         </div>
 
         {/* Right Section: FAQs */}
-        <div className="bg-[#175864] text-white rounded-lg shadow p-6">
+        <div className="bg-[#278083] text-white rounded-lg shadow p-6">
           <dl className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-white last:border-b-0">

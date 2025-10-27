@@ -166,7 +166,7 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
         <div className="flex justify-center items-center">
           <Link href="/">
             <img
-              src="/assets/images/logo.png"
+              src="/assets/images/main-logo.svg"
               alt="Logo"
               className="h-12 md:h-16"
             />

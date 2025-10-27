@@ -257,7 +257,7 @@ export function AnimatedList() {
       <div className="flex flex-col items-center space-y-0 px-4 pt-0">
         <div
           className="w-[180px] aspect-square flex items-center justify-center font-bold text-white rounded-full shadow-lg"
-          style={{ background: "#175864" }}
+          style={{ background: "#194A59" }}
         >
           <h2 className="w-[58%] text-center text-[clamp(1rem,4vw,2.5rem)]">
             HOW WE WORK?
@@ -303,7 +303,7 @@ export function AnimatedList() {
       <section className="relative flex flex-col items-center md:flex-row md:justify-center lg:-space-x-16 md:-space-x-28 px-4 pt-20">
         <div
           className="w-[280px] lg:w-[345px] aspect-square flex items-center justify-center font-bold text-white rounded-full shadow-lg"
-          style={{ background: "#175864" }}
+          style={{ background: "#194A59" }}
         >
           <h2 className="w-[58%] text-center text-[clamp(1rem,4vw,2.5rem)]">
             HOW WE WORK?

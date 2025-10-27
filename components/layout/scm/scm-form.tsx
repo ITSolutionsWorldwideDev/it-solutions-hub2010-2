@@ -282,7 +282,7 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
               </div>
               <button
                 onClick={handlePersonalInfoSubmit}
-                className="bg-[#175864] text-white px-4 py-2 rounded cursor-pointer"
+                className="bg-[#278083] text-white px-4 py-2 rounded cursor-pointer"
               >
                 Proceed To Select Department
               </button>
@@ -297,7 +297,7 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
               <div className="flex flex-wrap sm:flex-col">
                 <button
                   onClick={() => handleQuestionnaireSelect("Procure-to-pay")}
-                  className="bg-[#175864] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
+                  className="bg-[#278083] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
                 >
                   Procure-to-pay
                 </button>
@@ -305,7 +305,7 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
                   onClick={() =>
                     handleQuestionnaireSelect("Transport Management")
                   }
-                  className="bg-[#175864] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
+                  className="bg-[#278083] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
                 >
                   Transport Management
                 </button>
@@ -313,13 +313,13 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
                   onClick={() =>
                     handleQuestionnaireSelect("Logistics Planning")
                   }
-                  className="bg-[#175864] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
+                  className="bg-[#278083] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
                 >
                   Logistic Planning
                 </button>
                 <button
                   onClick={() => handleQuestionnaireSelect("Warehousing")}
-                  className="bg-[#175864] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
+                  className="bg-[#278083] text-white px-4 py-2 rounded mr-4 mb-3 cursor-pointer"
                 >
                   Warehouse Management
                 </button>
@@ -378,7 +378,7 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
               <Link href="/supply-health-check">
                 <button
                   onClick={handleRestart}
-                  className="bg-[#175864] text-white px-4 py-2 rounded mt-4 cursor-pointer"
+                  className="bg-[#278083] text-white px-4 py-2 rounded mt-4 cursor-pointer"
                 >
                   Restart
                 </button>

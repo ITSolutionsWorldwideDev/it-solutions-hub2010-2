@@ -41,7 +41,7 @@ export default function NavbarHome() {
         <div className="flex items-center space-x-2 w-32">
           <Link href="/">
             <img
-              src="/assets/images/main-logo.png"
+              src="/assets/images/main-logo.svg"
               alt="IT Solutions Worldwide Logo"
             />
           </Link>
@@ -170,7 +170,7 @@ export default function NavbarHome() {
                 <Link
                   href="/contact-us"
                   onClick={toggleMenu}
-                  className="bg-[#175864] text-white px-4 py-2 rounded-md transition hover:bg-[#175864]"
+                  className="bg-[#278083] text-white px-4 py-2 rounded-md transition hover:bg-[#278083]"
                 >
                   Contact Us
                 </Link>

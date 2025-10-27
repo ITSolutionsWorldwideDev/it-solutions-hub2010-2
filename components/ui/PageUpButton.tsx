@@ -29,7 +29,7 @@ export default function PageUpButton() {
         position: "fixed",
         bottom: "30px",
         right: "20px",
-        backgroundColor: "#175864",
+        backgroundColor: "#236b7a",
         color: "white",
         border: "none",
         borderRadius: "50%",
