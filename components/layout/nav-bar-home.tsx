@@ -75,7 +75,7 @@ export default function NavbarHome() {
               onMouseEnter={() => handleMouseEnter(item.label)}
               onMouseLeave={handleMouseLeave}
             >
-              <Link href="{item.link}" className="hover:underline">
+              <Link href={item.link} className="hover:underline">
                 {item.label}
               </Link>
               {item.dropdown && hoveredItem === item.label && (
