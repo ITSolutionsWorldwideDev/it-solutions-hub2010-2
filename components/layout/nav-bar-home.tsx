@@ -42,7 +42,7 @@ export default function NavbarHome() {
           <Link href="/">
             <img
               src="/assets/images/main-logo.svg"
-              alt="IT Solutions Worldwide Logo"
+              alt="IT Solutions Hub 2010 Logo"
             />
           </Link>
         </div>

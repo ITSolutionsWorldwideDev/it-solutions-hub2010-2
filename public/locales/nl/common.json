@@ -14,7 +14,7 @@
     "text7": "Wij combineren expertise in managementadvies en de implementatie van bedrijfsapplicaties.",
     "aboutusheading": "Over Ons",
     "aboutustext1": "Wij bieden oplossingen die uw reis automatiseren.",
-    "aboutustext2": "IT Solutions Worldwide is een toonaangevende aanbieder van innovatieve IT-oplossingen die bedrijven helpen hun activiteiten te stroomlijnen, de efficiëntie te verbeteren en meer succes te behalen. Sinds 2016 zijn wij gespecialiseerd in supply chain management, IT-ondersteuning, digitale marketing en operationele uitmuntendheid. Ons deskundige team levert geavanceerde technologieën en strategische oplossingen om bedrijven te moderniseren en groei in de digitale markt te stimuleren.",
+    "aboutustext2": "IT Solutions Hub 2010 is een toonaangevende aanbieder van innovatieve IT-oplossingen die bedrijven helpen hun activiteiten te stroomlijnen, de efficiëntie te verbeteren en meer succes te behalen. Sinds 2016 zijn wij gespecialiseerd in supply chain management, IT-ondersteuning, digitale marketing en operationele uitmuntendheid. Ons deskundige team levert geavanceerde technologieën en strategische oplossingen om bedrijven te moderniseren en groei in de digitale markt te stimuleren.",
     "cardmainheading": "Omvattende wereldwijde diensten om uw bedrijf te versterken",
     "cardmaintext": "Uitmuntendheid in IT, Supply Chain, Digitale Marketing en Personeelsdiensten voor bedrijven wereldwijd.",
     "cardheading1": "SCM",
@@ -59,23 +59,122 @@
     "message": "Bericht",
     "sendmessage": "Verstuur Bericht"
   },
+  "profile": {
+    "banner_heading": "Van idee naar impact",
+    "banner_text": "wij regelen alles.",
+    "button_text": "Ontdek Nu",
+    "button2_text": "Onze Diensten",
+
+    "cards_main_heading": "Maak uw bedrijf toekomstbestendig — gebouwd om zich aan te passen, klaar om te leiden.",
+    "card_heading_1": "Slimme oplossingen, naadloze werking",
+    "card_text_1": "Wij vereenvoudigen complexe workflows met op maat gemaakte IT- en cloudoplossingen die de efficiëntie verhogen, kosten verlagen en met uw groei meegroeien. Van infrastructuur tot automatisering: wij bouwen systemen die zich ontwikkelen met uw bedrijf.",
+
+    "card_heading_2": "Digitale groei die resultaat levert",
+    "card_text_2": "Onze digitale marketing- en e-commercestrategieën zijn ontworpen om echte resultaten te realiseren — meer zichtbaarheid, betrokkenheid en conversie. Met data-gedreven campagnes en geoptimaliseerde platforms helpen we u te excelleren in de digitale wereld.",
+
+    "card_heading_3": "Wendbare ondersteuning, betrouwbaar talent",
+    "card_text_3": "Blijf vooroplopen met flexibele staffing en deskundige ondersteuning die zich aanpast aan uw behoeften. Of u nu teams opschaalt of technische uitdagingen oplost, wij bieden de juiste mensen en tools om uw bedrijf vooruit te helpen."
+  },
   "aboutus": {
-    "heading_1": "Over Ons | IT Solutions Worldwide",
-    "text_1": "Wij combineren expertise in managementadvies en de implementatie van bedrijfsapplicaties.",
+    "banner_heading": "OVER ONS",
+    "banner_text": "Wij combineren expertise in management consulting en de implementatie van bedrijfsapplicaties.",
+
+    "contactheading": "Neem contact op",
+
+    "why_us_heading": "Over Ons Bedrijf",
+    "why_us_heading_2": "Waarom Kiezen Voor",
+    "why_us_text": "Wij onderscheiden ons door technische excellentie, klantgerichtheid en betaalbaarheid. Onze oplossingen zijn van hoge kwaliteit en toch scherp geprijsd, zodat klanten maximale waarde ontvangen. We bouwen geen systemen alleen — we creëren oplossingen die waarde toevoegen, efficiëntie verhogen en veiligheid, schaalbaarheid en prestaties prioriteren. Wij geloven in langdurige partnerschappen. Onze klanten zien ons niet enkel als een leverancier, maar als een strategische partner die vooruitdenkt, deskundig adviseert en betrouwbaar ondersteunt. Transparante processen, duidelijke communicatie en betrouwbare support vormen de basis van het vertrouwen dat wij opbouwen.",
+
+    "why_us_widget_heading1": "Impact in Alle Sectoren",
+    "why_us_widget_heading2": "Bewezen Expertise",
+    "why_us_widget_heading3": "Modernisering Door Talent",
+
+    "why_us_widget_text1": "IT Solutions Hub 2010 levert geavanceerde technologische oplossingen aan diverse industrieën, en stimuleert succes en efficiëntie.",
+    "why_us_widget_text2": "Met X jaar ervaring en een bewezen trackrecord zijn wij gespecialiseerd in supply chain optimalisatie, IT-support, digitale marketing en operationele excellentie.",
+    "why_us_widget_text3": "Onze hooggekwalificeerde technische professionals helpen bedrijven te evolueren met eenvoudige, innovatieve en toekomstbestendige strategieën.",
+
+    "our_mission_main_heading": "Onze Missie",
+    "our_mission_main_subheading": "Het Is Tijd Voor Een Revolutie",
+
+    "our_mission_heading": "Waar Digitale Excellentie Samenkomen met Naadloze Uitvoering en Schaalbare Groei",
+    "our_mission_text": "Bij IT Solutions Hub 2010 is onze missie eenvoudig: bedrijven helpen groeien met slimme, toekomstbestendige IT-oplossingen. In een snel veranderend technologisch landschap zorgen wij ervoor dat organisaties niet alleen bijblijven — maar vooroplopen. We combineren diepgaande technische expertise met praktische ervaring. Ons team van ontwikkelaars, ontwerpers en marketingspecialisten creëert innovatieve oplossingen die bedrijven digitaal versterken. Of het nu gaat om het bouwen van een gebruiksvriendelijke website, het ontwikkelen van een complexe webapplicatie, het automatiseren van bedrijfsprocessen of het inzetten van AI — wij leveren maatwerkstrategieën die aansluiten op de unieke behoeften van elke klant.",
+
+    "our_mission_widget_heading1": "Webontwikkeling & Onderhoud",
+    "our_mission_widget_heading2": "Web- & App-ontwikkeling",
+    "our_mission_widget_heading3": "E-commerce & Webshops",
+    "our_mission_widget_heading4": "Procesautomatisering",
+    "our_mission_widget_heading5": "AI-diensten",
+    "our_mission_widget_heading6": "Marketing & Campagnes",
+
+    "our_mission_widget_text1": "Schaalbare, snelle en veilige websites en platforms, van bedrijfssites tot geavanceerde e-commerceoplossingen in Magento en WooCommerce.",
+    "our_mission_widget_text2": "Moderne frameworks en technologieën voor het creëren van web- en mobiele applicaties die processen optimaliseren en bedrijven toekomstbestendig maken.",
+    "our_mission_widget_text3": "Gebruiksvriendelijke, conversiegerichte webshops met veilige betalingsoplossingen en naadloze integraties.",
+    "our_mission_widget_text4": "Het stroomlijnen van bedrijfsactiviteiten, het verminderen van handmatige werkzaamheden en het verbeteren van efficiëntie in alle afdelingen.",
+    "our_mission_widget_text5": "Het implementeren van AI-oplossingen die bruikbare inzichten bieden, besluitvorming verbeteren en innovatie stimuleren.",
+    "our_mission_widget_text6": "Complete digitale marketingstrategieën, inclusief branding, SEO, social media beheer en PPC-campagnes voor meetbare resultaten.",
+
+    "our_values_main_heading": "Onze Kernwaarden",
+    "our_values_main_subheading": "De Fundamenten van Alles Wat Wij Doen",
+    "our_values_main_text": "Bij IT Solutions Hub 2010 sturen onze waarden elke beslissing, elke oplossing en elke samenwerking. Ze weerspiegelen onze toewijding aan excellentie, innovatie en integriteit in een snel evoluerende digitale wereld.",
+
+    "our_values_widget_heading1": "Klantgerichtheid & Operationele Excellentie",
+    "our_values_widget_heading2": "Innovatie & Aanpassingsvermogen",
+    "our_values_widget_heading3": "Samenwerking & Integriteit",
+
+    "our_values_widget_text1": "Wij streven ernaar hoogwaardige IT-oplossingen te leveren die bedrijfsprocessen verbeteren, efficiëntie verhogen en duurzame relaties opbouwen met klanten, stakeholders en partners.",
+    "our_values_widget_text2": "Wij omarmen moderne technologieën en agile-denken om efficiënte, toekomstgerichte oplossingen te creëren die resultaten leveren in dynamische markten.",
+    "our_values_widget_text3": "Wij stimuleren sterke, transparante relaties — intern en extern — gebaseerd op vertrouwen, teamwork en het gezamenlijke streven naar excellentie.",
+
+    "creative_team_heading": "Het Creatieve Team Achter de Deur",
+    "creative_team_subheading": "Vraag niet wat je teamgenoten voor jou kunnen doen. Vraag wat jij voor je teamgenoten kunt doen.",
+
+    "expertise_heading_1": "Supply Chain Services",
+    "expertise_text_1": "Optimaliseren van logistiek en operaties voor snellere en slimmere levering.",
+
+    "expertise_heading_2": "IT- en Cloudoplossingen",
+    "expertise_text_2": "Veilige, schaalbare systemen gebouwd voor de moderne zakelijke behoeften.",
+
+    "expertise_heading_3": "Digitale Marketing & E-commerce",
+    "expertise_text_3": "Online groei stimuleren via strategie, content en conversie.",
+
+    "expertise_heading_4": "Staffing en Ondersteuning",
+    "expertise_text_4": "Flexibel talent en technische ondersteuning om uw bedrijfsvoering sterk te houden.",
+
+    "our_vision_heading": "Onze Visie voor de Toekomst",
+    "our_vision_text": "Technologie staat nooit stil, en wij ook niet. Wij investeren voortdurend in de nieuwste tools, frameworks en innovaties—van AI-integraties tot cloudoplossingen en procesautomatisering—om bedrijven een voorsprong te geven. Met een wereldwijde blik en lokale betrokkenheid bedienen wij klanten in diverse sectoren, van startups en mkb’s tot gevestigde ondernemingen. Ons doel is simpel: digitale oplossingen leveren die bedrijven sterker, slimmer en succesvoller maken, tegen een prijs die bij elk budget past.",
+
+    "process_flow_heading": "Onze Expertise",
+    "heading_1": "Over Ons | IT Solutions Hub 2010",
+    "text_1": "Wij combineren expertise in management consulting en de implementatie van bedrijfsapplicaties.",
     "heading_2": "Wie Wij Zijn",
-    "text_2": "IT Solutions Worldwide is een toonaangevend bedrijf dat de meest geavanceerde oplossingen biedt aan een breed scala van sectoren. Met jarenlange ervaring streven wij ernaar eenvoudige en innovatieve technologische oplossingen te implementeren om bedrijven te helpen meer succes te behalen met meer efficiëntie. Met een bewezen staat van dienst optimaliseren wij bedrijven door middel van supply chain management, IT-ondersteuning, digitale marketingdiensten en operationele uitmuntendheid. Wij helpen bedrijven te moderniseren met onze beste technische professionals."
+    "text_2": "IT Solutions Hub 2010 is een toonaangevend bedrijf dat de meest actuele oplossingen biedt aan een breed scala van industrieën. Met X jaar ervaring streven wij ernaar eenvoudige en innovatieve technologische oplossingen te implementeren, zodat bedrijven meer succes en efficiëntie behalen. Met een bewezen staat van dienst optimaliseren wij bedrijven via supply chain management, IT-ondersteuning, digitale marketingdiensten en operationele excellentie. Wij helpen bedrijven te moderniseren met onze beste technische professionals.",
+
+    "faq_title": "Veelgestelde vragen",
+    "faq_desc": "Bel gerust onze klantenservice-helpdesk.",
+    "question1": "Wat doet uw bedrijf?",
+    "answer1": "Wij bieden diverse diensten, waaronder Supply Chain Management, CRM, ERP, Logistiek, IT-ondersteuning en Cloudservices. Ons doel is bedrijven te helpen de efficiëntie te verbeteren, groei te stimuleren en langdurig succes te bereiken met op maat gemaakte oplossingen en deskundige begeleiding.",
+    "question2": "Welke sectoren bedient u?",
+    "answer2": "Wij werken met bedrijven in verschillende sectoren, waaronder gezondheidszorg, productie, supply chain management, technologie, logistiek en financiën.",
+    "question3": "Hoe kan ik contact met u opnemen?",
+    "answer3": "U kunt ons e-mailen via info@itsolutionshub2010.com of bellen naar +31 10 766 0786. Wij staan altijd klaar om u te helpen!",
+    "question4": "Biedt u ondersteuning na oplevering van een project?",
+    "answer4": "Ja, wij bieden regelmatige en voortdurende ondersteuning na voltooiing en oplevering van een project om een soepele bedrijfsvoering en langdurig succes te garanderen.",
+    "question5": "Biedt u consultaties voordat een project start?",
+    "answer5": "Zeker! Wij bieden consultaties om uw behoeften, doelen en uitdagingen te analyseren en te begrijpen, zodat we u de beste oplossingen kunnen bieden.",
+    "question6": "Hoe kan ik meer te weten komen over uw diensten?",
+    "answer6": "Bezoek onze website voor meer informatie of neem direct contact met ons op voor uitgebreidere details."
   },
   "contactus": {
-    "heading_1": "Contacteer Ons | IT Solutions Worldwide",
+    "heading_1": "Contacteer Ons | IT Solutions Hub 2010",
     "text_1": "Wij combineren expertise in managementadvies en de implementatie van bedrijfsapplicaties."
   },
   "career": {
     "heading_1": "CARRIÈRE",
     "heading_2": "Word lid van ons team en vorm de toekomst",
-    "text_2": "Ons bedrijf is het toonbeeld van technologie en innovatie. Ons uitzonderlijke team is daar het bewijs van. Wij werven toptalent op de markt en tonen hun expertise in hun respectieve vakgebieden. Bij IT Solutions Worldwide is overleven niet de norm – wij gaan verder. Sluit je aan bij ons team als een bekwame professional die op zoek is naar een uitzonderlijke werkomgeving om te groeien en te bloeien.",
+    "text_2": "Ons bedrijf is het toonbeeld van technologie en innovatie. Ons uitzonderlijke team is daar het bewijs van. Wij werven toptalent op de markt en tonen hun expertise in hun respectieve vakgebieden. Bij IT Solutions Hub 2010 is overleven niet de norm – wij gaan verder. Sluit je aan bij ons team als een bekwame professional die op zoek is naar een uitzonderlijke werkomgeving om te groeien en te bloeien.",
     "heading_3": "Voordelen",
     "subtitle_2": "Voordelen die grenzen overstijgen",
-    "text_3": "Ons bedrijf is het toonbeeld van technologie en innovatie. Ons uitzonderlijke team is daar het bewijs van. Wij werven toptalent op de markt en tonen hun expertise in hun respectieve vakgebieden. Bij IT Solutions Worldwide is overleven niet de norm – wij gaan verder. Sluit je aan bij ons team als een bekwame professional die op zoek is naar een uitzonderlijke werkomgeving om te groeien en te bloeien.",
+    "text_3": "Ons bedrijf is het toonbeeld van technologie en innovatie. Ons uitzonderlijke team is daar het bewijs van. Wij werven toptalent op de markt en tonen hun expertise in hun respectieve vakgebieden. Bij IT Solutions Hub 2010 is overleven niet de norm – wij gaan verder. Sluit je aan bij ons team als een bekwame professional die op zoek is naar een uitzonderlijke werkomgeving om te groeien en te bloeien.",
     "heading_4": "Ontdek ons wereldwijde netwerk van kantoren",
     "text_4": "Ervaar ons uitgebreide netwerk van kantoren over de hele wereld, zodat u overal toegang hebt tot onze uitzonderlijke diensten."
   },
@@ -275,7 +374,7 @@
     "card4_heading": "Leveringsbeheer",
     "card4_text": "Zorg voor tijdige en foutloze leveringen met onze geavanceerde leveringsoplossingen.",
     "heading_4": "Onze Aanpak van Supply Chain Uitvoering",
-    "text_4": "Bij IT Solutions Worldwide combineren we efficiëntie, wendbaarheid en technologie in onze aanpak van supply chain uitvoering om een naadloze end-to-end prestatie te leveren. We integreren ERP-, WMS- en TMS-systemen om realtime zichtbaarheid te creëren binnen uw operaties, zodat elk proces aansluit bij de bedrijfsdoelen en met maximale efficiëntie verloopt. Door gebruik te maken van branchegerichte best practices, nauwe samenwerking met partners te bevorderen en belangrijke prestatie-indicatoren continu te monitoren, maken we snellere en slimmere besluitvorming mogelijk. Onze focus op flexibiliteit, risicobeheer en duurzaamheid zorgt ervoor dat uw supply chain veerkrachtig, adaptief en in staat blijft om blijvende waarde te creëren in een voortdurend veranderende markt.",
+    "text_4": "Bij IT Solutions Hub 2010 combineren we efficiëntie, wendbaarheid en technologie in onze aanpak van supply chain uitvoering om een naadloze end-to-end prestatie te leveren. We integreren ERP-, WMS- en TMS-systemen om realtime zichtbaarheid te creëren binnen uw operaties, zodat elk proces aansluit bij de bedrijfsdoelen en met maximale efficiëntie verloopt. Door gebruik te maken van branchegerichte best practices, nauwe samenwerking met partners te bevorderen en belangrijke prestatie-indicatoren continu te monitoren, maken we snellere en slimmere besluitvorming mogelijk. Onze focus op flexibiliteit, risicobeheer en duurzaamheid zorgt ervoor dat uw supply chain veerkrachtig, adaptief en in staat blijft om blijvende waarde te creëren in een voortdurend veranderende markt.",
     "listitem1": "Realtime zichtbaarheid in uw supply chain.",
     "listitem2": "Flexibele en schaalbare oplossingen voor elke sector.",
     "listitem3": "Data-analyse voor continue prestatieverbetering.",
@@ -722,8 +821,8 @@
     "submitting": "Uw aanvraag wordt verwerkt..."
   },
   "meta": {
-    "title": "IT Solutions Worldwide - Innovatieve IT, Cloud & Supply Chain Diensten",
-    "description": "IT Solutions Worldwide biedt innovatieve IT-, Oracle Cloud-, Supply Chain- en Digitale Marketingdiensten aan bedrijven wereldwijd. Wij helpen bedrijven groeien door technologie.",
+    "title": "IT Solutions Hub 2010 - Innovatieve IT, Cloud & Supply Chain Diensten",
+    "description": "IT Solutions Hub 2010 biedt innovatieve IT-, Oracle Cloud-, Supply Chain- en Digitale Marketingdiensten aan bedrijven wereldwijd. Wij helpen bedrijven groeien door technologie.",
     "keywords": "IT-oplossingen, Oracle Cloud, Supply Chain, Digitale Marketing, IT-ondersteuning, Personeel, Consultancy"
   },
   "errors": {
@@ -850,8 +949,8 @@
     "headline_2": "Klaar om Online te Verkopen in Nederland?",
     "subheadline_2": "Of u zich nu in Amsterdam, Rotterdam of elders bevindt – wij bouwen webshops die bezoekers omzetten in klanten.",
     "text_1": "Start een Conversiegerichte Webshop op Maat voor Uw Merk",
-    "heading_2": "Waarom Kiezen voor IT Solutions Worldwide voor Uw Webshop?",
-    "text_2": "Bij IT Solutions Worldwide bouwen wij schaalbare, conversiegerichte e-commerce websites die Nederlandse bedrijven helpen online te groeien. Ons team zorgt ervoor dat elk detail bijdraagt aan verkoopsucces.",
+    "heading_2": "Waarom Kiezen voor IT Solutions Hub 2010 voor Uw Webshop?",
+    "text_2": "Bij IT Solutions Hub 2010 bouwen wij schaalbare, conversiegerichte e-commerce websites die Nederlandse bedrijven helpen online te groeien. Ons team zorgt ervoor dat elk detail bijdraagt aan verkoopsucces.",
     "text_3": "Onze IT-diensten helpen bedrijven zich te concentreren op groei, met onderhoud, probleemoplossing en cyberbeveiliging.",
     "heading_3": "Wat is Inbegrepen in Onze E-commerce Pakketten",
     "text_4": "Volledige IT-ondersteuningsdiensten op maat",
@@ -1065,7 +1164,7 @@
     "listitem11": "Realtime analytics",
     "listitem12": "Doorlopende ondersteuning",
     "listitem13": "Verbeterde samenwerking binnen teams",
-    "card_heading_1": "Odoo (Partner van IT Solutions Worldwide)",
+    "card_heading_1": "Odoo (Partner van IT Solutions Hub 2010)",
     "card_text_1": "Een flexibele, volledig geïntegreerde ERP-oplossing om processen te stroomlijnen en groei te stimuleren.",
     "card_heading_2": "Oracle Fusion Cloud",
     "card_text_2": "Een krachtig cloudgebaseerd ERP-systeem voor financiën, HR en supply chain management.",
@@ -1093,7 +1192,7 @@
     "text_2": "Cloud-databeheersystemen helpen bedrijven hun IT-infrastructuur te schalen op een flexibele en kosteneffectieve manier. Cloudomgevingen maken het mogelijk om gegevens op te slaan, te beheren, te delen en te updaten vanuit één uniform systeem over verschillende platforms.",
     "text_3": "AI in combinatie met cloudservices helpt bedrijven processen te automatiseren, beveiliging te verbeteren en datagestuurde beslissingen te nemen. Door clouddata-oplossingen en AI-technologieën te integreren, kunnen bedrijven sneller groeien, hun time-to-market verkorten en een naadloze workflow creëren.",
     "heading_3": "Onze Diensten",
-    "text_4": "Bij IT Solutions Worldwide leveren we end-to-end Cloud-, Data- en AI-diensten die organisaties helpen hun bedrijfsvoering te moderniseren, inzichten te benutten en innovatie te versnellen.",
+    "text_4": "Bij IT Solutions Hub 2010 leveren we end-to-end Cloud-, Data- en AI-diensten die organisaties helpen hun bedrijfsvoering te moderniseren, inzichten te benutten en innovatie te versnellen.",
 
     "card_heading_1": "Cloudstrategie en Migratie",
     "card_text_1": "Beoordeel, plan en implementeer naadloze overgangen naar Oracle Cloud met schaalbare en veilige architecturen.",
@@ -1136,7 +1235,7 @@
     "text_1": "Wij helpen bedrijven online te groeien met op maat gemaakte strategieën, deskundige SEO en creatieve brandingoplossingen.",
     "button_1": "Vraag een Gratis Consultatie aan",
     "heading_2": "Waarom is Digitale Marketing Essentieel voor uw Bedrijf?",
-    "text_2": "IT Solutions Worldwide maakt deel uit van S&S Partners Holding, een ambitieus en innovatief bedrijf dat streeft naar de beste zakelijke oplossingen voor onze klanten. Onze klanten voeren complexe technische en operationele projecten uit.",
+    "text_2": "IT Solutions Hub 2010 maakt deel uit van S&S Partners Holding, een ambitieus en innovatief bedrijf dat streeft naar de beste zakelijke oplossingen voor onze klanten. Onze klanten voeren complexe technische en operationele projecten uit.",
     "text_3": "Ze kiezen voor ons vanwege onze kwaliteit, marktkennis en persoonlijke aanpak. Namens hen zoeken, werven en plaatsen wij de beste technische professionals. Op het gebied van R&D, engineering, projectbeheersing, constructiemanagement en logistiek kennen wij de spelers en de markt. Wij voeren projecten uit in alle fasen – van concept tot turnkey-oplevering.",
     "heading_4": "Onze Kern Digitale Marketing Diensten",
     "dynamic_card_heading_1": "Webdesign en Ontwikkeling",
@@ -1218,7 +1317,7 @@
     "answer5": "Ja, wij kunnen uw bestaande website opnieuw ontwerpen om deze responsiever, moderner en gebruiksvriendelijker te maken."
   },
   "ecommerce": {
-    "heading_1": "Professionele E-commerce Ontwikkelingsdiensten | IT Solutions Worldwide",
+    "heading_1": "Professionele E-commerce Ontwikkelingsdiensten | IT Solutions Hub 2010",
     "text_1": "Geoptimaliseerde e-commerceplatforms ontworpen om betrokkenheid, verkoop en klantloyaliteit te vergroten.",
     "button_1": "Vraag een Gratis Consultatie aan",
     "heading_2": "Introductie tot E-commerce Ontwikkeling",
@@ -1264,7 +1363,7 @@
     "answer5": "Na de ontwikkeling bieden wij training en ondersteuning zodat u eenvoudig producten, bestellingen en inhoud kunt beheren."
   },
   "ppc": {
-    "heading_1": "Expert PPC Advertentiediensten | IT Solutions Worldwide",
+    "heading_1": "Expert PPC Advertentiediensten | IT Solutions Hub 2010",
     "text_1": "Slimme biedingen en datagestuurde advertenties die verkeer genereren, leads opleveren en uw ROI maximaliseren.",
     "button_1": "Vraag een Gratis Consultatie aan",
     "heading_2": "Introductie tot PPC-advertenties",
@@ -1523,7 +1622,7 @@
     "answer5": "Een logistiek specialist stroomlijnt uw processen, optimaliseert kosten, vermindert vertragingen, waarborgt naleving van regelgeving en verhoogt klanttevredenheid."
   },
   "warehousedesign": {
-    "heading_1": "Magazijnontwerp- en Indelingsdiensten in Nederland | IT Solutions Worldwide",
+    "heading_1": "Magazijnontwerp- en Indelingsdiensten in Nederland | IT Solutions Hub 2010",
     "text_1": "Transformeer uw magazijn met data-gedreven ontwerpen en efficiënte lay-outs.",
     "button_1": "Vraag een Gratis Consultatie aan",
     "heading_2": "Maximaliseer Efficiëntie met Functionele Zonering",
@@ -1593,7 +1692,7 @@
     "answer5": "Plan een consult met ons team — wij analyseren uw magazijn en adviseren geschikte oplossingen."
   },
   "leansixsigma": {
-    "heading_1": "Lean en Six Sigma Implementatie | IT Solutions Worldwide",
+    "heading_1": "Lean en Six Sigma Implementatie | IT Solutions Hub 2010",
     "text_1": "Data-gedreven methoden om processen te verbeteren, kwaliteit te verhogen en duurzame groei te stimuleren.",
     "button_1": "Vraag een Gratis Consultatie aan",
     "heading_2": "Lean en Six Sigma Implementatie",

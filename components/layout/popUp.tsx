@@ -25,7 +25,7 @@ const PopUp: React.FC<PopUpProps> = ({ showPopup, onClose }) => {
         <div className="flex justify-center mb-4">
           <Image
             src="/assets/images/itww-logo-white.png"
-            alt="IT Solutions Worldwide Logo"
+            alt="IT Solutions Hub 2010 Logo"
             width={180}
             height={60}
             priority

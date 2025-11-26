@@ -114,8 +114,8 @@ const ContactSection: React.FC = () => {
               <span className="bg-white/20 p-3 rounded-full">
                 <FaEnvelope className="text-xl text-white" />
               </span>
-              <Link href="mailto:info@itsolutionsworldwide.com" className="text-lg">
-                info@itsolutionsworldwide.com
+              <Link href="mailto:info@itsolutionshub2010.com" className="text-lg">
+                info@itsolutionshub2010.com
               </Link>
             </div>
           </address>
@@ -123,16 +123,16 @@ const ContactSection: React.FC = () => {
           <div>
             <p className="text-lg mb-2">Connect with us:</p>
             <div className="flex space-x-4" aria-label="Social media links">
-              <Link href="https://www.facebook.com/itsolutionsww" aria-label="Facebook">
+              <Link href="https://www.facebook.com/people/It-Solutions-Hub-2010-PVT-Ltd/100095307775094/?mibextid=kFxxJD" aria-label="Facebook">
                 <FaFacebook className="text-2xl hover:text-[#F5A623]" />
               </Link>
-              <Link href="https://www.linkedin.com/company/it-solutions-worldwide-bv" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/it-solutions-hub-2010" aria-label="LinkedIn">
                 <FaLinkedin className="text-2xl hover:text-[#F5A623]" />
               </Link>
-              <Link href="https://www.instagram.com/itsolutionsworldwide" aria-label="Instagram">
+              <Link href="https://www.instagram.com/itsolutionshub2010/?hl=en" aria-label="Instagram">
                 <FaInstagram className="text-2xl hover:text-[#F5A623]" />
               </Link>
-              <Link href="https://www.tiktok.com/@itsolutionsworldwide" aria-label="TikTok">
+              <Link href="https://www.tiktok.com/@itsolutionshub2010" aria-label="TikTok">
                 <FaTiktok className="text-2xl hover:text-[#F5A623]" />
               </Link>
             </div>

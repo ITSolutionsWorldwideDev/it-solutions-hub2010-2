@@ -5,7 +5,7 @@ const MissionVisionSection = () => {
     {
       title: "Our Mission",
       content:
-        "IT Solutions Worldwide aims to empower businesses through innovative IT solutions that optimize business flow, enhance operational efficiency, and create remarkable market value. We focus on delivering cutting-edge technology solutions and expert technical support to our clients, helping them overcome complexities and grow faster in the digital market.",
+        "IT Solutions Hub 2010.com aims to empower businesses through innovative IT solutions that optimize business flow, enhance operational efficiency, and create remarkable market value. We focus on delivering cutting-edge technology solutions and expert technical support to our clients, helping them overcome complexities and grow faster in the digital market.",
     },
     {
       title: "Our Vision",

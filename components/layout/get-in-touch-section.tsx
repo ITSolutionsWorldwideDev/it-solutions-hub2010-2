@@ -49,12 +49,12 @@ export default async function GetInTouchSection({
               <p className="text-sm">{t("home.contactemail")}</p>
               <p className="font-medium">
                 <Link
-                  href="mailto:info@itsolutionsworldwide.com"
+                  href="mailto:info@itsolutionshub2010.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
                 >
-                  info@itsolutionsworldwide.com
+                  info@itsolutionshub2010.com
                 </Link>
               </p>
             </div>

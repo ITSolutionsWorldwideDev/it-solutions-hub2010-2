@@ -41,5 +41,5 @@ With years of proven expertise, we specialize in implementing simple yet innovat
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ITSolutionsWorldwideDev/it-solutions-worldwide2.git
+git clone https://github.com/ITSolutionsWorldwideDev/it-solutions-hub2010-2.git
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import AnimatedBorderCard from "./home/AnimatedBorderCard";
 // import { Logo } from "./logo";
 import NavbarHome from "./nav-bar-home";
+import SegmentTabs from "./home/SegmentTabComponent";
 
 export default function Header() {
   const isBgLoaded = true;
@@ -25,9 +26,11 @@ export default function Header() {
         {/* Hero Content */}
         <div className="relative z-1 flex flex-col items-center justify-center  text-center text-white px-4 pt-20">
           {/* Animated Border Card */}
+          {/* 
           <div className="w-[60px] absolute top-[100%] md:top-2/4 lg:top-[85%] transform -translate-y-1/2 left-4 md:left-10 lg:left-40">
             <AnimatedBorderCard />
           </div>
+           */}
 
           <h1 className="text-[45px] sm:text-6xl/tight lg:text-7xl/tight 2xl:text-8xl/tight font-bold mb-8 w-full sm:w-10/12 lg:w-8/12 xl:w-9/12">
             Empowering Businesses with Smart IT Solutions
@@ -50,6 +53,8 @@ export default function Header() {
               Get FREE Consultation
             </button>
           </Link>
+
+          <SegmentTabs />
         </div>
       </div>
     </div>

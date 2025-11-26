@@ -12,10 +12,10 @@ export default function Footer() {
             <img
               className="w-auto"
               src="/assets/footer-logo.svg"
-              alt="IT Solutions Worldwide"
+              alt="IT Solutions Hub 2010"
             />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
-              IT Solutions Worldwide delivers innovative IT solutions in supply
+              IT Solutions Hub 2010 delivers innovative IT solutions in supply
               chain management, IT support, digital marketing, and provides
               operational excellence.
             </p>
@@ -30,6 +30,11 @@ export default function Footer() {
               <li>
                 <Link href="/about-us" className="text-base hover:text-[#236b7a]">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/profile" className="text-base hover:text-[#236B7A]">
+                  Profile
                 </Link>
               </li>
               <li>
@@ -177,15 +182,15 @@ export default function Footer() {
         {/* Bottom row: disclaimers/contact info */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-evenly space-y-4 md:space-y-0 md:space-x-6">
           <p className="text-sm text-[#236b7a]">
-            © IT Solutions Worldwide. All rights reserved
+            © ITSolutionsHub. All rights reserved
           </p>
           <span className="text-sm text-[#236b7a]">
             <Link
-              href="mailto:info@itsolutionsworldwide.com"
+              href="mailto:info@itsolutionshub2010.com"
               target="_blank"
               rel="noreferrer"
             >
-              info@itsolutionsworldwide.com
+              info@itsolutionshub2010.com
             </Link>
           </span>
           <span className="text-sm text-[#236b7a]">

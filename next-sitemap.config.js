@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://itsolutionsworldwide.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://itsolutionshub2010.com';
 
 module.exports = {
   siteUrl,

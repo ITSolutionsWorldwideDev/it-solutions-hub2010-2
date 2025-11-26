@@ -41,11 +41,11 @@ export default async function ContactCard({ locale }: Props) {
                   <p className="text-sm">{t("home.contactemail")}</p>
                   <p className="font-medium break-all">
                     <Link
-                      href="mailto:info@itsolutionsworldwide.com"
+                      href="mailto:info@itsolutionshub2010.com"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      info@itsolutionsworldwide.com
+                      info@itsolutionshub2010.com
                     </Link>
                   </p>
                 </div>
@@ -77,22 +77,22 @@ export default async function ContactCard({ locale }: Props) {
               <div className="flex space-x-4">
                 {[
                   {
-                    href: "https://www.facebook.com/itsolutionsww/",
+                    href: "https://www.facebook.com/people/It-Solutions-Hub-2010-PVT-Ltd/100095307775094/?mibextid=kFxxJD",
                     Icon: Facebook,
                     label: "Facebook",
                   },
                   {
-                    href: "https://twitter.com/ITSolutionsBV",
+                    href: "https://x.com/ITSolution2010",
                     Icon: Twitter,
                     label: "Twitter",
                   },
                   {
-                    href: "https://nl.linkedin.com/company/it-solutions-worldwide-bv",
+                    href: "https://www.linkedin.com/company/it-solutions-hub-2010/",
                     Icon: Linkedin,
                     label: "LinkedIn",
                   },
                   {
-                    href: "https://www.instagram.com/itsolutionsworldwide/",
+                    href: "https://www.instagram.com/itsolutionshub2010/?hl=en",
                     Icon: Instagram,
                     label: "Instagram",
                   },

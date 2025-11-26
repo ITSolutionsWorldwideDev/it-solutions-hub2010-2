@@ -9,11 +9,11 @@ export default function Privacy() {
           Privacy Policy
         </h1>
         <p>
-          Welcome to IT Solutions Worldwide. Your privacy is important to us.
+          Welcome to IT Solutions Hub 2010. Your privacy is important to us.
           This Privacy Policy explains how we collect, use, share, and protect
           your personal information when you visit our website{" "}
-          <Link href="https://itsolutionsworldwide.com" className="underline">
-            https://itsolutionsworldwide.com
+          <Link href="https://itsolutionshub2010.com" className="underline">
+            https://itsolutionshub2010.com
           </Link>{" "}
           or engage with our services.
         </p>
@@ -21,7 +21,7 @@ export default function Privacy() {
           1. Who We Are
         </h2>
         <p>
-          IT Solutions Worldwide is a technology solutions provider specializing
+          IT Solutions Hub 2010 is a technology solutions provider specializing
           in ERP implementation, supply chain optimization, IT infrastructure
           automation, and related digital services. Our commitment to your
           privacy is based on transparency and trust.
