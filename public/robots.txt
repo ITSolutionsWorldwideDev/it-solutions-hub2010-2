@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://itsolutionsworldwide.com
+Host: https://itsolutionshub2010.com/
 
 # Sitemaps
-Sitemap: https://itsolutionsworldwide.com/sitemap.xml
+Sitemap: https://itsolutionshub2010.com/sitemap.xml
