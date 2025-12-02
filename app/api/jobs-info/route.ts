@@ -31,6 +31,11 @@ export async function GET(req: NextRequest) {
     }
 
     const whereClauses: string[] = [];
+
+    whereClauses.push(
+        `i.published =1 `,
+      );
+
     if (search) {
       const keyword = escape(search.toLowerCase());
       whereClauses.push(
@@ -42,7 +47,7 @@ export async function GET(req: NextRequest) {
       ? `WHERE ${whereClauses.join(" AND ")}`
       : "";
 
-    let sortingOrder = "ORDER BY i.created_at DESC";
+    let sortingOrder = "ORDER BY i.updated_at DESC";
     if (sort === "nameDesc") sortingOrder = "ORDER BY i.title DESC";
     else if (sort === "dateAsc") sortingOrder = "ORDER BY i.created_at ASC";
 
@@ -57,8 +62,9 @@ export async function GET(req: NextRequest) {
         ${sortingOrder}
         LIMIT ${pageSize} OFFSET ${offset}
         `;
-
+        
     const countQuery = `SELECT COUNT(i.job_info_id) FROM jobs_infos AS i ${whereClause}`;
+
 
     const [result, countResult] = await Promise.all([
       pool.query(query),
