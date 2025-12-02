@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Loader from "@/components/ui/Loader";
 
 type JobApplyFormProps = {
   translations: {
@@ -18,12 +19,16 @@ type JobApplyFormProps = {
 const strapiUrl =
   process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1338";
 
+const PAGE_SIZE = 50;
+
 export default function JobApplyForm({ translations }: JobApplyFormProps) {
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [category, setCategory] = useState("");
+  const [categoryId, setCategoryId] = useState("");
+  const [categoryTitle, setCategoryTitle] = useState("");
   const [hearAbout, setHearAbout] = useState("");
   const [message, setMessage] = useState("");
   const [resume, setResume] = useState<File | null>(null);
@@ -32,10 +37,14 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
   const [sending, setSending] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
-  useEffect(() => {
-    const fetchJobs = async () => {
+  /* useEffect(() => {
+    const fetchJobs = async (page = 1) => {
       try {
-        const res = await fetch(`${strapiUrl}/api/jobs-infos`);
+        const res = await fetch(`/api/jobs-info?page=${page}&limit=${PAGE_SIZE}`,
+          {
+            cache: "no-store",
+          },
+        );
         const data = await res.json();
         setJobs(data.data);
       } catch (err) {
@@ -43,7 +52,31 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
       }
     };
     fetchJobs();
-  }, []);
+  }, []); */
+
+  const PAGE_SIZE = 124;
+
+  const fetchjobsInfo = async (page = 1) => {
+    setLoading(true);
+    try {
+      const res = await fetch(
+        `/api/jobs-info?page=${page}&limit=${PAGE_SIZE}`,
+        {
+          cache: "no-store",
+        }
+      );
+      const data = await res.json();
+      setJobs(data.items || []);
+    } catch (err) {
+      console.error("Failed to load jobsInfo", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchjobsInfo(1);
+  }, [1]);
 
   const handleResumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -51,16 +84,22 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
     }
   };
 
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedId = e.target.value;
+    setCategoryId(selectedId);
+
+    // Find the matching job title
+    const selectedJob = jobs.find((job) => job.job_info_id == selectedId);
+    setCategoryTitle(selectedJob ? selectedJob.title : "");
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.persist();
     setSending(true);
     setResponseMessage("");
 
-    const selectedJob = jobs.find(
-      (job) => job["attributes"]?.title === category
-    );
-
-    if (!hearAbout || !selectedJob || !resume) {
+    if (!hearAbout || !categoryId || !resume) {
       setResponseMessage("Please fill in all required fields.");
       setSending(false);
       return;
@@ -73,8 +112,58 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
     }
 
     try {
-      const fileFormData = new FormData();
-      fileFormData.append("files", resume, resume.name);
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("address", address);
+      formData.append("hear", hearAbout);
+      formData.append("message", message);
+      formData.append("job_category_id", categoryId);
+      formData.append("job_category", categoryTitle);
+      formData.append("resume", resume, resume.name);
+
+      const res = await fetch("/api/job-applications", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      // console.log('data === ',data);
+      // console.log('res.ok === ',res.ok);
+
+      if (!res.ok)
+        throw new Error(data.error || "Failed to submit application.");
+
+      setResponseMessage("Application submitted successfully!");
+      // e.currentTarget.reset();
+      setName("");
+      setEmail("");
+      setPhone("");
+      setAddress("");
+      setCategoryId("");
+      setCategoryTitle("");
+      setHearAbout("");
+      setMessage("");
+      setResume(null);
+    } catch (err: any) {
+      setResponseMessage(err.message || "Something went wrong.");
+    } finally {
+      setSending(false);
+    }
+
+    /* try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("address", address);
+      formData.append("hear", hearAbout);
+      formData.append("message", message);
+      formData.append("job_category_id", categoryId);
+      formData.append("job_category", categoryTitle);
+      formData.append("resume", resume, resume.name);
 
       const uploadRes = await fetch(`${strapiUrl}/api/upload`, {
         method: "POST",
@@ -157,8 +246,10 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
       setResponseMessage(err.message || "Something went wrong.");
     } finally {
       setSending(false);
-    }
+    } */
   };
+
+  if (loading) return <Loader message="Loading Jobs Info..." />;
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
@@ -255,16 +346,17 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
                 id="category"
                 name="category"
                 required
-                value={category}
+                value={categoryId}
+                onChange={handleCategoryChange}
                 // onChange={handleCategoryChange}
-                onChange={(e) => setCategory(e.target.value)}
+                // onChange={(e) => setCategory(e.target.value)}
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-teal-500 focus:border-teal-500 focus:z-10 sm:text-sm mt-2"
               >
                 <option value="">Select Job Type</option>
                 {jobs &&
                   jobs.map((job, index) => (
-                    <option key={index} value={job["attributes"]?.title}>
-                      {job["attributes"]?.title}
+                    <option key={index} value={job?.job_info_id}>
+                      {job?.title}
                     </option>
                   ))}
               </select>
@@ -276,8 +368,9 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
               <select
                 id="hearAbout"
                 name="hearAbout"
-                // onChange={handleHearAboutChange}
-                onChange={(e) => setCategory(e.target.value)}
+                value={hearAbout}
+                onChange={(e) => setHearAbout(e.target.value)} // ✅ correct
+                required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-teal-500 focus:border-teal-500 focus:z-10 sm:text-sm mt-2"
               >
                 <option value="">How did you hear about us?</option>
@@ -317,69 +410,6 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-teal-500 focus:border-teal-500 focus:z-10 sm:text-sm mt-2"
               />
             </div>
-            {/* <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="input"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-              className="input"
-            />
-            <textarea
-              placeholder="Address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-              className="input"
-            />
-            <select
-              required
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="input"
-            >
-              <option value="">Select Job Type</option>
-              {jobs.map((job) => (
-                <option key={job.id} value={job.attributes.title}>
-                  {job.attributes.title}
-                </option>
-              ))}
-            </select>
-            <select
-              required
-              value={hearAbout}
-              onChange={(e) => setHearAbout(e.target.value)}
-              className="input"
-            >
-              <option value="">How did you hear about us?</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Twitter">Twitter</option>
-              <option value="Friend/Family">Friend/Family</option>
-              <option value="Website">Website</option>
-              <option value="Other">Other</option>
-            </select>
-            <textarea
-              placeholder="Cover Letter (Optional)"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="input"
-            />
-            <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              onChange={handleResumeChange}
-              required
-              className="input"
-            /> */}
 
             <div>
               <button
