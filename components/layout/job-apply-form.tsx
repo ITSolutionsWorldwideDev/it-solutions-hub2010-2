@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Loader from "@/components/ui/Loader";
+import { useRouter } from "next/navigation";
 
 type JobApplyFormProps = {
   translations: {
@@ -15,11 +16,6 @@ type JobApplyFormProps = {
   };
   locale: string;
 };
-
-const strapiUrl =
-  process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1338";
-
-const PAGE_SIZE = 50;
 
 export default function JobApplyForm({ translations }: JobApplyFormProps) {
   const [loading, setLoading] = useState(true);
@@ -37,22 +33,8 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
   const [sending, setSending] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
-  /* useEffect(() => {
-    const fetchJobs = async (page = 1) => {
-      try {
-        const res = await fetch(`/api/jobs-info?page=${page}&limit=${PAGE_SIZE}`,
-          {
-            cache: "no-store",
-          },
-        );
-        const data = await res.json();
-        setJobs(data.data);
-      } catch (err) {
-        console.error("Failed to load jobs");
-      }
-    };
-    fetchJobs();
-  }, []); */
+  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
 
   const PAGE_SIZE = 124;
 
@@ -76,7 +58,18 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
 
   useEffect(() => {
     fetchjobsInfo(1);
+    
+  // setShowModal(true);
   }, [1]);
+
+  useEffect(() => {
+    if (showModal) {
+      const timer = setTimeout(() => {
+        router.push("/career"); // redirect after 8 seconds
+      }, 8000);
+      return () => clearTimeout(timer);
+    }
+  }, [showModal]);
 
   const handleResumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -137,6 +130,7 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
         throw new Error(data.error || "Failed to submit application.");
 
       setResponseMessage("Application submitted successfully!");
+      setShowModal(true);
       // e.currentTarget.reset();
       setName("");
       setEmail("");
@@ -152,106 +146,31 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
     } finally {
       setSending(false);
     }
-
-    /* try {
-      const formData = new FormData();
-      formData.append("name", name);
-      formData.append("email", email);
-      formData.append("phone", phone);
-      formData.append("address", address);
-      formData.append("hear", hearAbout);
-      formData.append("message", message);
-      formData.append("job_category_id", categoryId);
-      formData.append("job_category", categoryTitle);
-      formData.append("resume", resume, resume.name);
-
-      const uploadRes = await fetch(`${strapiUrl}/api/upload`, {
-        method: "POST",
-        body: fileFormData,
-      });
-
-      if (!uploadRes.ok) throw new Error("Failed to upload resume.");
-
-      const uploadData = await uploadRes.json();
-      const resumeFileId = uploadData[0]?.id;
-      const resumeUrl = `${strapiUrl}${uploadData[0]?.url}`;
-
-      const applicationData = {
-        name,
-        email,
-        phone,
-        address,
-        job_category_id: selectedJob.id,
-        hear: hearAbout,
-        message,
-        resume: resumeFileId,
-      };
-
-      const applicationRes = await fetch(`${strapiUrl}/api/job-applications`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data: applicationData }),
-      });
-
-      if (!applicationRes.ok) throw new Error("Failed to submit application.");
-
-      await Promise.all([
-        fetch(`${strapiUrl}/api/send-application-email`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email,
-            name,
-            jobTitle: selectedJob.attributes.title,
-            phone,
-            address,
-            hear: hearAbout,
-            message,
-            resume: resumeUrl,
-            email_subject: `Thank You for Reaching Out to IT Solutions Hub2010`,
-            email_hr: "info@itsolutionshub2010.com",
-            type: 1,
-          }),
-        }),
-        fetch(`${strapiUrl}/api/send-application-email`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email,
-            name,
-            jobTitle: selectedJob.attributes.title,
-            phone,
-            address,
-            hear: hearAbout,
-            message,
-            resume: resumeUrl,
-            email_subject: `Job application for ${selectedJob.attributes.title}`,
-            email_hr: "info@itsolutionshub2010.com",
-            type: 2,
-          }),
-        }),
-      ]);
-
-      setResponseMessage("Application submitted successfully!");
-      e.currentTarget.reset();
-      setName("");
-      setEmail("");
-      setPhone("");
-      setAddress("");
-      setCategory("");
-      setHearAbout("");
-      setMessage("");
-      setResume(null);
-    } catch (err: any) {
-      setResponseMessage(err.message || "Something went wrong.");
-    } finally {
-      setSending(false);
-    } */
   };
 
   if (loading) return <Loader message="Loading Jobs Info..." />;
 
   return (
+    <>
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+            <h2 className="text-xl font-semibold mb-3">Thank You 🎉</h2>
+            <p>Your application was submitted successfully.</p>
+
+            <p className="text-sm text-gray-500 mt-2">
+              Redirecting to Careers page...
+            </p>
+
+            <button
+              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+              onClick={() => router.push("/career")}
+            >
+              Go Now
+            </button>
+          </div>
+        </div>
+      )}
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <div className="w-full">
         <div className="flex justify-center items-center">
@@ -432,5 +351,122 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
         )}
       </div>
     </div>
+    </>
   );
 }
+
+
+// const strapiUrl =
+//   process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1338";
+
+  /* useEffect(() => {
+    const fetchJobs = async (page = 1) => {
+      try {
+        const res = await fetch(`/api/jobs-info?page=${page}&limit=${PAGE_SIZE}`,
+          {
+            cache: "no-store",
+          },
+        );
+        const data = await res.json();
+        setJobs(data.data);
+      } catch (err) {
+        console.error("Failed to load jobs");
+      }
+    };
+    fetchJobs();
+  }, []); */
+
+    /* try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("address", address);
+      formData.append("hear", hearAbout);
+      formData.append("message", message);
+      formData.append("job_category_id", categoryId);
+      formData.append("job_category", categoryTitle);
+      formData.append("resume", resume, resume.name);
+
+      const uploadRes = await fetch(`${strapiUrl}/api/upload`, {
+        method: "POST",
+        body: fileFormData,
+      });
+
+      if (!uploadRes.ok) throw new Error("Failed to upload resume.");
+
+      const uploadData = await uploadRes.json();
+      const resumeFileId = uploadData[0]?.id;
+      const resumeUrl = `${strapiUrl}${uploadData[0]?.url}`;
+
+      const applicationData = {
+        name,
+        email,
+        phone,
+        address,
+        job_category_id: selectedJob.id,
+        hear: hearAbout,
+        message,
+        resume: resumeFileId,
+      };
+
+      const applicationRes = await fetch(`${strapiUrl}/api/job-applications`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: applicationData }),
+      });
+
+      if (!applicationRes.ok) throw new Error("Failed to submit application.");
+
+      await Promise.all([
+        fetch(`${strapiUrl}/api/send-application-email`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            name,
+            jobTitle: selectedJob.attributes.title,
+            phone,
+            address,
+            hear: hearAbout,
+            message,
+            resume: resumeUrl,
+            email_subject: `Thank You for Reaching Out to IT Solutions Hub2010`,
+            email_hr: "info@itsolutionshub2010.com",
+            type: 1,
+          }),
+        }),
+        fetch(`${strapiUrl}/api/send-application-email`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            name,
+            jobTitle: selectedJob.attributes.title,
+            phone,
+            address,
+            hear: hearAbout,
+            message,
+            resume: resumeUrl,
+            email_subject: `Job application for ${selectedJob.attributes.title}`,
+            email_hr: "info@itsolutionshub2010.com",
+            type: 2,
+          }),
+        }),
+      ]);
+
+      setResponseMessage("Application submitted successfully!");
+      e.currentTarget.reset();
+      setName("");
+      setEmail("");
+      setPhone("");
+      setAddress("");
+      setCategory("");
+      setHearAbout("");
+      setMessage("");
+      setResume(null);
+    } catch (err: any) {
+      setResponseMessage(err.message || "Something went wrong.");
+    } finally {
+      setSending(false);
+    } */
