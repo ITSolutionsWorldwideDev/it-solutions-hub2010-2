@@ -56,8 +56,41 @@ export const clientLogos = [
     alt: "New Ways",
   },
   {
-    src: "/assets/images/logos/bosman.png",
+    // src: "/assets/images/logos/bosman.png",
+    src: "/assets/images/bosman.svg",
     alt: "Bosman",
+  },
+  {
+    src: "/assets/images/babylonlogisticsinternational.webp",
+    alt: "Babylon Logistics International",
+  },
+  {
+    src: "/assets/images/g-rollz.png",
+    alt: "g-rollz",
+  },
+  {
+    src: "/assets/images/THE_NEWWAYS_LOGO.png",
+    alt: "THE NEWWAYS",
+  },
+  {
+    src: "/assets/images/dinel.jpg",
+    alt: "Dinel",
+  },
+  {
+    src: "/assets/images/hitachikenki.webp",
+    alt: "Hitachi",
+  },
+  {
+    src: "/assets/images/VFS.jpg",
+    alt: "VFS",
+  },
+  {
+    src: "/assets/images/2go.png",
+    alt: "2go",
+  },
+  {
+    src: "/assets/images/SSL-Electrotechneik.webp",
+    alt: "SSL",
   },
 ];
 
@@ -89,18 +122,15 @@ export const logosSlider = [
   "/assets/images/albelli.png",
   "/assets/images/kent.png",
   "/assets/images/ddgroup.png",
-  "/assets/images/bol.png",
-  "/assets/images/hitech.png",
-  "/assets/images/jumbosports.png",
-  "/assets/images/albelli.png",
-  "/assets/images/kent.png",
-  "/assets/images/ddgroup.png",
-  "/assets/images/bol.png",
-  "/assets/images/hitech.png",
-  "/assets/images/jumbosports.png",
-  "/assets/images/albelli.png",
-  "/assets/images/kent.png",
-  "/assets/images/ddgroup.png",
+
+  "/assets/images/bosman.svg",
+  "/assets/images/babylonlogisticsinternational.webp",
+  "/assets/images/g-rollz.png",
+  "/assets/images/THE_NEWWAYS_LOGO.png",
+  "/assets/images/rifasopleidingsinstituut.png",
+  "/assets/images/x-treme-tunings.png",
+  "/assets/images/hassan_travels.png",
+  "/assets/images/portugees_to_go.svg",
 ];
 
 export const servicesData = [

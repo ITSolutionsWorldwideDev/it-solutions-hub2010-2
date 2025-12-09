@@ -29,7 +29,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="relative cursor-pointer group w-[301px] h-[350px]  pt-5 overflow-auto"
+        className="relative cursor-pointer group w-[301px] h-[350px]  pt-5 overflow-hidden"
       >
         <Image
           src={image || "/assets/images/profile/avatar.jpg"}

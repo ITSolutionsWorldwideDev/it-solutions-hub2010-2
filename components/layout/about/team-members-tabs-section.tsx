@@ -83,8 +83,8 @@ const TeamMembersTabsSection: NextPage = () => {
       bg_image: "/assets/images/profile/member_bg_purple.png",
       // image: "/assets/images/profile/team_member_4.png",
       image: "/assets/images/profile/avatar.png",
-      bio: "",
-      bio2: "",
+      bio: "Ammar Ahmed is an AI-Empowered Full-Stack Marketing Specialist with over 5+ years of proven experience dedicated to driving high-velocity growth and ensuring 100% client satisfaction to scale ITSolutions globally. He achieves this by unifying organic authority and paid acquisition channels (Meta, Google, LinkedIn, TikTok, Snapchat) through technical mastery of MarTech Automation—expertly implementing Go High Level (GHL) ,N8N to engineer complex sales funnels and accelerate MQL-to-SQL conversion—and Data & AI Integration, utilizing Python for strategic Data Scraping and leveraging LLMs/Generative AI for continuous optimization.",
+      bio2: "His approach is grounded in Complete Analytics, providing comprehensive ROI measurement and business optimization  through Seo strategies  & Google Analytics (GA4), Zoho Analytics, and HubSpot Analytics.",
     },
     {
       name: "Haris",

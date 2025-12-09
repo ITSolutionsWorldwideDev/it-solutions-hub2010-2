@@ -13,28 +13,16 @@ import "swiper/css/navigation";
 
 const testimonials = [
   {
-    text: "Amet morbi enim sodales quis dui, in habitant pharetra...",
-    name: "Ralph Edwards",
-    role: "Product Designer",
-    img: "/assets/images/aboutus/Hellena-thumb.png",
+    text: "Ik ben erg tevreden met de website die het team voor mij heeft gebouwd en de ondersteuning die ik heb ontvangen. Alles werkt perfect, ze kwamen met goede opties om het nog verder te optimaliseren en de samenwerking kan ik zeker aanbevelen. <br><br>Heel erg bedankt voor al jullie werk, ik waardeer het enorm! <br>Reageren<br><br> ❤️1",
+    name: "Babylon Logistics",
+    // role: "Product Designer",
+    img: "/assets/images/babylonlogisticsinternational.webp",
   },
   {
-    text: "Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus venenatis velit semper lectus sed ornare quam nulla. Lacus, ut congue sagittis vel nisi integer imperdiet a vitae.",
-    name: "Hellena John",
-    role: "Co-founder",
-    img: "/assets/images/aboutus/Hellena-thumb.png",
-  },
-  {
-    text: "A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a lacus. Pretium vehicula pretium posuere justo sed lorem cursus.",
-    name: "David Oshodi",
-    role: "Manager",
-    img: "/assets/images/aboutus/david-thumb.png",
-  },
-  {
-    text: "Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet aenean metus nibh eu scelerisque.",
-    name: "Charolette Hanlin",
-    role: "CEO",
-    img: "/assets/images/aboutus/Hellena-thumb.png",
+    text: "Over the last 2 years, I worked with IT Solutions Worldwide BV on implementing Oracle Cloud in The Netherlands (Albelli) and France (MonAlbum Photo). <br><br>In addition to a great and innovative mind, they are possibly the most hardworking, professional and conscientious team I have ever worked with. If you are looking for sustainable solutions in Supply Chain Management, look no further than IT Solutions Worldwide BV. Their knowledge of issues is unquestionably and the ability to meet the interests of several stakeholders is impeccable.",
+    name: "Albelli",
+    // role: "Co-founder",
+    img: "/assets/images/logos/albelli.png",
   },
 ];
 
@@ -44,7 +32,6 @@ const MaskGroup: NextPage = () => {
 
   return (
     <div className="relative w-full font-lexend text-white overflow-hidden rounded-[23px]">
-
       {/* Background Image */}
       <Image
         src="/assets/images/aboutus/bg-copy-1.png"
@@ -81,17 +68,24 @@ const MaskGroup: NextPage = () => {
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           className="relative"
           breakpoints={{
-            640: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            1024: { slidesPerView: 2 },
           }}
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-[20px] shadow-xl p-8 text-black">
-                <p className="leading-[160%] mb-6">{item.text}</p>
+              <div className="bg-white rounded-[20px] min-h-96 shadow-xl p-8 text-black">
+                {/* <p className="leading-[160%] mb-6">{item.text}</p> */}
 
-                <div className="flex items-center gap-4">
+                <p
+                  className="leading-[160%] mb-6 text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: item.text.replace(/\n/g, "<br>"),
+                  }}
+                />
+
+                <div className="flex items-center gap-4 bottom-0">
                   <Image
                     src={item.img}
                     width={64}
@@ -102,7 +96,7 @@ const MaskGroup: NextPage = () => {
                   <div>
                     <b className="block leading-[160%]">{item.name}</b>
                     <span className="text-gray-500 text-[16px]">
-                      {item.role}
+                      {/* {item.role} */}
                     </span>
                   </div>
                 </div>
@@ -126,223 +120,9 @@ const MaskGroup: NextPage = () => {
             ></button>
           ))}
         </div>
-
       </div>
     </div>
   );
 };
 
 export default MaskGroup;
-
-
-/* import type { NextPage } from "next";
-import Image from "next/image";
-
-const MaskGroup: NextPage = () => {
-  return (
-    <div className="w-full h-[664px] relative text-left text-[20px] text-black font-lexend">
-      <div className="rounded-[23px] [background:linear-gradient(-90deg,_#000,_#278083)] w-full h-[664px]" />
-      <Image
-        className="object-cover mix-blend-luminosity"
-        fill
-        alt="" src="/assets/images/aboutus/bg-copy-1.png"
-      />
-
-      <b className="text-[36px] leading-[110%] inline-block text-white text-center w-[728px]">
-        Success Stories from Around the World
-      </b>
-
-      <div className="absolute top-[155px] left-[calc(50%_-_623px)] w-[1245px] h-[446px]">
-        <div className="slider-div absolute top-[0px] left-[calc(50%_-_622.5px)] w-[1245px] overflow-x-auto flex items-center justify-center gap-6">
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                Amet morbi enim sodales quis dui, in habitant pharetra. Risus id
-                fringilla sed adipiscing volutpat sit varius turpis. Sed pretium
-                semper rhoncus, tellus semper.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/Hellena-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    Ralph Edwards
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    Product Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis
-                amet enim. Sit purus venenatis velit semper lectus sed ornare
-                quam nulla. Lacus, ut congue sagittis vel nisi integer imperdiet
-                a vitae.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/Hellena-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    Hellena John
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    Co-founder
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                A eget sed posuere dui risus habitasse mauris. Venenatis aliquet
-                id ultrices a lacus. Pretium vehicula pretium posuere justo sed
-                lorem cursus.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/david-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    David Oshodi
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    Manager
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-mediumturquoise overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis
-                amet enim. Sit purus venenatis velit semper lectus sed ornare
-                quam nulla. Lacus, ut congue sagittis vel nisi integer imperdiet
-                a vitae.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/Hellena-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    Hellena John
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-white">
-                    Co-founder
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                A eget sed posuere dui risus habitasse mauris. Venenatis aliquet
-                id ultrices a lacus. Pretium vehicula pretium posuere justo sed
-                lorem cursus.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/david-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    David Oshodi
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    Manager
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                A eget sed posuere dui risus habitasse mauris. Venenatis aliquet
-                id ultrices a lacus. Pretium vehicula pretium posuere justo sed
-                lorem cursus.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/david-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    David Oshodi
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    Manager
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-96 shadow-[0px_9px_53.7px_rgba(0,_0,_0,_0.12)] rounded-num-20 bg-white overflow-hidden shrink-0 flex flex-col items-start justify-center">
-            <div className="self-stretch flex flex-col items-start p-num-32 gap-4">
-              <div className="self-stretch relative leading-[160%]">
-                Magna egestas aliquet ut integer non. Sed diam enim nibh sit.
-                Aliquam laoreet aenean metus nibh eu scelerisque.
-              </div>
-              <div className="self-stretch flex items-center pt-num-16 px-num-0 pb-num-0 gap-4 text-num-18 text-[#467a7e]">
-                <Image
-                  className="h-16 w-16 rounded-num-100 object-cover"
-                  width={64}
-                  height={64}
-                  sizes="100vw"
-                  alt="" src="/assets/images/aboutus/Hellena-thumb.png"
-                />
-                <div className="flex-1 flex flex-col items-start">
-                  <b className="self-stretch relative leading-[160%]">
-                    Charolette Hanlin
-                  </b>
-                  <div className="self-stretch relative text-[16px] leading-[140%] text-lightslategray">
-                    CEO
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  );
-};
-
-export default MaskGroup;
- */
