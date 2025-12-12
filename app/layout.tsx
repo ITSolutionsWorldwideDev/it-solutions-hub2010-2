@@ -3,6 +3,8 @@ import "./globals.css";
 import { Lexend } from "next/font/google";
 import PageUpButton from "@/components/ui/PageUpButton";
 import { Metadata } from "next";
+import GoogleTagManager from "@/components/GoogleTagManager";
+import TikTokPixel from "@/components/TikTokPixel";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -33,6 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={lexend.className} suppressHydrationWarning>
       <body>
+        {/* <MetaPixel pixelId="1766535074073515" /> */}
+        <GoogleTagManager gtmId="GTM-PNHZ8DPL" />        
+        <TikTokPixel pixelId="D4RVMERC77U9MH0VT7EG" />
         {children}
         <PageUpButton />
       </body>
@@ -62,3 +67,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 } */
+
