@@ -18,12 +18,19 @@ export default function BlogCard({ post, locale }: Props) {
 
   const getDescription = () => {
     if (post.content.description) return post.content.description;
-    if (post.content.sections?.length) {
-      if (post.content.sections[0].content) return post.content.sections[0].content;
-      if (post.content.sections[1]?.content) return post.content.sections[1].content;
-    }
-    return "No description available.";
+
+    const section = post.content.sections?.find((s) => s.content);
+    return section?.content || "No description available.";
   };
+
+  // const getDescription = () => {
+  //   if (post.content.description) return post.content.description;
+  //   if (post.content.sections?.length) {
+  //     if (post.content.sections[0].content) return post.content.sections[0].content;
+  //     if (post.content.sections[1]?.content) return post.content.sections[1].content;
+  //   }
+  //   return "No description available.";
+  // };
 
   const getFeaturedImage = () => {
     if (post.content.featuredImage) return post.content.featuredImage;
@@ -49,12 +56,18 @@ export default function BlogCard({ post, locale }: Props) {
         <h2 className="text-lg font-bold mt-2" itemProp="headline">
           {post.content.title}
         </h2>
-        <p className="text-gray-600 mt-2" itemProp="description">
-          {truncateText(getDescription(), 30)}
+        <p className="text-gray-500 text-sm mb-10">
+          {new Date(post.date).toLocaleString()}
         </p>
+        <p className="text-gray-600 mt-2" itemProp="description" dangerouslySetInnerHTML={{
+          __html: truncateText(getDescription(), 30),
+        }}>
+          {/* {truncateText(getDescription(), 30)} */}
+        </p>
+
         <div className="flex items-center mt-4">
           <Link
-            href={`/${locale}/blogs/${post.slug}`}
+            href={`/blogs/${post.slug}`}
             className="bg-teal-600 text-white px-4 py-2 rounded-lg"
             itemProp="url"
           >
@@ -65,4 +78,3 @@ export default function BlogCard({ post, locale }: Props) {
     </article>
   );
 }
-

@@ -37,7 +37,7 @@ export default function RootLayout({
       <body>
         {/* <MetaPixel pixelId="1766535074073515" /> */}
         <GoogleTagManager gtmId="GTM-PNHZ8DPL" />        
-        <TikTokPixel pixelId="D4RVMERC77U9MH0VT7EG" />
+        <TikTokPixel pixelId="D4U48FJC77U9L5PJ11G0" />
         {children}
         <PageUpButton />
       </body>

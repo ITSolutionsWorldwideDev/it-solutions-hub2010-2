@@ -131,11 +131,11 @@ export default function Navbar() {
           </ul>
 
           <div className="hidden xl:block">
-            <Link href="/supply-health-check-info">
+            {/* <Link href="/supply-health-check-info">
               <button className="bg-[#278083] text-white md:my-2 px-4 py-2 rounded-md hover:bg-[#278083] transition mr-2 cursor-pointer">
                 Free SCM Check
               </button>
-            </Link>
+            </Link> */}
             <Link href="/contact-us">
               <button className="bg-[#278083] text-white px-4 py-2 md:my-2 rounded-md hover:bg-[#278083] transition cursor-pointer">
                 Contact Us
@@ -205,13 +205,13 @@ export default function Navbar() {
                 </li>
               ))}
               <li className="relative">
-                <Link
+                {/* <Link
                   href="/supply-health-check-info"
                   onClick={toggleMenu}
                   className="bg-[#278083] flex text-white px-4 py-2 rounded-md transition hover:bg-[#278083] w-full"
                 >
                   Free SCM Check
-                </Link>
+                </Link> */}
               </li>
               <li className="relative">
                 <Link

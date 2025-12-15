@@ -10,7 +10,7 @@ export default async function NotFound() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">
-      <h1 className="text-6xl font-bold">404 43534</h1>
+      <h1 className="text-6xl font-bold">404</h1>
       <p className="text-xl text-gray-600 mb-8 mt-2">{t("notfound.message")}</p>
       <Link
         href={`/${locale}`}
