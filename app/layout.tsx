@@ -5,6 +5,7 @@ import PageUpButton from "@/components/ui/PageUpButton";
 import { Metadata } from "next";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import TikTokPixel from "@/components/TikTokPixel";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -35,8 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={lexend.className} suppressHydrationWarning>
       <body>
-        {/* <MetaPixel pixelId="1766535074073515" /> */}
-        <GoogleTagManager gtmId="GTM-PNHZ8DPL" />        
+        <GoogleAnalytics measurementId="G-7NMTE5LZNR" />
+        <GoogleTagManager gtmId="GTM-PNHZ8DPL" />
         <TikTokPixel pixelId="D4U48FJC77U9L5PJ11G0" />
         {children}
         <PageUpButton />
