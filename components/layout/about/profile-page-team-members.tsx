@@ -40,14 +40,15 @@ const ProfilePgTeamMember: React.FC<ProfilePgTeamMemberProps> = ({
       <div
         onClick={() => setIsOpen(true)}
         style={{ backgroundImage: `url(${bg_image})` }}
-        className="relative cursor-pointer group w-[301px] h-[350px] bg-cover bg-no-repeat bg-center pt-5"
+        className="relative cursor-pointer group w-[301px] h-[350px] bg-cover bg-no-repeat bg-center pt-5 overflow-hidden"
       >
         <Image
           src={image}
           alt={name}
-          width={301}
-          height={350}
-          className="rounded-lg absolute -top-5 w-full h-[370px] transition-transform duration-300 group-hover:scale-105"
+          fill
+          // width={301}
+          // height={350}
+          className="rounded-lg absolute -top-5 w-full h-[370px] transition-transform duration-300 group-hover:scale-105 px-5 pt-2"
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-3xl transition-all flex items-center justify-center text-white">
           <div>

@@ -34,9 +34,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <Image
           src={image || "/assets/images/profile/avatar.jpg"}
           alt={name}
-          width={301}
-          height={350}
-          className="rounded-lg object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          fill
+          // width={301}
+          // height={350}
+          className="rounded-lg object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 px-5 pt-2"
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-3xl transition-all flex items-center justify-center text-white">
           <div>

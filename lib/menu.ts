@@ -20,10 +20,10 @@ export const menuItems = [
       },
     ],
   },
-  {
-    label: "Oracle Cloud",
-    link: "/oracle-cloud",
-  },
+  // {
+  //   label: "Oracle Cloud",
+  //   link: "/oracle-cloud",
+  // },
   {
     label: "Digital Services",
     link: "/digital-services",
