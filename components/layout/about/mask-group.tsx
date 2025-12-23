@@ -16,7 +16,7 @@ const testimonials = [
     text: "Ik ben erg tevreden met de website die het team voor mij heeft gebouwd en de ondersteuning die ik heb ontvangen. Alles werkt perfect, ze kwamen met goede opties om het nog verder te optimaliseren en de samenwerking kan ik zeker aanbevelen. <br><br>Heel erg bedankt voor al jullie werk, ik waardeer het enorm! <br>Reageren<br><br> ❤️1",
     name: "Babylon Logistics",
     // role: "Product Designer",
-    img: "/assets/images/babylonlogisticsinternational.webp",
+    img: "/assets/images/babylon.svg",
   },
   {
     text: "Over the last 2 years, I worked with IT Solutions Worldwide BV on implementing Oracle Cloud in The Netherlands (Albelli) and France (MonAlbum Photo). <br><br>In addition to a great and innovative mind, they are possibly the most hardworking, professional and conscientious team I have ever worked with. If you are looking for sustainable solutions in Supply Chain Management, look no further than IT Solutions Worldwide BV. Their knowledge of issues is unquestionably and the ability to meet the interests of several stakeholders is impeccable.",
