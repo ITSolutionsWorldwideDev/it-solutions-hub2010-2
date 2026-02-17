@@ -26,16 +26,15 @@ export default async function CreativeTeamSection({ locale }: { locale: string }
       bio: "Zeb Raja is the co-founder and Head of Marketing at IT Solutions Hub 2010, responsible for shaping the company's brand, digital presence, and growth strategy. With a background spanning transport, IT, and digital marketing, he combines operational understanding with sharp commercial insight to drive high-impact marketing initiatives.",
       bio2: "Zeb leads the company’s global marketing direction—building strong client relationships, developing data-driven campaigns, and positioning the company as a forward-thinking provider of AI, tech, and outsourcing solutions. His experience across international markets helps the brand connect with diverse audiences and scale effectively.",
     },
-    {
-      name: "Turab",
-      role: "HR Manager",
-      department: "HR",
-      bg_image: "/assets/images/profile/member_bg_yellow.png",
-      image: "/assets/images/profile/turab.png",
-      bio: "Turab Ahmad manages HR operations for IT Solutions Hub Pakistan and supports HR processes for IT Solutions Hub 2010 in the Netherlands. He specializes in recruitment, HR policy development, performance management, employee documentation, and legal compliance.",
-      bio2: "He also led ISO 9001:2015 & ISO 27001:2022 documentation for the company. Turab is committed to building a strong, professional, and globally aligned workforce.",
-    },
-
+    // {
+    //   name: "Turab",
+    //   role: "HR Manager",
+    //   department: "HR",
+    //   bg_image: "/assets/images/profile/member_bg_yellow.png",
+    //   image: "/assets/images/profile/turab.png",
+    //   bio: "Turab Ahmad manages HR operations for IT Solutions Hub Pakistan and supports HR processes for IT Solutions Hub 2010 in the Netherlands. He specializes in recruitment, HR policy development, performance management, employee documentation, and legal compliance.",
+    //   bio2: "He also led ISO 9001:2015 & ISO 27001:2022 documentation for the company. Turab is committed to building a strong, professional, and globally aligned workforce.",
+    // },
     {
       name: "Amer",
       role: "Senior Full Stack Developer",

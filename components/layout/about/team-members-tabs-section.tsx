@@ -6,15 +6,15 @@ import ProfilePgTeamMember from "./profile-page-team-members";
 
 const TeamMembersTabsSection: NextPage = () => {
   const team = [
-    {
-      name: "Ritban",
-      role: "Business Consultant",
-      bg_image: "/assets/images/profile/member_bg_red.png",
-      image: "/assets/images/profile/avatar.png",
-      // /assets/images/profile/team_member_1.png
-      bio: "Ritban helps our clients turn complex supply chain, logistics, and e-commerce challenges into smart, actionable solutions. With more than 7 years of experience, including ERP implementations on Oracle Cloud, NetSuite, and Oracle mobile apps, he ensures projects are efficient, user-friendly, and deliver real business impact.",
-      bio2: "",
-    },
+    // {
+    //   name: "Ritban",
+    //   role: "Business Consultant",
+    //   bg_image: "/assets/images/profile/member_bg_red.png",
+    //   image: "/assets/images/profile/avatar.png",
+    //   // /assets/images/profile/team_member_1.png
+    //   bio: "Ritban helps our clients turn complex supply chain, logistics, and e-commerce challenges into smart, actionable solutions. With more than 7 years of experience, including ERP implementations on Oracle Cloud, NetSuite, and Oracle mobile apps, he ensures projects are efficient, user-friendly, and deliver real business impact.",
+    //   bio2: "",
+    // },
 
     {
       name: "Tasmia",
@@ -42,7 +42,7 @@ const TeamMembersTabsSection: NextPage = () => {
       department: "Supply Chain",
       bg_image: "/assets/images/profile/member_bg_blue.png",
       // image: "/assets/images/profile/team_member_5.png",
-      image: "/assets/images/profile/business-women.png",
+      image: "/assets/images/profile/Cheila.png",
       bio: "Cheila is an ambitious supply chain consultant passionate about innovation, lean management, and continuous improvement. Focused on delivering sustainable growth and enhancing team performance, she helps clients achieve smarter, more efficient, and high-quality results.",
       bio2: "",
     },
@@ -76,26 +76,26 @@ const TeamMembersTabsSection: NextPage = () => {
       bio: "Hareesh is a technology-driven professional with more than 14 years of experience leading digital transformation across Oil & Gas, Construction, Retail, and Hospitality. Passionate about innovation, he leverages his expertise to implement IT solutions that streamline operations, boost efficiency, and create real impact for organizations.",
       bio2: "",
     },
-    {
-      name: "Ammar",
-      role: "PPC specialist",
-      department: "IT Specialist",
-      bg_image: "/assets/images/profile/member_bg_purple.png",
-      // image: "/assets/images/profile/team_member_4.png",
-      image: "/assets/images/profile/ammar.png",
-      bio: "Ammar Ahmed is an AI-Empowered Full-Stack Marketing Specialist with over 5+ years of proven experience dedicated to driving high-velocity growth and ensuring 100% client satisfaction to scale ITSolutions globally. He achieves this by unifying organic authority and paid acquisition channels (Meta, Google, LinkedIn, TikTok, Snapchat) through technical mastery of MarTech Automation—expertly implementing Go High Level (GHL) ,N8N to engineer complex sales funnels and accelerate MQL-to-SQL conversion—and Data & AI Integration, utilizing Python for strategic Data Scraping and leveraging LLMs/Generative AI for continuous optimization.",
-      bio2: "His approach is grounded in Complete Analytics, providing comprehensive ROI measurement and business optimization  through Seo strategies  & Google Analytics (GA4), Zoho Analytics, and HubSpot Analytics.",
-    },
-    {
-      name: "Haris",
-      role: "Data Entry Specialist",
-      department: "IT Specialist",
-      bg_image: "/assets/images/profile/member_bg_purple.png",
-      // image: "/assets/images/profile/team_member_4.png",
-      image: "/assets/images/profile/avatar.png",
-      bio: "Haris is a dedicated data entry specialist committed to accuracy, efficiency, and perfection. With a keen eye for detail, he ensures data is meticulously organized and error-free, supporting smooth operations and informed decision-making for clients.",
-      bio2: "",
-    },
+    // {
+    //   name: "Ammar",
+    //   role: "PPC specialist",
+    //   department: "IT Specialist",
+    //   bg_image: "/assets/images/profile/member_bg_purple.png",
+    //   // image: "/assets/images/profile/team_member_4.png",
+    //   image: "/assets/images/profile/ammar.png",
+    //   bio: "Ammar Ahmed is an AI-Empowered Full-Stack Marketing Specialist with over 5+ years of proven experience dedicated to driving high-velocity growth and ensuring 100% client satisfaction to scale ITSolutions globally. He achieves this by unifying organic authority and paid acquisition channels (Meta, Google, LinkedIn, TikTok, Snapchat) through technical mastery of MarTech Automation—expertly implementing Go High Level (GHL) ,N8N to engineer complex sales funnels and accelerate MQL-to-SQL conversion—and Data & AI Integration, utilizing Python for strategic Data Scraping and leveraging LLMs/Generative AI for continuous optimization.",
+    //   bio2: "His approach is grounded in Complete Analytics, providing comprehensive ROI measurement and business optimization  through Seo strategies  & Google Analytics (GA4), Zoho Analytics, and HubSpot Analytics.",
+    // },
+    // {
+    //   name: "Haris",
+    //   role: "Data Entry Specialist",
+    //   department: "IT Specialist",
+    //   bg_image: "/assets/images/profile/member_bg_purple.png",
+    //   // image: "/assets/images/profile/team_member_4.png",
+    //   image: "/assets/images/profile/avatar.png",
+    //   bio: "Haris is a dedicated data entry specialist committed to accuracy, efficiency, and perfection. With a keen eye for detail, he ensures data is meticulously organized and error-free, supporting smooth operations and informed decision-making for clients.",
+    //   bio2: "",
+    // },
     {
       name: "Priyanka",
       role: "Data Analyst",
@@ -122,19 +122,19 @@ const TeamMembersTabsSection: NextPage = () => {
       department: "IT Specialist",
       bg_image: "/assets/images/profile/member_bg_purple.png",
       // image: "/assets/images/profile/team_member_4.png",
-      image: "/assets/images/profile/avatar.png",
+      image: "/assets/images/profile/nisar.png",
       bio: "",
       bio2: "",
     },
-    {
-      name: "Adil",
-      role: "IT Application Manager",
-      department: "IT Manager",
-      bg_image: "/assets/images/profile/member_bg_green.png",
-      image: "/assets/images/profile/adil.png",
-      bio: "Adil is a technology-driven professional with more than 14 years of experience leading digital transformation across Oil & Gas, Construction, Retail, and Hospitality. Passionate about innovation, he leverages his expertise to implement IT solutions that streamline operations, boost efficiency, and create real impact for organizations.",
-      bio2: "",
-    },
+    // {
+    //   name: "Adil",
+    //   role: "IT Application Manager",
+    //   department: "IT Manager",
+    //   bg_image: "/assets/images/profile/member_bg_green.png",
+    //   image: "/assets/images/profile/adil.png",
+    //   bio: "Adil is a technology-driven professional with more than 14 years of experience leading digital transformation across Oil & Gas, Construction, Retail, and Hospitality. Passionate about innovation, he leverages his expertise to implement IT solutions that streamline operations, boost efficiency, and create real impact for organizations.",
+    //   bio2: "",
+    // },
   ];
 
   const tabs = [
