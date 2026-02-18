@@ -15,7 +15,15 @@ const TeamMembersTabsSection: NextPage = () => {
     //   bio: "Ritban helps our clients turn complex supply chain, logistics, and e-commerce challenges into smart, actionable solutions. With more than 7 years of experience, including ERP implementations on Oracle Cloud, NetSuite, and Oracle mobile apps, he ensures projects are efficient, user-friendly, and deliver real business impact.",
     //   bio2: "",
     // },
-
+    {
+      name: "Nisar",
+      role: "Digital Marketer",
+      department: "IT Specialist",
+      bg_image: "/assets/images/profile/member_bg_purple.png",
+      image: "/assets/images/profile/nisar.png",
+      bio: "",
+      bio2: "",
+    },
     {
       name: "Tasmia",
       role: "Back-Office Recruiter",
@@ -45,6 +53,15 @@ const TeamMembersTabsSection: NextPage = () => {
       image: "/assets/images/profile/Cheila.png",
       bio: "Cheila is an ambitious supply chain consultant passionate about innovation, lean management, and continuous improvement. Focused on delivering sustainable growth and enhancing team performance, she helps clients achieve smarter, more efficient, and high-quality results.",
       bio2: "",
+    },
+    {
+      name: "Mahvia",
+      role: "Full Stack Developer",
+      department: "IT Specialist",
+      bg_image: "/assets/images/profile/member_bg_blue.png",
+      image: "/assets/images/profile/Cheila.png",
+      bio: "Full Stack Developer with experience building complete web applications from frontend to backend. Designs responsive, user-friendly interfaces and develops secure, scalable server-side solutions.",
+      bio2: "Works with databases, APIs, and authentication systems to create seamless digital experiences. Focused on writing clean, maintainable code and following best development practices. Passionate about solving real-world problems through efficient and innovative software solutions.",
     },
     {
       name: "Jenny",
@@ -115,16 +132,6 @@ const TeamMembersTabsSection: NextPage = () => {
       image: "/assets/images/profile/avatar.png",
       bio: "Usama is a dynamic Machine Learning Engineer with six years of experience turning complex data into actionable business insights. Skilled in Python programming, machine learning, AI, and advanced data visualization, he specializes in transforming raw data into strategies that drive innovation and growth.",
       bio2: "With a proven track record of managing end-to-end analytical projects, Usama collaborates cross-functionally to optimize processes, enhance efficiency, and unlock new revenue streams. His expertise in applying cutting-edge technologies helps organizations make data-driven decisions and shape long-term strategic direction.",
-    },
-    {
-      name: "Nisar",
-      role: "Digital Marketer",
-      department: "IT Specialist",
-      bg_image: "/assets/images/profile/member_bg_purple.png",
-      // image: "/assets/images/profile/team_member_4.png",
-      image: "/assets/images/profile/nisar.png",
-      bio: "",
-      bio2: "",
     },
     // {
     //   name: "Adil",
