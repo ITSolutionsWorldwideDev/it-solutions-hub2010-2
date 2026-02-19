@@ -59,7 +59,7 @@ const TeamMembersTabsSection: NextPage = () => {
       role: "Full Stack Developer",
       department: "IT Specialist",
       bg_image: "/assets/images/profile/member_bg_blue.png",
-      image: "/assets/images/profile/Cheila.png",
+      image: "/assets/images/profile/Mahvia.png",
       bio: "Full Stack Developer with experience building complete web applications from frontend to backend. Designs responsive, user-friendly interfaces and develops secure, scalable server-side solutions.",
       bio2: "Works with databases, APIs, and authentication systems to create seamless digital experiences. Focused on writing clean, maintainable code and following best development practices. Passionate about solving real-world problems through efficient and innovative software solutions.",
     },

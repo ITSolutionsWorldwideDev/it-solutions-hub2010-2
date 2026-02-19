@@ -47,7 +47,7 @@ export default function NavbarHome() {
           </Link>
         </div>
 
-        <div className="xl:hidden">
+        <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none cursor-pointer">
             <svg
               className="h-6 w-6"
@@ -67,7 +67,7 @@ export default function NavbarHome() {
           </button>
         </div>
 
-        <ul className="hidden xl:flex space-x-6">
+        <ul className="hidden md:flex space-x-6">
           {menuItems.map((item, idx) => (
             <li
               key={idx}
@@ -99,7 +99,7 @@ export default function NavbarHome() {
             </li>
           ))}
         </ul>
-        <div className="hidden xl:block">
+        <div className="hidden md:block">
           <Link href="/contact-us">
             <button className="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors cursor-pointer">
               Contact Us

@@ -48,7 +48,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="xl:hidden">
+          <div className="md:hidden">
             {/* <button onClick={toggleMenu} className="focus:outline-none cursor-pointer">
               <svg
                 className="h-6 w-6"
@@ -94,7 +94,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <ul className="hidden xl:flex space-x-6 z-40">
+          <ul className="hidden md:flex space-x-6 z-40">
             {menuItems.map((item, idx) => (
               <li
                 key={idx}
@@ -130,7 +130,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="hidden xl:block">
+          <div className="hidden md:block">
             {/* <Link href="/supply-health-check-info">
               <button className="bg-[#278083] text-white md:my-2 px-4 py-2 rounded-md hover:bg-[#278083] transition mr-2 cursor-pointer">
                 Free SCM Check

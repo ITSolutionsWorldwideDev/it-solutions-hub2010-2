@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const certifications = [
   {
@@ -73,15 +74,16 @@ export default function Certifications() {
           {certifications.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="">
-
                 <div className=" items-center gap-4">
-                  <Image
-                    src={item.img}
-                    width={100}
-                    height={100}
-                    alt=""
-                    className="rounded-full object-cover"
-                  />
+                  <Link href="/iso-certified">
+                    <Image
+                      src={item.img}
+                      width={100}
+                      height={100}
+                      alt=""
+                      className="rounded-full object-cover"
+                    />
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -103,7 +105,6 @@ export default function Certifications() {
             ></button>
           ))}
         </div>
-
       </div>
     </div>
   );
