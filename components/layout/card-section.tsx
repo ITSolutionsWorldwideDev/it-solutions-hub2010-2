@@ -18,14 +18,14 @@ const cards = [
     phone: "+31107660786",
     phoneLink: "https://wa.me/31107660786",
     address: "Mandenmakerstraat 100C, 3194DG, Hoogvliet Rotterdam",
-    image: "/assets/images/career3.png",
+    image: "/assets/images/1 2.webp",
   },
   {
     title: "Our Partner Office",
     phone: "+923187192053",
     phoneLink: "https://wa.me/923187192053",
     address: "Seventeen Square Block A Multi Gardens B-17 Islamabad, Pakistan",
-    image: "/assets/images/career4.png",
+    image: "/assets/images/2 1.webp",
   },
 ];
 
