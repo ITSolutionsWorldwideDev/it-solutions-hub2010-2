@@ -849,10 +849,21 @@ export function PinnedProgressSection() {
         }
       });
 
+      // --- SAFE GUARD START: prevents production crash when SVG path
+      // isn't ready/visible yet (hidden lg:block, hydration timing) ---
       if (!svgRef.current) return;
       const svgPath = svgRef.current.querySelector("path");
       if (!svgPath) return;
-      const pathLength = svgPath.getTotalLength();
+
+      let pathLength = 0;
+      try {
+        pathLength = svgPath.getTotalLength();
+      } catch (e) {
+        console.warn("PinnedProgressSection: getTotalLength failed, skipping path animation", e);
+        return;
+      }
+      if (!pathLength) return;
+      // --- SAFE GUARD END ---
 
       gsap.set(svgPath, {
         strokeDasharray: pathLength,
@@ -899,6 +910,9 @@ export function PinnedProgressSection() {
               src={slide.image}
               alt={slide.industry}
               className="w-full h-[90%] rounded object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
             />
           </div>
           <div className="text-container w-full md:w-1/2 h-full flex flex-col items-start justify-center p-3 md:p-12 lg:pl-20 xl:pl-40 z-20">

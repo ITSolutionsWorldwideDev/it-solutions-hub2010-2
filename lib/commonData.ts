@@ -231,7 +231,7 @@ export const industriesData = [
     id: 1,
     number: "01",
     industry: "Manufacturing",
-    image: "assets/images/industries/manufacturing.jpg",
+    image: "/assets/images/industries/manufacturing.jpg",
     heading: "Industry-Specific Expertise",
     content:
       "We help manufacturing industries optimize operations through tailored ERP solutions, supply chain management, automation, and IT support. Our services streamline production workflows, enhance inventory control, improve procurement efficiency, and integrate smart technologies to boost productivity and reduce costs.",
@@ -241,7 +241,7 @@ export const industriesData = [
     id: 2,
     number: "02",
     industry: "Healthcare",
-    image: "assets/images/industries/healthcare.jpg",
+    image: "/assets/images/industries/healthcare.jpg",
     heading: "Industry-Specific Expertise",
     content:
       "ITWW supports healthcare providers with secure IT infrastructure, digital health solutions, and patient data management systems. Our expertise in telemedicine, electronic health records (EHR), and AI-driven diagnostics enables medical professionals to enhance patient care while maintaining compliance with industry regulations.",
@@ -251,7 +251,7 @@ export const industriesData = [
     id: 3,
     number: "03",
     industry: "Finance",
-    image: "assets/images/industries/it.jpg",
+    image: "/assets/images/industries/it.jpg",
     heading: "Industry-Specific Expertise",
     content:
       "In the fast-evolving finance sector, we provide robust cybersecurity, blockchain integration, and AI-powered analytics to safeguard transactions and optimize financial operations. Our FinTech solutions help organizations improve risk management, automate processes, and enhance customer experiences.",
@@ -261,7 +261,7 @@ export const industriesData = [
     id: 4,
     number: "04",
     industry: "Supply Chain",
-    image: "assets/images/industries/logistics.jpg",
+    image: "/assets/images/industries/logistics.jpg",
     heading: "Industry-Specific Expertise",
     content:
       "We help businesses in logistics and supply chain management with real-time inventory tracking, demand forecasting, and AI-driven route optimization. Our digital solutions improve operational visibility, reduce costs, and ensure seamless supply chain operations.",
@@ -271,7 +271,7 @@ export const industriesData = [
     id: 5,
     number: "05",
     industry: "Software Development",
-    image: "assets/images/industries/e-commerce.jpg",
+    image: "/assets/images/industries/e-commerce.jpg",
     heading: "Industry-Specific Expertise",
     content:
       "From custom software solutions to enterprise applications, ITWW delivers scalable and high-performance software tailored to your business needs. Our expertise in cloud computing, AI, and agile development ensures that our clients receive innovative and future-ready software solutions.",
