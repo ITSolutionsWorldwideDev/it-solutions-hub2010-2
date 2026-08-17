@@ -4,8 +4,13 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const data = await req.json();
-    const { name, email, subject, message } = data;
+    // 1. Extract form data sent from the client
+    const formData = await req.formData();
+    const name = formData.get("name")?.toString();
+    const email = formData.get("email")?.toString();
+    const subject = formData.get("subject")?.toString();
+    const message = formData.get("message")?.toString();
+    const captchaToken = formData.get("g-recaptcha-response")?.toString();
 
     if (!email) {
       return NextResponse.json(
@@ -14,6 +19,31 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // 2. Verify Google reCAPTCHA token
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    
+    // If you want to enforce reCAPTCHA strictly:
+    if (secretKey) {
+      if (!captchaToken) {
+        return NextResponse.json(
+          { error: "Please complete the reCAPTCHA verification." },
+          { status: 400 }
+        );
+      }
+
+      const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaToken}`;
+      const recaptchaRes = await fetch(verificationUrl, { method: "POST" });
+      const recaptchaResult = await recaptchaRes.json();
+
+      if (!recaptchaResult.success) {
+        return NextResponse.json(
+          { error: "Robot verification failed. Please try again." },
+          { status: 400 }
+        );
+      }
+    }
+
+    // 3. Setup Nodemailer Transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -42,9 +72,10 @@ export async function POST(req: NextRequest) {
         <p><strong>Subject:</strong> ${subject || "Not selected"}</p>
         <br/>
         <p><strong>Message:</strong> ${message || "Not selected"}</p>
-        `,
+      `,
     };
 
+    // 4. Send Email
     await transporter.sendMail(mailBody);
 
     return NextResponse.json({
@@ -54,16 +85,13 @@ export async function POST(req: NextRequest) {
     });
   } catch (err: any) {
     console.error("Email error:", err);
-    return NextResponse.json({
-      ok: false,
-      success: false,
-      error: err.message || "Something went wrong.",
-    });
+    return NextResponse.json(
+      {
+        ok: false,
+        success: false,
+        error: err.message || "Something went wrong.",
+      },
+      { status: 500 }
+    );
   }
 }
-
-/* 
-,
-      { status: 500 }
-    
-*/

@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import ReCAPTCHA from "react-google-recaptcha";
 
 type Props = {
   translations: Record<string, string>;
@@ -18,7 +19,6 @@ type Props = {
 
 export default function ContactCardClient({ translations }: Props) {
   const t = translations;
-
   const router = useRouter();
 
   const [status, setStatus] = useState<null | "success" | "error">(null);
@@ -28,6 +28,13 @@ export default function ContactCardClient({ translations }: Props) {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  
+  // Safe environment site key check
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  // reCAPTCHA state tracking
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaError, setCaptchaError] = useState(false);
 
   const [sending, setSending] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
@@ -37,10 +44,17 @@ export default function ContactCardClient({ translations }: Props) {
       const timer = setTimeout(() => router.push("/"), 8000);
       return () => clearTimeout(timer);
     }
-  }, [showModal]);
+  }, [showModal, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Verify if CAPTCHA was solved only if siteKey exists
+    if (siteKey && !captchaToken && !captchaError) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
     setSending(true);
 
     try {
@@ -49,6 +63,10 @@ export default function ContactCardClient({ translations }: Props) {
       formData.append("email", email);
       formData.append("subject", subject);
       formData.append("message", message);
+      
+      if (captchaToken) {
+        formData.append("g-recaptcha-response", captchaToken);
+      }
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -65,6 +83,7 @@ export default function ContactCardClient({ translations }: Props) {
       setEmail("");
       setSubject("");
       setMessage("");
+      setCaptchaToken(null);
     } catch (err: any) {
       setStatus("error");
       setResponseMessage(err.message);
@@ -86,27 +105,12 @@ export default function ContactCardClient({ translations }: Props) {
             <button
               className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
               onClick={() => router.push("/")}
-            >Go Now</button>
-          </div>
-        </div>
-      )}
-      {/* {showModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
-            <h2 className="text-xl font-semibold mb-3">{t.thanks}</h2>
-            <p>{t.messageSent}</p>
-
-            <p className="text-sm text-gray-500 mt-2">{t.redirecting}</p>
-
-            <button
-              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-              onClick={() => router.push("/")}
             >
-              {t.goNow}
+              Go Now
             </button>
           </div>
         </div>
-      )} */}
+      )}
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="bg-white rounded-lg shadow-xl flex flex-wrap lg:flex-nowrap">
@@ -218,6 +222,8 @@ export default function ContactCardClient({ translations }: Props) {
                     type="text"
                     id="name"
                     name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
                     required
                   />
@@ -233,6 +239,8 @@ export default function ContactCardClient({ translations }: Props) {
                     type="email"
                     id="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
                     required
                   />
@@ -249,6 +257,8 @@ export default function ContactCardClient({ translations }: Props) {
                   type="text"
                   id="subject"
                   name="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
                   required
                 />
@@ -264,15 +274,36 @@ export default function ContactCardClient({ translations }: Props) {
                   id="message"
                   rows={5}
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#278083] transition"
                   required
                 ></textarea>
               </div>
+
+              {/* Google reCAPTCHA Widget with Safe Fallback */}
+              <div className="flex flex-col items-center lg:items-start space-y-2">
+                {siteKey && !captchaError ? (
+                  <ReCAPTCHA
+                    sitekey={siteKey}
+                    onChange={(token) => setCaptchaToken(token)}
+                    onErrored={() => setCaptchaError(true)}
+                  />
+                ) : (
+                  <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg w-full">
+                    <p>
+                      ⚠️ reCAPTCHA is not configured or failed to load.
+                    </p>
+                  </div>
+                )}
+              </div>
+
               <button
                 type="submit"
-                className="w-full md:w-auto bg-[#278083] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1f6f69] transition duration-300 transform hover:scale-105 cursor-pointer"
+                disabled={sending}
+                className="w-full md:w-auto bg-[#278083] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1f6f69] transition duration-300 transform hover:scale-105 cursor-pointer disabled:opacity-50"
               >
-                {t.sendmessage}
+                {sending ? (t.sending || "Sending...") : t.sendmessage}
               </button>
             </form>
 
@@ -284,7 +315,7 @@ export default function ContactCardClient({ translations }: Props) {
 
             {status === "error" && (
               <p className="mt-4 text-red-600 font-semibold">
-                Something went wrong. Please try again.
+                {responseMessage || "Something went wrong. Please try again."}
               </p>
             )}
           </div>
