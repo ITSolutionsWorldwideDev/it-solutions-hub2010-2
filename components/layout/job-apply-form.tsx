@@ -5,6 +5,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Loader from "@/components/ui/Loader";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic"; // 1. Import dynamic from next
+
+// 2. Load ReCAPTCHA dynamically with SSR disabled to prevent client-side exception
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+});
 
 type JobApplyFormProps = {
   translations: {
@@ -29,9 +35,11 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
   const [message, setMessage] = useState("");
   const [resume, setResume] = useState<File | null>(null);
   const [jobs, setJobs] = useState<any[]>([]);
+  const [captchaToken, setCaptchaToken] = useState("");
 
   const [sending, setSending] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
@@ -86,6 +94,11 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
     setCategoryTitle(selectedJob ? selectedJob.title : "");
   };
 
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token || "");
+    setErrors((prev) => ({ ...prev, captcha: "" }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     e.persist();
@@ -94,6 +107,16 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
 
     if (!hearAbout || !categoryId || !resume) {
       setResponseMessage("Please fill in all required fields.");
+      setSending(false);
+      return;
+    }
+
+    if (!captchaToken) {
+      setErrors((prev) => ({
+        ...prev,
+        captcha: "Please complete the CAPTCHA verification",
+      }));
+      setResponseMessage("Please complete the CAPTCHA verification.");
       setSending(false);
       return;
     }
@@ -115,6 +138,7 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
       formData.append("job_category_id", categoryId);
       formData.append("job_category", categoryTitle);
       formData.append("resume", resume, resume.name);
+      formData.append("captchaToken", captchaToken);
 
       const res = await fetch("/api/job-applications", {
         method: "POST",
@@ -141,6 +165,7 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
       setHearAbout("");
       setMessage("");
       setResume(null);
+      setCaptchaToken("");
     } catch (err: any) {
       setResponseMessage(err.message || "Something went wrong.");
     } finally {
@@ -328,6 +353,23 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-teal-500 focus:border-teal-500 focus:z-10 sm:text-sm mt-2"
               />
+            </div>
+
+            {/* Google reCAPTCHA v2 Component Integration */}
+            <div className="pt-3">
+              {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                />
+              ) : (
+                <p className="text-sm text-red-500">
+                  CAPTCHA is not configured. Please contact site admin.
+                </p>
+              )}
+              {errors.captcha && (
+                <p className="mt-1 text-sm text-red-500">{errors.captcha}</p>
+              )}
             </div>
 
             <div>
