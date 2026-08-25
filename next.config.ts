@@ -1,10 +1,6 @@
 // next.config.js
-import type { NextConfig } from "next";
-// const { i18n } = require('./next-i18next.config');
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  // i18n,
+/** @type {import('next.config.next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   experimental: {
     // enable App Router features if needed
@@ -13,6 +9,15 @@ const nextConfig: NextConfig = {
     // ✅ Disable ESLint during builds
     ignoreDuringBuilds: true,
   },
+  // Images ke remote domains ki configuration bhi यहीं add kar dein jo pichla error tha:
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

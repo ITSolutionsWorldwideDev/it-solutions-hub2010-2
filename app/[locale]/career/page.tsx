@@ -1,46 +1,78 @@
-// app/[locale]/logistics/career/page.tsx
-
+// app/[locale]/career/page.tsx
 import initServerI18n from "@/utils/serverTranslation";
-import ImageSection from "@/components/layout/image-section";
-import ImageSection2 from "@/components/layout/image-section-2";
-import BannerSection from "@/components/layout/banner-section";
+import { Metadata } from "next";
 
-import CardSection from "@/components/layout/card-section";
+// Correct imports matching components/layout/ folder paths
+import CareerHeroSection from "@/components/layout/career-hero-section";
+import CtaSplitSection from "@/components/layout/cta-split-section";
+import CareerGrowthSection from "@/components/layout/career-growth-section";
 import CareerJobsSection from "@/components/layout/career-jobs";
+import CareerOpenApplication from "@/components/layout/career-open-application";
 
-export default async function Career({
-  params,
-}: {
-  params: Promise<{ locale: string; }>;
+// ISR revalidation time
+export const revalidate = 3600;
+export const dynamic = "force-static";
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  return {
+    title: {
+      absolute: "IT & Supply Chain Jobs in Netherlands | Apply Now",
+    },
+    description:
+      "Looking for IT, supply chain or digital marketing jobs in the Netherlands? Explore career opportunities at IT Solutions Worldwide and grow with us.",
+  };
+}
+
+export default async function Career(props: {
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const params = await props.params;
+  const { locale } = params;
 
   const i18nInstance = await initServerI18n(locale);
   const t = await i18nInstance.getFixedT(locale, "common");
 
-  const slides = [
-    {
-      backgroundImage: "/assets/images/career1.png",
-      heading: t("career.heading_1"),
-    },
-  ];
-
   return (
     <div>
-      <BannerSection slides={slides} />
-      <ImageSection
-        heading={t("career.heading_2")}
-        text={t("career.text_2")}
-        imageUrl="/assets/images/career2.png"
+      {/* CAREER HERO */}
+      <CareerHeroSection
+        eyebrow="Join Our Team"
+        heading="Build Your Career. Make Work Matter."
+        subtext="Join a global team helping businesses work smarter, move faster, and grow further."
+        tags={[
+          "Global Team",
+          "International Clients",
+          "Growing Careers",
+          "Real Responsibility",
+        ]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Careers" },
+        ]}
+        backgroundImage="/assets/images/career/c_bg.webp"
       />
-      <ImageSection2
-        heading={t("career.heading_3")}
-        // subtitle={t("career.subtitle_2")}
-        text={t("career.text_3")}
-        imageUrl="/assets/images/career3.png"
+
+      {/* CTA SPLIT SECTION */}
+      <CtaSplitSection
+        eyebrow="Our Work · Portfolio"
+        heading="Let's Build Something Exceptional Together."
+        highlightWord="Exceptional"
+        subtext="Tell us about your project. We'll respond within one business day with a tailored proposal."
+        imageUrl="/assets/images/career/c-bg1.webp"
+        imageAlt="Team collaborating on a project"
+        overlayText="Career Open."
       />
-      <CardSection heading={t('career.heading_4')} text={t('career.text_4')} />
+
+      {/* CAREER GROWTH SECTION */}
+      <CareerGrowthSection />
+
+      {/* JOBS SECTION */}
       <CareerJobsSection />
+
+      {/* OPEN APPLICATION SECTION */}
+      <CareerOpenApplication />
     </div>
   );
 }
