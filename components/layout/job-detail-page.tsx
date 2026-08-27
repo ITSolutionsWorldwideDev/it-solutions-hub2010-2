@@ -757,7 +757,7 @@ export default function JobDetailPage({
           </div>
         </div>
 
-        {/* ============ FULL-WIDTH CENTERED RELATED CARDS SECTION ============ */}
+   {/* ============ FULL-WIDTH CENTERED RELATED CARDS SECTION ============ */}
 
         <div className="mt-20 pt-12 border-t border-gray-200/60 w-full flex flex-col items-center">
           <div className="text-center mb-8">
@@ -771,103 +771,74 @@ export default function JobDetailPage({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1000px]">
-            {displayCards.map((rj) => {
-              // ⚠️ FIX: pehle external check sirf isExternalLink flag +
-              // "http" wale externalUrl pe hota tha, lekin ab hum apni
-              // DB wali jobs isExternalLink: false ke sath bhej rahe
-              // hain, isliye wo hamesha internal (apne hub domain) pe
-              // hi jayengi — /[locale]/career/[slug].
-              const isExternal =
-                rj.isExternalLink === true &&
-                !!rj.externalUrl?.startsWith("http");
-
-              const targetUrl = isExternal
-                ? (rj.externalUrl as string)
-                : `/${locale}/career/${rj.slug}`;
-
-              return (
-                <div
-                  key={rj.slug}
-                  className="bg-white border border-gray-200/70 rounded-2xl p-5 flex flex-col justify-between hover:border-[#1C8C93] transition shadow-sm w-full"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex gap-1.5">
-                        {rj.department && (
-                          <span className="text-[10px] font-semibold px-2 py-0.5 bg-[#EEF8F7] text-[#1C8C93] rounded-full">
-                            {rj.department}
-                          </span>
-                        )}
-
-                        {rj.level && (
-                          <span className="text-[10px] font-semibold px-2 py-0.5 bg-[#F3E8FF] text-[#7E22CE] rounded-full">
-                            {rj.level}
-                          </span>
-                        )}
-                      </div>
-
-                      {rj.postedAgo && (
-                        <span className="text-[10px] text-gray-400">
-                          {rj.postedAgo}
-                        </span>
-                      )}
-                    </div>
-
-                    <h4 className="text-sm font-bold text-[#06282C] mb-2">
-                      {rj.title}
-                    </h4>
-
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
-                        {rj.location}
+            {[
+              {
+                title: "SEO Specialist",
+                department: "Marketing",
+                level: "Mid",
+                location: "Remote",
+                workType: "Full-time",
+                url: "https://www.itsolutionshub2010.com/en/career/seo-specialist",
+              },
+              {
+                title: "Junior Graphic Designer",
+                department: "Design",
+                level: "Junior",
+                location: "Remote",
+                workType: "Full-time",
+                url: "https://www.itsolutionshub2010.com/en/career/junior-graphic-designer",
+              },
+              {
+                title: "Full Stack Developer (PERN)",
+                department: "Engineering",
+                level: "Mid",
+                location: "Remote",
+                workType: "Full-time",
+                url: "https://www.itsolutionshub2010.com/en/career/full-stack-developer-pern",
+              },
+            ].map((rj) => (
+              <div
+                key={rj.url}
+                className="bg-white border border-gray-200/70 rounded-2xl p-5 flex flex-col justify-between hover:border-[#1C8C93] transition shadow-sm w-full"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex gap-1.5">
+                      <span className="text-[10px] font-semibold px-2 py-0.5 bg-[#EEF8F7] text-[#1C8C93] rounded-full">
+                        {rj.department}
                       </span>
 
-                      <span>{rj.workType}</span>
+                      <span className="text-[10px] font-semibold px-2 py-0.5 bg-[#F3E8FF] text-[#7E22CE] rounded-full">
+                        {rj.level}
+                      </span>
                     </div>
-
-                    {rj.description && (
-                      <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                        {rj.description}
-                      </p>
-                    )}
-
-                    {rj.skills && rj.skills.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {rj.skills.map((s, i) => (
-                          <span
-                            key={i}
-                            className="text-[10px] font-medium px-2 py-0.5 bg-gray-100 text-gray-600 rounded-full"
-                          >
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
-                  {isExternal ? (
-                    <a
-                      href={targetUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-[#1C8C93] hover:underline flex items-center gap-1 pt-2 border-t border-gray-100"
-                    >
-                      Visit Link
-                      <Globe className="w-3 h-3" />
-                    </a>
-                  ) : (
-                    <Link
-                      href={targetUrl}
-                      className="text-xs font-semibold text-[#1C8C93] hover:underline flex items-center gap-1 pt-2 border-t border-gray-100"
-                    >
-                      View Role
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  )}
+                  <h4 className="text-sm font-bold text-[#06282C] mb-2">
+                    {rj.title}
+                  </h4>
+
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400 mb-3">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {rj.location}
+                    </span>
+
+                    <span>{rj.workType}</span>
+                  </div>
                 </div>
-              );
-            })}
+
+                <a
+                  href={rj.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-[#1C8C93] hover:underline flex items-center gap-1 pt-2 border-t border-gray-100"
+                >
+                  View Role
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
