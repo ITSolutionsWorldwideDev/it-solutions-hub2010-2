@@ -74,6 +74,8 @@ export default function Page() {
     whatYoullDo: parsed.whatYoullDo,
     whatYoullBring: parsed.whatYoullBring,
     niceToHave: parsed.niceToHave,
+        additionalInfo: parsed.additionalInfo, // ⬅️ NEW
+
   });
 } else {
   setJob(baseJob);

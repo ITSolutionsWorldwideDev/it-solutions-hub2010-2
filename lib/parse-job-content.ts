@@ -5,6 +5,7 @@ export interface ParsedJobContent {
   whatYoullDo?: string[];
   whatYoullBring?: string[];
   niceToHave?: string[];
+  additionalInfo?: string[];
 }
 
 function cleanLine(line: string): string {
@@ -28,6 +29,7 @@ export function parseJobContent(raw: string): ParsedJobContent {
     { match: /key responsibilities|what you.?ll do/i, key: "whatYoullDo" },
     { match: /requirements|what you.?ll bring/i, key: "whatYoullBring" },
     { match: /nice to have/i, key: "niceToHave" },
+    { match: /additional information|additional info/i, key: "additionalInfo" },
   ];
 
   const flush = () => {

@@ -43,6 +43,8 @@ export interface JobDetail {
   whatYoullDo?: string[];
   whatYoullBring?: string[];
   niceToHave?: string[];
+  additionalInfo?: string[]; // ⬅️ NEW
+
 
   teamImage?: string;
 
@@ -321,6 +323,11 @@ export default function JobDetailPage({
     job.niceToHave && job.niceToHave.length > 0
   );
 
+  const hasAdditionalInfo = !!(
+  job.additionalInfo && job.additionalInfo.length > 0
+); // ⬅️ NEW
+
+
   const hasKeySkills = !!(
     job.keySkills && job.keySkills.length > 0
   );
@@ -535,6 +542,32 @@ export default function JobDetailPage({
                 </div>
               </section>
             )}
+
+
+
+{hasAdditionalInfo && (
+  <section className="flex gap-4 mb-12">
+    <SectionNumber n={nextNumber()} />
+
+    <div className="flex-1 pt-1.5">
+      <h2 className="text-xl font-bold text-[#06282C] mb-3">
+        Additional Information
+      </h2>
+
+      <div className="space-y-3 mb-4">
+        {job.additionalInfo!.map((p, i) => (
+          <p
+            key={i}
+            className="text-sm text-gray-500 leading-relaxed"
+          >
+            {p}
+          </p>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
 
             <section className="flex gap-4 mb-10">
               <SectionNumber n={nextNumber()} />
