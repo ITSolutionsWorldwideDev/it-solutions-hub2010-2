@@ -23,14 +23,15 @@ export default async function CreativeTeamSection({ locale }: { locale: string }
       bio: "Zeb Raja is the co-founder and Head of Marketing at IT Solutions Hub 2010, responsible for shaping the company's brand, digital presence, and growth strategy. With a background spanning transport, IT, and digital marketing, he combines operational understanding with sharp commercial insight to drive high-impact marketing initiatives.",
       bio2: "Zeb leads the company’s global marketing direction—building strong client relationships, developing data-driven campaigns, and positioning the company as a forward-thinking provider of AI, tech, and outsourcing solutions. His experience across international markets helps the brand connect with diverse audiences and scale effectively.",
     },
-    {
-      name: "Ahmed",
-      role: "HR & Operations Manager",
-      department: "HR",
-      bg_image: "/assets/images/profile/member_bg_yellow.png",
-      image: "/assets/images/profile/ahmed1.png",
-      bio: "As HR & Operations Manager, Ahmed bridges strategic people management with efficient operational execution. He oversees end-to-end talent acquisition, performance management, cross-functional project coordination, and international client communication. Focused on operational excellence and scalable workflows, Ahmed ensures organizational alignment and timely project delivery to drive sustainable business growth.",
-    },
+  {
+  name: "Ahmed",
+  role: "HR & Operations Manager",
+  department: "HR",
+  bg_image: "/assets/images/profile/member_bg_yellow.png",
+  image: "/assets/images/profile/Ahmed1.png", 
+  bio: "As HR & Operations Manager...",
+},
+
     {
       name: "Amer",
       role: "Senior Full Stack Developer",
@@ -43,7 +44,7 @@ export default async function CreativeTeamSection({ locale }: { locale: string }
   ];
 
   return (
-    <div className="w-full relative text-center text-black font-lexend mx-auto py-3 md:py-4 lg:py-6 px-4 md:px-0 lg:px-0">
+    <div className="w-full max-w-7xl relative text-center text-black font-lexend mx-auto my-12 py-3 md:py-4 lg:py-12 px-4 md:px-4 lg:px-5">
       <div className="flex flex-col items-center">
         <div className="text-[32px] md:text-[40px] font-semibold inline-block">
           <span>{t("aboutus.creative_team_heading")}</span>
@@ -51,9 +52,11 @@ export default async function CreativeTeamSection({ locale }: { locale: string }
         <div className="text-xl opacity-[0.6] pt-1">{t("aboutus.creative_team_subheading")}</div>
       </div>
 
-      <section className="flex flex-wrap gap-6 justify-center py-6">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center py-6 w-full">
         {team.map((member) => (
-          <TeamMember key={member.name} {...member} />
+          <div key={member.name} className="flex justify-center w-full">
+            <TeamMember {...member} />
+          </div>
         ))}
       </section>
     </div>

@@ -1,3 +1,4 @@
+// components/layout/about/team-member.tsx
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -25,9 +26,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer flex flex-col items-center w-[250px] mx-4 my-2"
+        className="cursor-pointer flex flex-col items-center w-[275px] mx-auto my-2"
       >
-        <div className="relative w-[250px] h-[300px] overflow-hidden flex items-end justify-center group rounded-lg">
+        <div className="relative w-[275px] h-[330px] overflow-hidden flex items-end justify-center group rounded-lg">
           <Image
             src={image || "/assets/images/profile/avatar.jpg"}
             alt={name}
@@ -107,7 +108,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                         <div className="capitalize text-[16px]">Phone Call:</div>
                         <div className="tracking-[0.01em] mt-1 text-[#898989] font-lexend text-[15px]">
                           <Link href="https://wa.me/+31107660786" target="_blank" rel="noreferrer">
-                            +92 319 5815278
+                            +31 10 766 0786
                           </Link>
                         </div>
                       </div>
