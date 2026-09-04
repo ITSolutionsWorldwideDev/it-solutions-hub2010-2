@@ -107,8 +107,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                       <div className="ml-3 text-left">
                         <div className="capitalize text-[16px]">Phone Call:</div>
                         <div className="tracking-[0.01em] mt-1 text-[#898989] font-lexend text-[15px]">
-                          <Link href="https://wa.me/+31107660786" target="_blank" rel="noreferrer">
-                            +31 10 766 0786
+                          <Link href="https://wa.me/+923195815278" target="_blank" rel="noreferrer">
+                            +92 319 5815278
                           </Link>
                         </div>
                       </div>
