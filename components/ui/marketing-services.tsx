@@ -1,5 +1,5 @@
-// components/ui/marketing-services.tsx
 "use client";
+// components/ui/marketing-services.tsx
 import Image from "next/image";
 
 type Service = {

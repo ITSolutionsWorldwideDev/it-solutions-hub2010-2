@@ -1,6 +1,5 @@
-// components/layout/job-detail-page.tsx
 "use client";
-
+// components/layout/job-detail-page.tsx
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useMemo } from "react";

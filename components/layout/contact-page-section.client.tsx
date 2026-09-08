@@ -1,5 +1,5 @@
-// components/layout/contact-page-section.client.tsx
 "use client";
+// components/layout/contact-page-section.client.tsx
 import {
   Mail,
   Phone,

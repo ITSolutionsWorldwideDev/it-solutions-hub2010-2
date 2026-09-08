@@ -1,6 +1,5 @@
-// components/ui/marketing-banner.tsx
 "use client";
-
+// components/ui/marketing-banner.tsx
 import Image from "next/image";
 import Link from "next/link";
 

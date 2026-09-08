@@ -1,6 +1,5 @@
-// components\GoogleTagManager.tsx
 "use client";
-
+// components\GoogleTagManager.tsx
 import Script from "next/script";
 
 export default function GoogleTagManager({ gtmId }: { gtmId: string }) {

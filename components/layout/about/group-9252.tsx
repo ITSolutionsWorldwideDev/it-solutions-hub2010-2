@@ -11,7 +11,7 @@ const Group9252: NextPage = () => {
           height={693}
           sizes="100vw"
           alt=""
-          src="/assets/images/aboutus/about-us-banner.png"
+          src="/assets/images/aboutus/about-us-banner.webp"
         />
         <div className="absolute top-[639px] left-[860px] bg-gainsboro w-[415px] h-[284px]" />
       </div>
@@ -22,7 +22,7 @@ const Group9252: NextPage = () => {
           height={693}
           sizes="100vw"
           alt=""
-          src="/assets/images/aboutus/subtract.png"
+          src="/assets/images/aboutus/subtract.webp"
         />
         <div className="absolute top-[639px] left-[860px] bg-gainsboro w-[415px] h-[284px]" />
       </div> */}

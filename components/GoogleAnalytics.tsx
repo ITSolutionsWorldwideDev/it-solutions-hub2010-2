@@ -1,6 +1,5 @@
-// components/GoogleAnalytics.tsx
 "use client";
-
+// components/GoogleAnalytics.tsx
 import Script from "next/script";
 
 interface GoogleAnalyticsProps {

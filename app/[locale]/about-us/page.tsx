@@ -24,22 +24,22 @@ export default async function AboutUsPage({
 
   const expertise = [
     {
-      icon: "/assets/images/aboutus4.png",
+      icon: "/assets/images/aboutus4.webp",
       title: t("aboutus.expertise_heading_1"),
       description: t("aboutus.expertise_text_1"),
     },
     {
-      icon: "/assets/images/aboutus5.png",
+      icon: "/assets/images/aboutus5.webp",
       title: t("aboutus.expertise_heading_2"),
       description: t("aboutus.expertise_text_2"),
     },
     {
-      icon: "/assets/images/aboutus6.png",
+      icon: "/assets/images/aboutus6.webp",
       title: t("aboutus.expertise_heading_3"),
       description: t("aboutus.expertise_text_3"),
     },
     {
-      icon: "/assets/images/aboutus7.png",
+      icon: "/assets/images/aboutus7.webp",
       title: t("aboutus.expertise_heading_4"),
       description: t("aboutus.expertise_text_4"),
     },
@@ -80,7 +80,7 @@ export default async function AboutUsPage({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/aboutus/about-us-banner.png",
+      backgroundImage: "/assets/images/aboutus/about-us-banner.webp",
       backgroundMainImage: "",
       heading: t("aboutus.banner_heading"),
       text: t("aboutus.banner_text"),
@@ -94,7 +94,7 @@ export default async function AboutUsPage({
     heading: t("aboutus.our_vision_heading"),
     text: t("aboutus.our_vision_text"),
     imageUrl:
-      "/assets/images/aboutus/d-0035-a-757-d-44406901-c-3-a-6-f-1-c-10-c-1-f-1-copy-1.png",
+      "/assets/images/aboutus/d-0035-a-757-d-44406901-c-3-a-6-f-1-c-10-c-1-f-1-copy-1.webp",
     leftColor: "#278083",
     rightColor: "#000",
   };

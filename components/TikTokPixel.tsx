@@ -1,6 +1,6 @@
-// components/TikTokPixel.tsx
 "use client";
-
+import Image from 'next/image';
+// components/TikTokPixel.tsx
 import Script from "next/script";
 
 export default function TikTokPixel({ pixelId }: { pixelId: string }) {

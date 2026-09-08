@@ -53,7 +53,7 @@ export default async function ISOCertified({
             <div className="bg-white rounded-2xl border border-gray-200 shadow-md p-8 flex gap-6">
               <div className="shrink-0">
                 <Image
-                  src="/assets/icons/certificate2.png"
+                  src="/assets/icons/certificate2.webp"
                   alt="ISO 9001 Certificate Icon"
                   width={64}
                   height={64}
@@ -76,7 +76,7 @@ export default async function ISOCertified({
             <div className="bg-white rounded-2xl border border-gray-200 shadow-md p-8 flex gap-6">
               <div className="shrink-0">
                 <Image
-                  src="/assets/icons/lock.png"
+                  src="/assets/icons/lock.webp"
                   alt="ISO 27001 Security Icon"
                   width={64}
                   height={64}
@@ -107,37 +107,37 @@ export default async function ISOCertified({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <BenefitCard
-              icon="/assets/icons/guarantee.png"
+              icon="/assets/icons/guarantee.webp"
               title="Guaranteed Quality Standards"
               description="Our ISO-driven processes ensure consistent, high-quality results—every project, every time."
             />
 
             <BenefitCard
-              icon="/assets/icons/standard.png"
+              icon="/assets/icons/standard.webp"
               title="Strong Data Security & Confidentiality"
               description="We follow strict security protocols to protect your business data, intellectual property, and systems."
             />
 
             <BenefitCard
-              icon="/assets/icons/moving-up.png"
+              icon="/assets/icons/moving-up.webp"
               title="Reduced Business Risk"
               description="ISO standards help us identify, manage, and reduce operational and security risks proactively."
             />
 
             <BenefitCard
-              icon="/assets/icons/audit.png"
+              icon="/assets/icons/audit.webp"
               title="Transparent & Documented Processes"
               description="You benefit from clear workflows, accountability, and structured project management."
             />
 
             <BenefitCard
-              icon="/assets/icons/global.png"
+              icon="/assets/icons/global.webp"
               title="Global Compliance & Trust"
               description="ISO certification makes us a reliable partner for international clients and regulated industries."
             />
 
             <BenefitCard
-              icon="/assets/icons/truct.png"
+              icon="/assets/icons/truct.webp"
               title="Continuous Improvement Culture"
               description="We don't just meet standards—we continuously improve our services, tools, and processes."
             />

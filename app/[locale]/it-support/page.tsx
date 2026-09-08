@@ -22,7 +22,7 @@ export default async function ItSupport({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/itsupport1.png",
+      backgroundImage: "/assets/images/itsupport1.webp",
       heading: t("itsupport.heading_1"),
       text: t("itsupport.text_1"),
       button: t("scmservices.button_1"),
@@ -54,22 +54,22 @@ export default async function ItSupport({
 
   const cards2 = [
     {
-      image: "/assets/images/businessconsultancyicon1.png",
+      image: "/assets/images/businessconsultancyicon1.webp",
       title: t("itsupport.card_heading_1"),
       description: t("itsupport.card_text_1"),
     },
     {
-      image: "/assets/images/businessconsultancyicon2.png",
+      image: "/assets/images/businessconsultancyicon2.webp",
       title: t("itsupport.card_heading_2"),
       description: t("itsupport.card_text_2"),
     },
     {
-      image: "/assets/images/businessconsultancyicon3.png",
+      image: "/assets/images/businessconsultancyicon3.webp",
       title: t("itsupport.card_heading_3"),
       description: t("itsupport.card_text_3"),
     },
     {
-      image: "/assets/images/businessconsultancyicon4.png",
+      image: "/assets/images/businessconsultancyicon4.webp",
       title: t("itsupport.card_heading_4"),
       description: t("itsupport.card_text_4"),
     },
@@ -88,12 +88,12 @@ export default async function ItSupport({
 
   const cards4 = [
     {
-      image: "/assets/images/businessconsultancyicon5.png",
+      image: "/assets/images/businessconsultancyicon5.webp",
       title: t("itsupport.card3_heading_1"),
       description: t("itsupport.card3_text_1"),
     },
     {
-      image: "/assets/images/businessconsultancyicon6.png",
+      image: "/assets/images/businessconsultancyicon6.webp",
       title: t("itsupport.card3_heading_2"),
       description: t("itsupport.card3_text_2"),
     },
@@ -127,16 +127,16 @@ export default async function ItSupport({
   const points = [
     {
       title: t("itsupport.point1"),
-      icon: "/assets/images/itsupport4.png",
+      icon: "/assets/images/itsupport4.webp",
     },
-    { title: t("itsupport.point2"), icon: "/assets/images/itsupport5.png" },
-    { title: t("itsupport.point3"), icon: "/assets/images/itsupport6.png" },
-    { title: t("itsupport.point4"), icon: "/assets/images/itsupport7.png" },
+    { title: t("itsupport.point2"), icon: "/assets/images/itsupport5.webp" },
+    { title: t("itsupport.point3"), icon: "/assets/images/itsupport6.webp" },
+    { title: t("itsupport.point4"), icon: "/assets/images/itsupport7.webp" },
   ];
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/itsupport8.png",
+      backgroundImage: "/assets/images/itsupport8.webp",
       heading: "Ready to Transform Your IT Infrastructure?",
       buttonText: "Schedule Your Consultation Now",
       buttonLink: "/contact-us",
@@ -149,7 +149,7 @@ export default async function ItSupport({
       <ImageSection
         heading={t("oraclecloud.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/itsupport2.png"
+        imageUrl="/assets/images/itsupport2.webp"
       />
 
       <InfoSection
@@ -162,7 +162,7 @@ export default async function ItSupport({
       <ImageSectionBgBlue
         title={t("itsupport.heading_4")}
         points={points}
-        image="/assets/images/itsupport3.png"
+        image="/assets/images/itsupport3.webp"
         leftColor="#0D69AD"
         rightColor="#ffff"
         iconColor="#0D69AD"

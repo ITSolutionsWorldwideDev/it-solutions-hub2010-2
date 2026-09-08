@@ -21,7 +21,7 @@ export default async function StaffingConsultingServices({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/staffingconsulting.png",
+      backgroundImage: "/assets/images/staffingconsulting.webp",
       heading: t("staffingconsulting.heading_1"),
       text: t("staffingconsulting.text_1"),
       button: t("staffingconsulting.button_1"),
@@ -93,29 +93,29 @@ export default async function StaffingConsultingServices({
   );
 
   /* const logos = [
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
   ]; */
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/industrystaffing5.png",
+      backgroundImage: "/assets/images/industrystaffing5.webp",
       heading:
         "Enhance Your Recruitment Process - Get Started with Expert Staffing Consultancy!",
       buttonText: "Get Started Now",
@@ -129,7 +129,7 @@ export default async function StaffingConsultingServices({
       <ImageSection2
         heading={t("staffingconsulting.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/staffingconsulting2.png"
+        imageUrl="/assets/images/staffingconsulting2.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />
@@ -141,14 +141,14 @@ export default async function StaffingConsultingServices({
       <ImageSection
         heading={t("staffingconsulting.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/staffingconsulting3.png"
+        imageUrl="/assets/images/staffingconsulting3.webp"
         leftColor="#ebf2f3"
         rightColor="#ebf2f3"
       />
       <ImageSection2
         heading={t("staffingconsulting.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/staffingconsulting4.png"
+        imageUrl="/assets/images/staffingconsulting4.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />

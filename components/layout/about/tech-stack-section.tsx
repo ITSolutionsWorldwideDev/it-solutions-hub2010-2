@@ -1,6 +1,6 @@
+"use client";
 // components/layout/about/tech-stack-section.tsx
 
-"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 
@@ -11,13 +11,13 @@ const TechStackSection: NextPage = () => {
     { name: "power-bi", icon: "/assets/icons/tech/power-bi.svg" },
     // { name: "FDI", icon: "/assets/icons/tech/g" },
     { name: "MS Fabrics", icon: "/assets/icons/tech/ms_fabric.svg" },
-    { name: "Microsoft Dynamics", icon: "/assets/icons/tech/microsoft-dynamics-365.png" },
-    { name: "Oracle Cloud", icon: "/assets/icons/tech/oracle-logo.png" },
+    { name: "Microsoft Dynamics", icon: "/assets/icons/tech/microsoft-dynamics-365.webp" },
+    { name: "Oracle Cloud", icon: "/assets/icons/tech/oracle-logo.webp" },
     { name: "SAP", icon: "/assets/icons/tech/sap.svg" },
-    { name: "Odoo", icon: "/assets/icons/tech/odoo_logo.png" },
-    { name: "Oracle E-Business Suite", icon: "/assets/icons/tech/oracle-logo.png" },
+    { name: "Odoo", icon: "/assets/icons/tech/odoo_logo.webp" },
+    { name: "Oracle E-Business Suite", icon: "/assets/icons/tech/oracle-logo.webp" },
     { name: "Monday.com", icon: "/assets/icons/tech/monday.com.webp" },
-    { name: "Quickbooks", icon: "/assets/icons/tech/quickbooks.png" },
+    { name: "Quickbooks", icon: "/assets/icons/tech/quickbooks.webp" },
     { name: "Workday", icon: "/assets/icons/tech/workday.svg" },
 
 
@@ -25,17 +25,17 @@ const TechStackSection: NextPage = () => {
     { name: "React", icon: "/assets/icons/tech/react.svg" },
     { name: "TypeScript", icon: "/assets/icons/tech/typescript.svg" },
     { name: "TailwindCSS", icon: "/assets/icons/tech/tailwind.svg" },
-    { name: "Node.js", icon: "/assets/icons/tech/nodejs.png" },
+    { name: "Node.js", icon: "/assets/icons/tech/nodejs.webp" },
     { name: "Figma", icon: "/assets/icons/tech/figma.svg" },
-    { name: "MongoDB", icon: "/assets/icons/tech/mongodb.png" },
+    { name: "MongoDB", icon: "/assets/icons/tech/mongodb.webp" },
     { name: "AWS", icon: "/assets/icons/tech/aws.svg" },
 
 
     { name: "Adobe", icon: "/assets/icons/tech/adobe.svg" },
     { name: "Adobe Firefly", icon: "/assets/icons/tech/adobefirefly.svg" },
     { name: "AE", icon: "/assets/icons/tech/ae.svg" },
-    { name: "Affinity", icon: "/assets/icons/tech/affinity-photo.png" },
-    { name: "Affinity Designer.js", icon: "/assets/icons/tech/affinity-designer.png" },
+    { name: "Affinity", icon: "/assets/icons/tech/affinity-photo.webp" },
+    { name: "Affinity Designer.js", icon: "/assets/icons/tech/affinity-designer.webp" },
     { name: "Affinity Photo", icon: "/assets/icons/tech/affinityphoto.svg" },
     { name: "Affinity Publisher", icon: "/assets/icons/tech/affinitypublisher.svg" },
     { name: "AI", icon: "/assets/icons/tech/ai.svg" },
@@ -43,7 +43,7 @@ const TechStackSection: NextPage = () => {
     { name: "AI 360", icon: "/assets/icons/tech/ai360.svg" },
     { name: "AI Hub Mix", icon: "/assets/icons/tech/aihubmix.svg" },
     { name: "Analytics", icon: "/assets/icons/tech/analytics.svg" },
-    { name: "Android", icon: "/assets/icons/tech/android.png" },
+    { name: "Android", icon: "/assets/icons/tech/android.webp" },
     { name: "Angular", icon: "/assets/icons/tech/angular.svg" },
     { name: "Angular 17", icon: "/assets/icons/tech/angular17.svg" },
     { name: "Anima App", icon: "/assets/icons/tech/animaapp.svg" },
@@ -58,7 +58,7 @@ const TechStackSection: NextPage = () => {
   ];
 
   return (
-    <div className="w-full relative text-[84px] text-black font-lexend rounded-[49px] bg-[url('/assets/images/profile/tech-stack-bg.png')] bg-cover bg-no-repeat bg-center">
+    <div className="w-full relative text-[84px] text-black font-lexend rounded-[49px] bg-[url('/assets/images/profile/tech-stack-bg.webp')] bg-cover bg-no-repeat bg-center">
       <div className="text-[var(--Gray-900,#061C3D)] font-lexend text-[50.373px] text-center font-bold leading-[62.967px] tracking-[-1.007px] pt-10">
         Tech Stack
       </div>

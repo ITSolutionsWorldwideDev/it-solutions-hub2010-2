@@ -3,21 +3,21 @@ import Image from "next/image";
 
 const ISO_Section4 = () => {
   const services = [
-    { title: "Software & Web Development", img: "/assets/icons/code.png" },
+    { title: "Software & Web Development", img: "/assets/icons/code.webp" },
     {
       title: "IT Consulting and Support",
-      img: "/assets/icons/global.png",
+      img: "/assets/icons/global.webp",
     },
     {
       title: "Cloud and Infrastructure Services",
-      img: "/assets/icons/cloud.png",
+      img: "/assets/icons/cloud.webp",
     },
-    { title: "Cybersecurity Solutions", img: "/assets/icons/standard.png" },
+    { title: "Cybersecurity Solutions", img: "/assets/icons/standard.webp" },
     {
       title: "Quality Assurance and Testing",
-      img: "/assets/icons/guarantee.png",
+      img: "/assets/icons/guarantee.webp",
     },
-    { title: "Post-Launch Support", img: "/assets/icons/performance.png" },
+    { title: "Post-Launch Support", img: "/assets/icons/performance.webp" },
   ];
 
   return (

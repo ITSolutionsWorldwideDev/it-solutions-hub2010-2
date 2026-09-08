@@ -1,6 +1,5 @@
-// components/layout/aboutus-process-flow.tsx
 "use client";
-
+// components/layout/aboutus-process-flow.tsx
 import Image from "next/image";
 import React from "react";
 
@@ -50,7 +49,7 @@ const AboutUsProcessFlow: React.FC<AboutUsProcessFlowProps> = ({
             className="absolute bg-contain bg-center w-full h-[300px] bg-no-repeat"
             /* md:h-[400px] lg:h-[600px] max-w-6xl  */
             style={{
-              backgroundImage: `url('/assets/images/aboutus/vector_1.png')`,
+              backgroundImage: `url('/assets/images/aboutus/vector_1.webp')`,
             }}
             role="img"
           ></div>

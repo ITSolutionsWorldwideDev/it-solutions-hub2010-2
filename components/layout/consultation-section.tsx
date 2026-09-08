@@ -1,6 +1,5 @@
+"use client";
 // components/layout/consultation-section.tsx
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import PopUp from "./popUp";
 import Link from 'next/link';

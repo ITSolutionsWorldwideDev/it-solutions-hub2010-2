@@ -21,7 +21,7 @@ export default async function SpecializedIndustryStaffing({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/industrystaffing.png",
+      backgroundImage: "/assets/images/industrystaffing.webp",
       heading: t("industrystaffing.heading_1"),
       text: t("industrystaffing.text_1"),
       button: t("industrystaffing.button_1"),
@@ -100,7 +100,7 @@ export default async function SpecializedIndustryStaffing({
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/industrystaffing5.png",
+      backgroundImage: "/assets/images/industrystaffing5.webp",
       heading:
         "Find Top Talent with the Expertise Your Industry Needs – Reach Out Today!",
       buttonText: "Get Started Now",
@@ -114,7 +114,7 @@ export default async function SpecializedIndustryStaffing({
       <ImageSection2
         heading={t("industrystaffing.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/industrystaffing2.png"
+        imageUrl="/assets/images/industrystaffing2.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />
@@ -126,14 +126,14 @@ export default async function SpecializedIndustryStaffing({
       <ImageSection
         heading={t("industrystaffing.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/industrystaffing3.png"
+        imageUrl="/assets/images/industrystaffing3.webp"
         leftColor="#ebf2f3"
         rightColor="#ebf2f3"
       />
       <ImageSection2
         heading={t("industrystaffing.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/industrystaffing4.png"
+        imageUrl="/assets/images/industrystaffing4.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />

@@ -1,6 +1,6 @@
+"use client";
 //  components/layout/about/project-section.tsx
 
-"use client";
 import Image from "next/image";
 import type { NextPage } from "next";
 
@@ -15,27 +15,27 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Creative Portfolio Website",
-    image: "/assets/images/profile/portfolio-001.png",
+    image: "/assets/images/profile/portfolio-001.webp",
     size: "large",
   },
   {
     title: "Business Dashboard UI",
-    image: "/assets/images/profile/portfolio-002.png",
+    image: "/assets/images/profile/portfolio-002.webp",
     size: "medium",
   },
   {
     title: "Mobile App Concept",
-    image: "/assets/images/profile/portfolio-003.png",
+    image: "/assets/images/profile/portfolio-003.webp",
     size: "small",
   },
   {
     title: "SaaS Platform Design",
-    image: "/assets/images/profile/portfolio-0004.png",
+    image: "/assets/images/profile/portfolio-0004.webp",
     size: "medium",
   },
   {
     title: "AI Landing Page",
-    image: "/assets/images/profile/portfolio-0004.png",
+    image: "/assets/images/profile/portfolio-0004.webp",
     size: "large",
   },
 ];

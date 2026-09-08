@@ -1,6 +1,5 @@
-// components/LanguageSwitcher.tsx
 "use client";
-
+// components/LanguageSwitcher.tsx
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import i18nConfig from "@/i18n/i18nConfig";
@@ -31,8 +30,8 @@ export default function LanguageSwitcher() {
 
   const flag =
     currentLocale === "en"
-      ? "/assets/images/flags/nl.png"
-      : "/assets/images/flags/uk.png";
+      ? "/assets/images/flags/nl.webp"
+      : "/assets/images/flags/uk.webp";
   const label = currentLocale === "en" ? "Dutch" : "English";
 
   return (

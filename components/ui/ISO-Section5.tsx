@@ -4,22 +4,22 @@ import Image from "next/image";
 
 const ISO_Section5 = () => {
   const commitments = [
-    { title: "Regular Internal Audits", img: "/assets/icons/audit2.png" },
+    { title: "Regular Internal Audits", img: "/assets/icons/audit2.webp" },
     {
       title: "External Certification Audits",
-      img: "/assets/icons/certificate3.png",
+      img: "/assets/icons/certificate3.webp",
     },
     {
       title: "Continuous Process Improvement",
-      img: "/assets/icons/moving-up2.png",
+      img: "/assets/icons/moving-up2.webp",
     },
     {
       title: "Staff Training and Awareness",
-      img: "/assets/icons/global2.png",
+      img: "/assets/icons/global2.webp",
     },
     {
       title: "Ongoing Performance Monitoring",
-      img: "/assets/icons/truct2.png",
+      img: "/assets/icons/truct2.webp",
     },
   ];
 

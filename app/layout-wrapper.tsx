@@ -1,5 +1,5 @@
-// app/layout-wrapper.tsx
 "use client";
+// app/layout-wrapper.tsx
 import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Header from "@/components/layout/header";

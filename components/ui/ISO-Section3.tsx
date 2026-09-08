@@ -18,23 +18,23 @@ const ISO_Section3 = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           <ValueCard
             title="Faster and more reliable project delivery"
-            img="/assets/icons/guarantee.png"
+            img="/assets/icons/guarantee.webp"
           />
           <ValueCard
             title="Improved system stability and performance"
-            img="/assets/icons/settings.png"
+            img="/assets/icons/settings.webp"
           />
           <ValueCard
             title="Secure IT infrastructure and data handling"
-            img="/assets/icons/lock.png"
+            img="/assets/icons/lock.webp"
           />
           <ValueCard
             title="Predictable service quality"
-            img="/assets/icons/certificate.png"
+            img="/assets/icons/certificate.webp"
           />
           <ValueCard
             title="A trusted partner aligned with global standards"
-            img="/assets/icons/standard.png"
+            img="/assets/icons/standard.webp"
           />
         </div>
         <div className="bg-teal-600 text-white rounded-2xl p-8 text-center max-w-5xl mx-auto">

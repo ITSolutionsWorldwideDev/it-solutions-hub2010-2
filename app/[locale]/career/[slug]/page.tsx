@@ -1,5 +1,5 @@
-// app/[locale]/career/[slug]/page.tsx
 "use client";
+// app/[locale]/career/[slug]/page.tsx
 import { useEffect, useState } from "react";
 import { useParams, notFound } from "next/navigation";
 import JobDetailPage, { JobDetail } from "@/components/layout/job-detail-page";

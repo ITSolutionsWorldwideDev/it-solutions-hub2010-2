@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // components/layout/home/BlogCard.tsx
 
 import Link from "next/link";
@@ -35,7 +36,7 @@ export default function BlogCard({ post, locale }: Props) {
   const getFeaturedImage = () => {
     if (post.content.featuredImage) return post.content.featuredImage;
     const sectionWithImage = post.content.sections?.find((s) => s.image);
-    return sectionWithImage?.image || "/assets/images/default-blog-image.jpg";
+    return sectionWithImage?.image || "/assets/images/default-blog-image.webp";
   };
 
   return (

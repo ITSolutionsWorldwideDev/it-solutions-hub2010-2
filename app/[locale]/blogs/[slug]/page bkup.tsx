@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // app/[locale]/blogs/[slug]/page.tsx
 import { loadBlogs } from "@/lib/loadBlogs";
 // import initServerI18n from "@/utils/serverTranslation";

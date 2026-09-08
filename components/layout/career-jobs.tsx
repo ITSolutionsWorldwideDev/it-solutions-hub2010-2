@@ -1,6 +1,5 @@
-// components/layout/career-jobs.tsx
 "use client";
-
+// components/layout/career-jobs.tsx
 import Link from "next/link";
 import { useEffect, useState } from "react";
 

@@ -1,6 +1,5 @@
-// components/layout/scm/scm-form.tsx
 "use client";
-
+// components/layout/scm/scm-form.tsx
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Chart } from "chart.js";

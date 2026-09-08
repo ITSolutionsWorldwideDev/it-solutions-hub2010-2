@@ -16,7 +16,7 @@ export default async function SCMPage({
   
   const slides = [
     {
-      backgroundImage: "/assets/images/Supply_check_background_Image.png",
+      backgroundImage: "/assets/images/Supply_check_background_Image.webp",
       heading:"Supply Chain Health Check",
     //   heading: t("supplyChainHealthCheckHeading") || "Supply Chain Health Check",
     },

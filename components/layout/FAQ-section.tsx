@@ -1,6 +1,5 @@
+"use client";
 // components/layout/FAQ-section.tsx
-'use client';
-
 import Link from "next/link";
 import { useEffect, useState } from "react";
 

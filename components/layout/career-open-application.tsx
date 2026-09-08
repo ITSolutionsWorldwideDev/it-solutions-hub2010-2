@@ -1,6 +1,5 @@
-// components/layout/career-open-application.tsx
 "use client";
-
+// components/layout/career-open-application.tsx
 import { useState, useRef } from "react";
 import { 
   FiClock, 

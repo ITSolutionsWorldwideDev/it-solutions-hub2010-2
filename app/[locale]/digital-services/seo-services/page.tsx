@@ -21,7 +21,7 @@ export default async function SEOServices({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/seo1.png",
+      backgroundImage: "/assets/images/seo1.webp",
       heading: t("seo.heading_1"),
       text: t("seo.text_1"),
       button: t("seo.button_1"),
@@ -106,7 +106,7 @@ export default async function SEOServices({
       <ImageSection2
         heading={t("seo.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/seo2.png"
+        imageUrl="/assets/images/seo2.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
@@ -114,7 +114,7 @@ export default async function SEOServices({
       <ImageSection
         heading={t("seo.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/seo3.png"
+        imageUrl="/assets/images/seo3.webp"
         leftColor="#f2e8fb"
         rightColor="#f2e8fb"
         textColor="#000"
@@ -122,7 +122,7 @@ export default async function SEOServices({
       <ImageSection2
         heading={t("seo.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/seo4.png"
+        imageUrl="/assets/images/seo4.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
@@ -139,7 +139,7 @@ export default async function SEOServices({
       />
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <MarketingBanner
-        imageSrc="/assets/images/webdev5.png"
+        imageSrc="/assets/images/webdev5.webp"
         title="Rank Higher and Drive More Traffic"
         description="Get Started with Our SEO Services Today!"
         buttonText="Contact Us Today"

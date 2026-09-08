@@ -10,7 +10,7 @@ const ISO_Section7 = () => {
         <div className="flex justify-center mb-8">
           <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
             <Image
-              src="/assets/icons/certificate2.png"
+              src="/assets/icons/certificate2.webp"
               alt="ISO Certified"
               width={40}
               height={40}

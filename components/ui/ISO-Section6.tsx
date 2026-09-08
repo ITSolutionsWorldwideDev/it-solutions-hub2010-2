@@ -1,6 +1,5 @@
-// components/ui/ISO-Section6.tsx
 "use client";
-
+// components/ui/ISO-Section6.tsx
 import { useState } from "react";
 import Image from "next/image";
 
@@ -59,7 +58,7 @@ const ISO_Section6 = () => {
                   </span>
 
                   <Image
-                    src="/assets/icons/plus.png"
+                    src="/assets/icons/plus.webp"
                     alt="Toggle"
                     width={20}
                     height={20}

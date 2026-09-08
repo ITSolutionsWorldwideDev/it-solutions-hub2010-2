@@ -1,3 +1,4 @@
+"use client";
 // app/[locale]/blogs/page.tsx
 import BlogsClient from "@/components/layout/home/BlogsClient";
 import initServerI18n from "@/utils/serverTranslation";
@@ -15,9 +16,7 @@ export default async function BlogsPage({
   return <BlogsClient locale={locale} title={t("latest_blogs", "Latest Blogs")} />;
 }
 
-/* "use client";
-
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react";
 import initServerI18n from "@/utils/serverTranslation";
 // import { loadBlogs } from "@/lib/loadBlogs";
 import BlogCard from "@/components/layout/home/BlogCard";
@@ -135,7 +134,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://yourdomain.com/${params.locale}/blogs`,
       images: [
         {
-          url: "https://yourdomain.com/og-image.jpg",
+          url: "https://yourdomain.com/og-image.webp",
           width: 800,
           height: 600,
           alt: "Blog Preview",

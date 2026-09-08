@@ -21,7 +21,7 @@ export default async function EcommerceDevelopment({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/ecommerce1.png",
+      backgroundImage: "/assets/images/ecommerce1.webp",
       heading: t("ecommerce.heading_1"),
       text: t("ecommerce.text_1"),
       button: t("ecommerce.button_1"),
@@ -39,22 +39,22 @@ export default async function EcommerceDevelopment({
 
   const cards2 = [
     {
-      image: "/assets/images/ecommerce6.png",
+      image: "/assets/images/ecommerce6.webp",
       title: t("ecommerce.card_heading_1"),
       description: t("ecommerce.card_text_1"),
     },
     {
-      image: "/assets/images/ecommerce7.png",
+      image: "/assets/images/ecommerce7.webp",
       title: t("ecommerce.card_heading_2"),
       description: t("ecommerce.card_text_2"),
     },
     {
-      image: "/assets/images/ecommerce8.png",
+      image: "/assets/images/ecommerce8.webp",
       title: t("ecommerce.card_heading_3"),
       description: t("ecommerce.card_text_3"),
     },
     {
-      image: "/assets/images/ecommerce9.png",
+      image: "/assets/images/ecommerce9.webp",
       title: t("ecommerce.card_heading_4"),
       description: t("ecommerce.card_text_4"),
     },
@@ -120,7 +120,7 @@ export default async function EcommerceDevelopment({
       <ImageSection2
         heading={t("ecommerce.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/ecommerce2.png"
+        imageUrl="/assets/images/ecommerce2.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
@@ -132,7 +132,7 @@ export default async function EcommerceDevelopment({
       <ImageSection
         heading={t("ecommerce.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/ecommerce3.png"
+        imageUrl="/assets/images/ecommerce3.webp"
         leftColor="#f2e8fb"
         rightColor="#f2e8fb"
         textColor="#000"
@@ -140,14 +140,14 @@ export default async function EcommerceDevelopment({
       <ImageSection2
         heading={t("ecommerce.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/ecommerce4.png"
+        imageUrl="/assets/images/ecommerce4.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
       <ImageSection
         heading={t("ecommerce.heading_6")}
         text={imagetext4}
-        imageUrl="/assets/images/ecommerce5.png"
+        imageUrl="/assets/images/ecommerce5.webp"
         leftColor="#f2e8fb"
         rightColor="#f2e8fb"
         textColor="#000"
@@ -168,7 +168,7 @@ export default async function EcommerceDevelopment({
 
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <MarketingBanner
-        imageSrc="/assets/images/digital6.png"
+        imageSrc="/assets/images/digital6.webp"
         title="Launch & Scale Your Online Store with Expert E-Commerce Solutions"
         description="Get Started Today!"
         buttonText="Contact Us Today"

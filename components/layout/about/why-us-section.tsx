@@ -121,7 +121,7 @@ export default async function WhyUsSection({ locale }: { locale: string }) {
               height={552}
               sizes="100vw"
               alt=""
-              src="/assets/images/aboutus/rectangle-122.png"
+              src="/assets/images/aboutus/rectangle-122.webp"
             />
             <div className="hidden  absolute top-[594px] md:top-[294px] border-white border-8 rounded-[28.97px] w-[280px] h-[199.5px] overflow-hidden md:flex items-center justify-center">
               <Image
@@ -130,7 +130,7 @@ export default async function WhyUsSection({ locale }: { locale: string }) {
                 height={199.5}
                 sizes="100vw"
                 alt=""
-                src="/assets/images/aboutus/rectangle-123.png"
+                src="/assets/images/aboutus/rectangle-123.webp"
               />
             </div>
           </div>

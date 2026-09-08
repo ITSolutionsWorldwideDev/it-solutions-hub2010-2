@@ -1,5 +1,5 @@
-// components/ui/pdf-viewer.tsx
 "use client";
+// components/ui/pdf-viewer.tsx
 import React from "react";
 
 type PdfViewerProps = {

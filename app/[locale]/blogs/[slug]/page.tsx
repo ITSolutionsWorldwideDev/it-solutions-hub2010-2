@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // app/[locale]/blogs/[slug]/page.tsx
 import { getBlogBySlug } from "@/lib/blogs";
 import { notFound } from "next/navigation";

@@ -1,6 +1,5 @@
-// components/ui/dynamic-tabs.tsx
 "use client";
-
+// components/ui/dynamic-tabs.tsx
 import { useState } from "react";
 
 type DynamicTabsProps = {

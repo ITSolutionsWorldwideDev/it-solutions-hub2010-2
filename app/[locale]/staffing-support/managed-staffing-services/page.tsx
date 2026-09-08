@@ -22,7 +22,7 @@ export default async function ManagedStaffingServices({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/managedstaff1.png",
+      backgroundImage: "/assets/images/managedstaff1.webp",
       heading: t("managedstff.heading_1"),
       text: t("managedstff.text_1"),
       button: t("managedstff.button_1"),
@@ -94,29 +94,29 @@ export default async function ManagedStaffingServices({
   );
 
   /* const logos = [
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
-    { src: "/assets/images/bol.png" },
-    { src: "/assets/images/hitech.png" },
-    { src: "/assets/images/jumbosports.png" },
-    { src: "/assets/images/albelli.png" },
-    { src: "/assets/images/kent.png" },
-    { src: "/assets/images/ddgroup.png" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
+    { src: "/assets/images/bol.webp" },
+    { src: "/assets/images/hitech.webp" },
+    { src: "/assets/images/jumbosports.webp" },
+    { src: "/assets/images/albelli.webp" },
+    { src: "/assets/images/kent.webp" },
+    { src: "/assets/images/ddgroup.webp" },
   ]; */
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/staffingsupport4.png",
+      backgroundImage: "/assets/images/staffingsupport4.webp",
       heading:
         "Streamline Your Hiring Process with Expert Managed Staffing - Get Started Today!",
       buttonText: "Get Started Now",
@@ -130,7 +130,7 @@ export default async function ManagedStaffingServices({
       <ImageSection2
         heading={t("managedstff.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/managedstaff2.png"
+        imageUrl="/assets/images/managedstaff2.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />
@@ -142,14 +142,14 @@ export default async function ManagedStaffingServices({
       <ImageSection
         heading={t("managedstff.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/managedstaff3.png"
+        imageUrl="/assets/images/managedstaff3.webp"
         leftColor="#ebf2f3"
         rightColor="#ebf2f3"
       />
       <ImageSection2
         heading={t("managedstff.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/managedstaff4.png"
+        imageUrl="/assets/images/managedstaff4.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />

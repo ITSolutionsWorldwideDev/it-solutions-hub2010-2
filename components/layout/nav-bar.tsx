@@ -1,5 +1,6 @@
-// components/layout/nav-bar.tsx
 "use client";
+import Image from 'next/image';
+// components/layout/nav-bar.tsx
 import Link from "next/link";
 import React, { useState, useRef } from "react";
 import { menuItems } from "@/lib/menu";
@@ -41,10 +42,7 @@ export default function Navbar() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center">
           <div className="flex items-center space-x-2 w-32">
             <Link href="/">
-              <img
-                src="/assets/images/main-logo.svg"
-                alt="IT Solutions Hub 2010 Logo"
-              />
+              <Image src="/assets/images/main-logo.svg" alt="IT Solutions Hub 2010 Logo" width={500} height={500} loading="lazy"  />
             </Link>
           </div>
 

@@ -1,13 +1,12 @@
-import type { NextPage } from "next";
 import Image from "next/image";
-
+import type { NextPage } from "next";
 const Group9319: NextPage = () => {
   return (
     <div className="w-full relative text-white font-lexend mx-2 md:mx-0">
       {/* Background Image */}
       <div className="relative w-full h-[680px] md:h-[200px]">
         <Image
-          src="/assets/images/aboutus/rectangle-140.png"
+          src="/assets/images/aboutus/rectangle-140.webp"
           alt=""
           className="rounded-[21px] object-cover"
           fill
@@ -58,14 +57,12 @@ const Group9319: NextPage = () => {
 export default Group9319;
 
 /* import type { NextPage } from "next";
-import Image from "next/image";
-
 const Group9319: NextPage = () => {
   return (
     <div className="w-full relative text-left text-[45px] text-white font-lexend">
       <div className="relative w-full h-[174px]">
         <Image
-          src="/assets/images/aboutus/rectangle-140.png"
+          src="/assets/images/aboutus/rectangle-140.webp"
           alt=""
           className="rounded-[21px] object-cover"
           fill

@@ -1,6 +1,5 @@
+"use client";
 // components/layout/landing-form.tsx
-'use client';
-
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useRouter } from 'next/navigation';

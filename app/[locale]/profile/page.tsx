@@ -39,8 +39,8 @@ export default async function ProfilePage({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/profile/banner_bg.png",
-      backgroundMainImage: "/assets/images/profile/banner_rightside_bg.png",
+      backgroundImage: "/assets/images/profile/banner_bg.webp",
+      backgroundMainImage: "/assets/images/profile/banner_rightside_bg.webp",
       heading:  t("profile.banner_heading"),
       text: t("profile.banner_text"),
       button: t("profile.button_text"),

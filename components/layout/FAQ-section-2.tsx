@@ -1,5 +1,6 @@
+"use client";
 // components/layout/FAQ-section-2.tsx
-'use client'; // Needed only for App Router with useState
+// Needed only for App Router with useState
 
 import React, { useState, ReactNode } from 'react';
 

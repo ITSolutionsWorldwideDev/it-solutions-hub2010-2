@@ -1,6 +1,6 @@
-// components/layout/job-apply-form.tsx
 "use client";
-
+import Image from 'next/image';
+// components/layout/job-apply-form.tsx
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Loader from "@/components/ui/Loader";
@@ -200,11 +200,7 @@ export default function JobApplyForm({ translations }: JobApplyFormProps) {
       <div className="w-full">
         <div className="flex justify-center items-center">
           <Link href="/">
-            <img
-              src="/assets/images/main-logo.svg"
-              alt="Logo"
-              className="h-12 md:h-16"
-            />
+            <Image src="/assets/images/main-logo.svg" alt="Logo" width={500} height={500} loading="lazy" className="h-12 md:h-16" />
           </Link>
         </div>
       </div>

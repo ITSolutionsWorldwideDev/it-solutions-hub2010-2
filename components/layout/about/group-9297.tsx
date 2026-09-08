@@ -26,7 +26,7 @@ const Group9297: NextPage = () => {
         width={584.1}
         height={510.3}
         sizes="100vw"
-        alt="" src="/assets/images/aboutus/d-0035-a-757-d-44406901-c-3-a-6-f-1-c-10-c-1-f-1-copy-1.png"
+        alt="" src="/assets/images/aboutus/d-0035-a-757-d-44406901-c-3-a-6-f-1-c-10-c-1-f-1-copy-1.webp"
       />
     </div>
   );

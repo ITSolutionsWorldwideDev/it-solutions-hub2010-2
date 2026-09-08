@@ -69,7 +69,7 @@ const ProfilePgTeamMember: React.FC<ProfilePgTeamMemberProps> = ({
                   height={541}
                   sizes="100vw"
                   alt=""
-                  src={image || "/assets/images/profile/avatar.jpg"}
+                  src={image || "/assets/images/profile/avatar.webp"}
                 />
               </div>
 

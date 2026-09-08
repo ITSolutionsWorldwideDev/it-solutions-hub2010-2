@@ -1,5 +1,8 @@
-// next.config.js
 /** @type {import('next.config.next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -9,7 +12,6 @@ const nextConfig = {
     // ✅ Disable ESLint during builds
     ignoreDuringBuilds: true,
   },
-  // Images ke remote domains ki configuration bhi यहीं add kar dein jo pichla error tha:
   images: {
     remotePatterns: [
       {
@@ -20,4 +22,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

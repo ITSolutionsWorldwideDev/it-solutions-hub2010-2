@@ -11,7 +11,7 @@ export default async function OurMission({ locale }: { locale: string }) {
     w-full 
     sm:bg-[rgb(230_237_237)]
     relative text-justify 
-    md:bg-[url('/assets/images/aboutus/Group_9296.png')] 
+    md:bg-[url('/assets/images/aboutus/Group_9296.webp')] 
     md:bg-cover 
     md:bg-no-repeat 
     text-lg text-gray 

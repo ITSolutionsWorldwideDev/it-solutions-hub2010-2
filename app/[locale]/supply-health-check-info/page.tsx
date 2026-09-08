@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // app/[locale]/supply-health-check-info/page.tsx
 
 // import initServerI18n from "@/utils/serverTranslation";
@@ -18,7 +19,7 @@ export default async function SupplyHealth() {
 
   const slides = [
     {
-      backgroundImage: "/assets/images/Supply_check_background_Image.png",
+      backgroundImage: "/assets/images/Supply_check_background_Image.webp",
       heading: "Supply Chain Health Check",
     },
   ];

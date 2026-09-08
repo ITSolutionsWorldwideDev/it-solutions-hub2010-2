@@ -11,7 +11,7 @@ const GetInTouchSection: NextPage = () => {
           fill
           sizes="100vw"
           alt=""
-          src="/assets/images/aboutus/rectangle-128.png"
+          src="/assets/images/aboutus/rectangle-128.webp"
         />
       </div> */}
       {/* overflow-hidden */}
@@ -19,7 +19,7 @@ const GetInTouchSection: NextPage = () => {
       <div
         className=" bg-cover bg-center w-full px-10 mx-auto bg-no-repeat rounded-xl shadow-lg  flex items-center justify-center"
         style={{
-          backgroundImage: `url("/assets/images/aboutus/get-in-touch-footer.png")`,
+          backgroundImage: `url("/assets/images/aboutus/get-in-touch-footer.webp")`,
         }}
         role="img"
       >
@@ -160,7 +160,7 @@ const GetInTouchSection: NextPage = () => {
               height={565}
               sizes="100vw"
               alt=""
-              src="/assets/images/aboutus/lady-caller.png"
+              src="/assets/images/aboutus/lady-caller.webp"
             />
           </div>
         </div>

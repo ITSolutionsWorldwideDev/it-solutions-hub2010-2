@@ -1,6 +1,5 @@
-// components/layout/banner-section-2.tsx
 "use client";
-
+// components/layout/banner-section-2.tsx
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 

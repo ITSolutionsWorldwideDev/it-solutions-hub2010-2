@@ -1,6 +1,5 @@
-// components/layout/home/BlogsClient.tsx
 "use client";
-
+// components/layout/home/BlogsClient.tsx
 import { useEffect, useState } from "react";
 import BlogCard from "@/components/layout/home/BlogCard";
 import { BlogEntry } from "@/types/blogs";

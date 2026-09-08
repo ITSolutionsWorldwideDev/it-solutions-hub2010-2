@@ -1,6 +1,5 @@
-// app/[locale]/supply-health-check/SpiderWebChart.tsx
 "use client";
-
+// app/[locale]/supply-health-check/SpiderWebChart.tsx
 import React, { useEffect, useRef, forwardRef } from "react";
 import { Chart, registerables } from "chart.js";
 

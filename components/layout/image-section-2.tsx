@@ -1,6 +1,5 @@
-// components/layout/image-section-2.tsx
 "use client";
-
+// components/layout/image-section-2.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

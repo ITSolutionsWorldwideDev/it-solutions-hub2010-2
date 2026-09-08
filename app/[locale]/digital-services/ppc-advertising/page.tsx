@@ -20,7 +20,7 @@ export default async function PPCAdvertising({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/ppc1.png",
+      backgroundImage: "/assets/images/ppc1.webp",
       heading: t("ppc.heading_1"),
       text: t("ppc.text_1"),
       button: t("ppc.button_1"),
@@ -52,22 +52,22 @@ export default async function PPCAdvertising({
 
   const cards2 = [
     {
-      image: "/assets/images/ppcicon1.png",
+      image: "/assets/images/ppcicon1.webp",
       title: t("ppc.card_heading_1"),
       description: t("ppc.card_text_1"),
     },
     {
-      image: "/assets/images/ppcicon2.png",
+      image: "/assets/images/ppcicon2.webp",
       title: t("ppc.card_heading_2"),
       description: t("ppc.card_text_2"),
     },
     {
-      image: "/assets/images/ppcicon3.png",
+      image: "/assets/images/ppcicon3.webp",
       title: t("ppc.card_heading_3"),
       description: t("ppc.card_text_3"),
     },
     {
-      image: "/assets/images/ppcicon4.png",
+      image: "/assets/images/ppcicon4.webp",
       title: t("ppc.card_heading_4"),
       description: t("ppc.card_text_4"),
     },
@@ -133,7 +133,7 @@ export default async function PPCAdvertising({
       <ImageSection2
         heading={t("ppc.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/ppc2.png"
+        imageUrl="/assets/images/ppc2.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
@@ -141,7 +141,7 @@ export default async function PPCAdvertising({
       <ImageSection
         heading={t("ppc.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/ppc3.png"
+        imageUrl="/assets/images/ppc3.webp"
         leftColor="#f2e8fb"
         rightColor="#f2e8fb"
         textColor="#000"
@@ -149,21 +149,21 @@ export default async function PPCAdvertising({
       <ImageSection2
         heading={t("ppc.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/ppc4.png"
+        imageUrl="/assets/images/ppc4.webp"
         borderWidth="2px"
         borderColor="#f2e8fb"
       />
       <ImageSection
         heading={t("ppc.heading_6")}
         text={imagetext4}
-        imageUrl="/assets/images/ppc5.png"
+        imageUrl="/assets/images/ppc5.webp"
         leftColor="#f2e8fb"
         rightColor="#f2e8fb"
         textColor="#000"
       />
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <MarketingBanner
-        imageSrc="/assets/images/digital6.png"
+        imageSrc="/assets/images/digital6.webp"
         title="Get Instant Leads & Higher Conversions with PPC"
         description="Start Your Campaign Today!"
         buttonText="Contact Us Today"

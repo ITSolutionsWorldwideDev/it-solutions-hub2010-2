@@ -22,7 +22,7 @@ export default async function TemporaryStaffing({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/tempstaffing1.png",
+      backgroundImage: "/assets/images/tempstaffing1.webp",
       heading: t("tempstaffing.heading_1"),
       text: t("tempstaffing.text_1"),
       button: t("tempstaffing.button_1"),
@@ -98,7 +98,7 @@ export default async function TemporaryStaffing({
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/staffingsupport4.png",
+      backgroundImage: "/assets/images/staffingsupport4.webp",
       heading: "Hire Skilled Temporary Staff On-Demand - Contact Us Today!",
       buttonText: "Get Started Now",
       buttonLink: "/contact-us",
@@ -113,7 +113,7 @@ export default async function TemporaryStaffing({
       <ImageSection2
         heading={t("tempstaffing.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/tempstaffing2.png"
+        imageUrl="/assets/images/tempstaffing2.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />
@@ -121,7 +121,7 @@ export default async function TemporaryStaffing({
       <ImageSection
         heading={t("tempstaffing.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/tempstaffing3.png"
+        imageUrl="/assets/images/tempstaffing3.webp"
         leftColor="#ebf2f3"
         rightColor="#ebf2f3"
         textColor="#000"
@@ -129,7 +129,7 @@ export default async function TemporaryStaffing({
       <ImageSection2
         heading={t("tempstaffing.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/tempstaffing4.png"
+        imageUrl="/assets/images/tempstaffing4.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />

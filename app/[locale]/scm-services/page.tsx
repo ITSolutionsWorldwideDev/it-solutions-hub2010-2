@@ -21,7 +21,7 @@ export default async function SCM({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/scm1.png",
+      backgroundImage: "/assets/images/scm1.webp",
       heading: t("scmservices.heading_1"),
       text: t("scmservices.text_1"),
       button: t("scmservices.button_1"),
@@ -65,17 +65,17 @@ export default async function SCM({
 
   const cards2 = [
     {
-      image: "/assets/images/scmicon1.png",
+      image: "/assets/images/scmicon1.webp",
       title: t("scmservices.card2_heading_1"),
       description: t("scmservices.card2_text_1"),
     },
     {
-      image: "/assets/images/scmicon2.png",
+      image: "/assets/images/scmicon2.webp",
       title: t("scmservices.card2_heading_2"),
       description: t("scmservices.card2_text_2"),
     },
     {
-      image: "/assets/images/scmicon3.png",
+      image: "/assets/images/scmicon3.webp",
       title: t("scmservices.card2_heading_3"),
       description: t("scmservices.card2_text_3"),
     },
@@ -108,7 +108,7 @@ export default async function SCM({
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/scm4.png",
+      backgroundImage: "/assets/images/scm4.webp",
       heading: "Let’s Optimize Your Supply Chain Today",
       buttonText: "Schedule Your Consultation Now",
       buttonLink: "/contact-us",
@@ -122,7 +122,7 @@ export default async function SCM({
       <ImageSection
         heading={t("scmservices.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/scm2.png"
+        imageUrl="/assets/images/scm2.webp"
         borderWidth="2px"
         borderColor="#fed4c2"
       />
@@ -134,7 +134,7 @@ export default async function SCM({
       <ImageSection2
         heading={t("scmservices.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/scm3.png"
+        imageUrl="/assets/images/scm3.webp"
         leftColor="#FC4C02"
         rightColor="#ffff"
       />

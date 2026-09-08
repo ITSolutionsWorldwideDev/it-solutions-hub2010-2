@@ -1,5 +1,5 @@
-// components/layout/about/team-member.tsx
 "use client";
+// components/layout/about/team-member.tsx
 import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "./Modal";
@@ -30,7 +30,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       >
         <div className="relative w-[275px] h-[330px] overflow-hidden flex items-end justify-center group rounded-lg">
           <Image
-            src={image || "/assets/images/profile/avatar.jpg"}
+            src={image || "/assets/images/profile/avatar.webp"}
             alt={name}
             fill
             className="object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
@@ -52,7 +52,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                   width={388}
                   height={541}
                   alt={name}
-                  src={image || "/assets/images/profile/avatar.jpg"}
+                  src={image || "/assets/images/profile/avatar.webp"}
                 />
               </div>
 

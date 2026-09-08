@@ -1,6 +1,5 @@
-// components/layout/home/BlogCarouselClient.tsx
 "use client";
-
+// components/layout/home/BlogCarouselClient.tsx
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

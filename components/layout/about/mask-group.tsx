@@ -1,6 +1,5 @@
-// components/layout/about/mask-group.tsx
 "use client";
-
+// components/layout/about/mask-group.tsx
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
@@ -22,7 +21,7 @@ const testimonials = [
     text: "Over the last 2 years, I worked with IT Solutions Worldwide BV on implementing Oracle Cloud in The Netherlands (Albelli) and France (MonAlbum Photo). <br><br>In addition to a great and innovative mind, they are possibly the most hardworking, professional and conscientious team I have ever worked with. If you are looking for sustainable solutions in Supply Chain Management, look no further than IT Solutions Worldwide BV. Their knowledge of issues is unquestionably and the ability to meet the interests of several stakeholders is impeccable.",
     name: "Albelli",
     // role: "Co-founder",
-    img: "/assets/images/logos/albelli.png",
+    img: "/assets/images/logos/albelli.webp",
   },
 ];
 
@@ -34,7 +33,7 @@ const MaskGroup: NextPage = () => {
     <div className="relative w-full font-lexend text-white overflow-hidden rounded-[23px]">
       {/* Background Image */}
       <Image
-        src="/assets/images/aboutus/bg-copy-1.png"
+        src="/assets/images/aboutus/bg-copy-1.webp"
         alt=""
         fill
         className="object-cover"

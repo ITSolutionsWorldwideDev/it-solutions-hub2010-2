@@ -22,7 +22,7 @@ export default async function OracleCloud({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/oraclecloud1.png",
+      backgroundImage: "/assets/images/oraclecloud1.webp",
       heading: t("oraclecloud.heading_1"),
       text: t("oraclecloud.text_1"),
       button: t("oraclecloud.button_1"),
@@ -54,22 +54,22 @@ export default async function OracleCloud({
 
   const cards2 = [
     {
-      image: "/assets/images/oraclecloud3.png",
+      image: "/assets/images/oraclecloud3.webp",
       title: t("oraclecloud.card_heading_1"),
       description: t("oraclecloud.card_text_1"),
     },
     {
-      image: "/assets/images/oraclecloud4.png",
+      image: "/assets/images/oraclecloud4.webp",
       title: t("oraclecloud.card_heading_2"),
       description: t("oraclecloud.card_text_2"),
     },
     {
-      image: "/assets/images/oraclecloud5.png",
+      image: "/assets/images/oraclecloud5.webp",
       title: t("oraclecloud.card_heading_3"),
       description: t("oraclecloud.card_text_3"),
     },
     {
-      image: "/assets/images/oraclecloud6.png",
+      image: "/assets/images/oraclecloud6.webp",
       title: t("oraclecloud.card_heading_4"),
       description: t("oraclecloud.card_text_4"),
     },
@@ -77,12 +77,12 @@ export default async function OracleCloud({
 
   const cards3 = [
     {
-      image: "/assets/images/oraclecloud3.png",
+      image: "/assets/images/oraclecloud3.webp",
       title: t("oraclecloud.card3_heading_1"),
       description: t("oraclecloud.card3_text_1"),
     },
     {
-      image: "/assets/images/oraclecloud4.png",
+      image: "/assets/images/oraclecloud4.webp",
       title: t("oraclecloud.card3_heading_2"),
       description: t("oraclecloud.card3_text_2"),
     },
@@ -125,22 +125,22 @@ export default async function OracleCloud({
   const points = [
     {
       title: t("oraclecloud.point1"),
-      icon: "/assets/images/oraclecloud8.png",
+      icon: "/assets/images/oraclecloud8.webp",
     },
-    { title: t("oraclecloud.point2"), icon: "/assets/images/oraclecloud9.png" },
+    { title: t("oraclecloud.point2"), icon: "/assets/images/oraclecloud9.webp" },
     {
       title: t("oraclecloud.point3"),
-      icon: "/assets/images/oraclecloud10.png",
+      icon: "/assets/images/oraclecloud10.webp",
     },
     {
       title: t("oraclecloud.point4"),
-      icon: "/assets/images/oraclecloud11.png",
+      icon: "/assets/images/oraclecloud11.webp",
     },
   ];
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/oraclecloud13.png",
+      backgroundImage: "/assets/images/oraclecloud13.webp",
       heading: "Drive Sales and Growth with a Customized CRM - Contact Us Now!",
       buttonText: "Schedule Your Consultation Now",
       buttonLink: "/contact-us",
@@ -153,7 +153,7 @@ export default async function OracleCloud({
       <ImageSection
         heading={t("oraclecloud.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/oraclecloud2.png"
+        imageUrl="/assets/images/oraclecloud2.webp"
       />
       <InfoSection
         heading={t("oraclecloud.heading_3")}
@@ -165,7 +165,7 @@ export default async function OracleCloud({
       <ImageSectionBgBlue
         title={t("oraclecloud.heading_4")}
         points={points}
-        image="/assets/images/oraclecloud7.png"
+        image="/assets/images/oraclecloud7.webp"
         leftColor="#C10C1B"
         rightColor="#ffff"
         iconColor="#C10C1B"
@@ -199,7 +199,7 @@ export default async function OracleCloud({
       <ImageSection2
         heading={t("oraclecloud.heading_7")}
         text={imagetext2}
-        imageUrl="/assets/images/oraclecloud12.png"
+        imageUrl="/assets/images/oraclecloud12.webp"
       />
 
       <FAQSection2

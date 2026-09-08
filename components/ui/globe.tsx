@@ -1,6 +1,5 @@
-// components/ui/Globe.tsx
 "use client";
-
+// components/ui/Globe.tsx
 import { useEffect, useRef,useState } from 'react';
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from 'three';
 import ThreeGlobe from 'three-globe';

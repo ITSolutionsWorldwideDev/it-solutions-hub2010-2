@@ -1,6 +1,5 @@
-// components/layout/banner-section.tsx
 "use client";
-
+// components/layout/banner-section.tsx
 import React, { useState, useEffect } from "react";
 
 type Slide = {

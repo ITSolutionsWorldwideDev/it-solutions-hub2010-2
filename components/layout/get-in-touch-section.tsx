@@ -136,7 +136,7 @@ export default async function GetInTouchSection({
       {/* Right Section - Image */}
       <div className="w-full lg:w-1/2 flex items-center justify-center relative mt-8 lg:mt-0">
         <Image
-          src="/assets/images/aboutus12.png"
+          src="/assets/images/aboutus12.webp"
           alt="IT Solutions team in office"
           width={800}
           height={600}

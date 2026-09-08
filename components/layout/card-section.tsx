@@ -1,6 +1,5 @@
+"use client";
 // components/layout/card-section.tsx
-
-'use client';
 
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";

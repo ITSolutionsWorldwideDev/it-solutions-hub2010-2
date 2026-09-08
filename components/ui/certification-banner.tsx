@@ -1,6 +1,5 @@
-// components/ui/certification-banner.tsx
 "use client";
-
+// components/ui/certification-banner.tsx
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,7 +33,7 @@ export default function CertificationBanner({
       <div className="max-w-5xl mx-auto px-6 text-center text-white">
         <div className="flex items-center justify-center gap-2 mb-6">
           <Image
-            src="/assets/icons/standard2.png"
+            src="/assets/icons/standard2.webp"
             alt="Certification"
             width={20}
             height={20}

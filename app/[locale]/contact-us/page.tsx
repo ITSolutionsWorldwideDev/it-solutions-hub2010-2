@@ -18,7 +18,7 @@ export default async function ContactUs({
   const t = await i18nInstance.getFixedT(locale, "common");
   const slides = [
     {
-      backgroundImage: "/assets/images/contactus1.png",
+      backgroundImage: "/assets/images/contactus1.webp",
       heading: t("contactus.heading_1"),
       text: t("contactus.text_1"),
     },

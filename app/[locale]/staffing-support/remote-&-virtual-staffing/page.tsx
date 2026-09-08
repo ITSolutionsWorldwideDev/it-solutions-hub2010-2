@@ -21,7 +21,7 @@ export default async function RemoteVirtualStaffing({
 
   const slides = [
     {
-      backgroundImage: "/assets/images/remotestaff1.png",
+      backgroundImage: "/assets/images/remotestaff1.webp",
       heading: t("remotestff.heading_1"),
       text: t("remotestff.text_1"),
       button: t("remotestff.button_1"),
@@ -94,7 +94,7 @@ export default async function RemoteVirtualStaffing({
 
   const slidesData2 = [
     {
-      backgroundImage: "/assets/images/staffingsupport4.png",
+      backgroundImage: "/assets/images/staffingsupport4.webp",
       heading:
         "Find Skilled Remote Professionals to Grow Your Business – Reach Out Today!",
       buttonText: "Get Started Now",
@@ -108,7 +108,7 @@ export default async function RemoteVirtualStaffing({
       <ImageSection2
         heading={t("remotestff.heading_2")}
         text={imagetext}
-        imageUrl="/assets/images/remotestaff2.png"
+        imageUrl="/assets/images/remotestaff2.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />
@@ -120,14 +120,14 @@ export default async function RemoteVirtualStaffing({
       <ImageSection
         heading={t("remotestff.heading_4")}
         text={imagetext2}
-        imageUrl="/assets/images/remotestaff3.png"
+        imageUrl="/assets/images/remotestaff3.webp"
         leftColor="#ebf2f3"
         rightColor="#ebf2f3"
       />
       <ImageSection2
         heading={t("remotestff.heading_5")}
         text={imagetext3}
-        imageUrl="/assets/images/remotestaff4.png"
+        imageUrl="/assets/images/remotestaff4.webp"
         borderWidth="2px"
         borderColor="#ebf2f3"
       />

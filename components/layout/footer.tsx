@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from "next/link";
 
 // components/layout/footer.tsx
@@ -9,11 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 gap-x-12">
           {/* Column 1: Logo + Company Info + Social Icons */}
           <div className="md:col-span-1">
-            <img
-              className="w-auto"
-              src="/assets/footer-logo.svg"
-              alt="IT Solutions Hub 2010"
-            />
+            <Image src="/assets/footer-logo.svg" alt="IT Solutions Hub 2010" width={500} height={500} loading="lazy" className="w-auto" />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
               IT Solutions Hub 2010 delivers innovative IT solutions in supply
               chain management, IT support, digital marketing, and provides
