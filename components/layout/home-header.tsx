@@ -5,29 +5,20 @@ import Link from "next/link";
 import AnimatedBorderCard from "./home/AnimatedBorderCard";
 import NavbarHome from "./nav-bar-home";
 import SegmentTabs from "./home/SegmentTabComponent";
-import { useState, useEffect } from "react";
 
 export default function Header() {
   const bgVideoUrl = "/assets/images/backgrounds/hero-section-bg.mp4";
   const fallbackImage = "/assets/images/backgrounds/hero-section-bg.png";
 
-  const [isClient, setIsClient] = useState(false);
-  const [shouldPlayVideo, setShouldPlayVideo] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-    // Desktop ya large screens par hi video load karein, mobile par static image rakhein taaki TBT/LCP bache
-    if (window.innerWidth >= 768) {
-      setShouldPlayVideo(true);
-    }
-  }, []);
-
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
-      {/* Background Video / Fallback Image */}
-      {isClient && shouldPlayVideo ? (
+      {/* Background Video (Desktop/Tablet only) / Fallback Image (Mobile & Base) */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${fallbackImage})` }}
+      >
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="w-full h-full object-cover hidden md:block"
           src={bgVideoUrl}
           poster={fallbackImage}
           autoPlay
@@ -36,12 +27,7 @@ export default function Header() {
           playsInline
           preload="none"
         />
-      ) : (
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-          style={{ backgroundImage: `url(${fallbackImage})` }}
-        />
-      )}
+      </div>
 
       <div className="container mx-auto relative z-10">
         {/* Semi-transparent overlay */}
