@@ -1,16 +1,21 @@
 // app/[locale]/about-us/page.tsx
+import dynamic from "next/dynamic";
 import initServerI18n from "@/utils/serverTranslation";
-import OurMission from "@/components/layout/about/our-mission";
-import WhyUsSection from "@/components/layout/about/why-us-section";
-import OurValuesSection from "@/components/layout/about/our-values-section";
-import CreativeTeamSection from "@/components/layout/about/creative-team-section";
-import GetInTouchSection from "@/components/layout/about/get-in-touch-section";
-import MaskGroup from "@/components/layout/about/mask-group";
-import Group9319 from "@/components/layout/about/group-9319";
-import VisionSection from "@/components/layout/vision-section";
-import FAQSection from "@/components/layout/FAQ-section";
-import AboutUsProcessFlow from "@/components/layout/aboutus-process-flow";
 import BannerSectionAboutUs from "@/components/layout/about/banner-section";
+
+// Above-the-fold component keep static for fast LCP
+import Group9319 from "@/components/layout/about/group-9319";
+
+// Below-the-fold components dynamically imported to save main-thread execution
+const WhyUsSection = dynamic(() => import("@/components/layout/about/why-us-section"));
+const OurMission = dynamic(() => import("@/components/layout/about/our-mission"));
+const VisionSection = dynamic(() => import("@/components/layout/vision-section"));
+const OurValuesSection = dynamic(() => import("@/components/layout/about/our-values-section"));
+const CreativeTeamSection = dynamic(() => import("@/components/layout/about/creative-team-section"));
+const AboutUsProcessFlow = dynamic(() => import("@/components/layout/aboutus-process-flow"));
+const MaskGroup = dynamic(() => import("@/components/layout/about/mask-group"));
+const FAQSection = dynamic(() => import("@/components/layout/FAQ-section"));
+const GetInTouchSection = dynamic(() => import("@/components/layout/about/get-in-touch-section"));
 
 export default async function AboutUsPage({
   params,
@@ -49,30 +54,12 @@ export default async function AboutUsPage({
     title: t("aboutus.faq_title"),
     description: t("aboutus.faq_desc"),
     faqs: [
-      {
-        question: t("aboutus.question1"),
-        answer: t("aboutus.answer1"),
-      },
-      {
-        question: t("aboutus.question2"),
-        answer: t("aboutus.answer2"),
-      },
-      {
-        question: t("aboutus.question3"),
-        answer: t("aboutus.answer3"),
-      },
-      {
-        question: t("aboutus.question4"),
-        answer: t("aboutus.answer4"),
-      },
-      {
-        question: t("aboutus.question5"),
-        answer: t("aboutus.answer5"),
-      },
-      {
-        question: t("aboutus.question6"),
-        answer: t("aboutus.answer6"),
-      },
+      { question: t("aboutus.question1"), answer: t("aboutus.answer1") },
+      { question: t("aboutus.question2"), answer: t("aboutus.answer2") },
+      { question: t("aboutus.question3"), answer: t("aboutus.answer3") },
+      { question: t("aboutus.question4"), answer: t("aboutus.answer4") },
+      { question: t("aboutus.question5"), answer: t("aboutus.answer5") },
+      { question: t("aboutus.question6"), answer: t("aboutus.answer6") },
     ],
     helpCenterLink: "/contact-us",
     privacyPolicyLink: "/privacy-policy",
@@ -126,11 +113,3 @@ export default async function AboutUsPage({
     </>
   );
 }
-/* Our vision is to emerge as one of the leading IT companies known and
-          recognized for our IT solution services, innovation, and integrity. We
-          look forward to building a strong committed bond with our clients to
-          optimise their business operations and be recognized for their work
-          and services. We believe in automating your business with the help of
-          cutting-edge technology services, and we aim to build a platform where
-          businesses can integrate advanced technology and grow to their full
-          potential. */

@@ -27,7 +27,7 @@ export default function GoogleTagManager({ gtmId }: { gtmId: string }) {
 
       {/* Google Tag Manager NoScript */}
       <noscript>
-        <iframe
+        <iframe loading="lazy"
           src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
           height="0"
           width="0"

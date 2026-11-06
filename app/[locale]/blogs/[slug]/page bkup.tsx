@@ -44,7 +44,7 @@ export default async function BlogPostPage({
             )}
 
             {section.image && (
-              <img
+              <img loading="lazy" decoding="async"
                 className="w-full h-auto object-cover object-top mb-4"
                 src={section.image}
                 // alt={section.title}

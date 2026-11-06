@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white">
+      <nav className="bg-white relative z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center">
           <div className="flex items-center space-x-2 w-32">
             <Link href="/">
@@ -108,7 +108,7 @@ export default function Navbar() {
                 </Link>
                 {item.dropdown && hoveredItem === item.label && (
                   <ul
-                    className="absolute top-12 left-0 bg-white shadow-lg rounded-md w-48 text-sm text-[#637381]"
+                    className="absolute top-12 left-0 bg-white shadow-xl rounded-md w-48 text-sm text-[#637381] z-50 py-1"
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
                   >

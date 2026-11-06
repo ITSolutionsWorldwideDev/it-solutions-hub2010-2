@@ -19,8 +19,9 @@ export const metadata: Metadata = {
   description: "Get expert marketing automation & professional services automation software in the Netherlands. Scalable solutions tailored to your business needs.",
   icons: {
     icon: [
-      { url: "/favicon-16x16.webp", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.webp", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
   },
 };

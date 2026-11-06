@@ -56,7 +56,7 @@ export default function TikTokPixel({ pixelId }: { pixelId: string }) {
 
       {/* TikTok Pixel NoScript */}
       <noscript>
-        <img
+        <img loading="lazy" decoding="async"
           height="1"
           width="1"
           style={{ display: "none" }}

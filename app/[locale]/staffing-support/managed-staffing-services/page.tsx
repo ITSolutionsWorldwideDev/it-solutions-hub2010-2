@@ -167,7 +167,7 @@ export default async function ManagedStaffingServices({
         textColor="#000"
       />
       {/* <LogosSlider images={logos} /> */}
-      <ClientLogosSlider />
+      {/* <ClientLogosSlider /> */}
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <ConsultationSection
         slides={slidesData2}

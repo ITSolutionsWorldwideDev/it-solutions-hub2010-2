@@ -232,7 +232,7 @@ export default function SCMForm({ locale, translations }: SCMFormProps) {
                   value={personalInfo.phone}
                   onChange={handleInputChange}
                   className="w-full p-2 border rounded"
-                  placeholder="+31XXXXXXXXXX"
+                  placeholder="+92XXXXXXXXXX"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone}</p>

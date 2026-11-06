@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   Mail,
   Phone,
+  MapPin,
   Facebook,
   Twitter,
   Linkedin,
@@ -69,13 +70,26 @@ export default async function GetInTouchSection({
               <p className="text-sm">{t("home.contactephone")}</p>
               <p className="font-medium">
                 <Link
-                  href="https://wa.me/+31107660786"
+                  href="https://wa.me/+923195815278"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
                 >
-                  +31 10 766 0786
+                  +92 319 5815278
                 </Link>
+              </p>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="flex items-start space-x-4 mt-6">
+            <div className="bg-[#278083] p-3 rounded-full hover:bg-[#236B7A] flex-shrink-0">
+              <MapPin className="h-6 w-6" />
+            </div>
+            <div>
+              <p className="text-sm">Address</p>
+              <p className="font-medium text-sm md:text-base leading-snug">
+                Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000
               </p>
             </div>
           </div>

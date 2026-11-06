@@ -209,7 +209,7 @@ export async function POST(req: NextRequest) {
         <p>Best regards,</p>
         <p>HR Department</p>
         <p>IT Solutions Worldwide</p>
-        <p>Mandenmakerstraat 100C, 3194DG, Hoogvliet Rotterdam</p>
+        <p>Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000</p>
         `,
     };
 

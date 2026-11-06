@@ -1,13 +1,16 @@
 // app/[locale]/digital-services/page.tsx
 
+import dynamicImport from "next/dynamic";
 import initServerI18n from "@/utils/serverTranslation";
-import ImageSection from "@/components/layout/image-section";
-import FAQSection2 from "@/components/layout/FAQ-section-2";
 import BannerSection2 from "@/components/layout/banner-section-2";
-import ImageSection2 from "@/components/layout/image-section-2";
-import DynamicTabs from "@/components/ui/dynamic-tabs";
-import MarketingServices from "@/components/ui/marketing-services";
-import MarketingBanner from "@/components/ui/marketing-banner";
+
+// Lazy load all below-the-fold components to slash mobile main-thread execution time
+const ImageSection = dynamicImport(() => import("@/components/layout/image-section"));
+const FAQSection2 = dynamicImport(() => import("@/components/layout/FAQ-section-2"));
+const ImageSection2 = dynamicImport(() => import("@/components/layout/image-section-2"));
+const DynamicTabs = dynamicImport(() => import("@/components/ui/dynamic-tabs"));
+const MarketingServices = dynamicImport(() => import("@/components/ui/marketing-services"));
+const MarketingBanner = dynamicImport(() => import("@/components/ui/marketing-banner"));
 
 export default async function DigitalServices({
   params,
@@ -90,8 +93,10 @@ export default async function DigitalServices({
 
   return (
     <div>
+      {/* HERO BANNER - Rendered immediately for optimal LCP */}
       <BannerSection2 slides={slides} />
 
+      {/* DYNAMICALLY LOADED SECTIONS */}
       <ImageSection
         heading={t("digitalservices.heading_2")}
         text={imagetext}

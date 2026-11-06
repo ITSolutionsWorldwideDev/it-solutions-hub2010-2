@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback, memo } from "react";
 import {
   clientLogos,
   logosSlider,
@@ -12,7 +12,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 
-// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -22,7 +21,6 @@ import dynamic from "next/dynamic";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Props type for SlotDigit
 interface SlotDigitProps {
   finalDigit: number;
   direction: "up" | "down";
@@ -31,7 +29,6 @@ interface SlotDigitProps {
   startAnimation: boolean;
 }
 
-// Props type for AnimatedNumber
 interface AnimatedNumberProps {
   value: number;
   duration?: number;
@@ -39,7 +36,6 @@ interface AnimatedNumberProps {
   startAnimation: boolean;
 }
 
-// ✅ Dynamically import World (Globe wrapper) without SSR
 const World = dynamic(
   () => import("@/components/ui/globe").then((mod) => mod.World),
   {
@@ -48,7 +44,7 @@ const World = dynamic(
   }
 );
 
-const SlotDigit: React.FC<SlotDigitProps> = ({
+const SlotDigit: React.FC<SlotDigitProps> = memo(({
   finalDigit,
   direction,
   duration = 2000,
@@ -62,9 +58,8 @@ const SlotDigit: React.FC<SlotDigitProps> = ({
 
   const finalOffset =
     (numbers.length - 1) * digitHeight * (direction === "up" ? -1 : 1);
-  // const innerRef = useRef(null);
 
-  const innerRef = useRef<HTMLDivElement | null>(null); // ✅ typed ref
+  const innerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (startAnimation) {
@@ -88,7 +83,7 @@ const SlotDigit: React.FC<SlotDigitProps> = ({
         alignItems: direction === "down" ? "flex-end" : "flex-start",
       }}
     >
-      <div ref={innerRef}>
+      <div ref={innerRef} style={{ willChange: "transform" }}>
         {numbers.map((num, index) => (
           <div
             key={index}
@@ -104,7 +99,9 @@ const SlotDigit: React.FC<SlotDigitProps> = ({
       </div>
     </div>
   );
-};
+});
+
+SlotDigit.displayName = "SlotDigit";
 
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   value,
@@ -134,7 +131,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   );
 };
 
-const DottedLine = () => {
+const DottedLine = memo(() => {
   return (
     <svg
       className="flex-shrink-0 w-28 h-6 sm:w-36 sm:h-6 md:w-28 md:h-8 lg:w-32 lg:h-8"
@@ -155,31 +152,57 @@ const DottedLine = () => {
       <circle cx="190" cy="10" r="5" fill="#16666F" />
     </svg>
   );
-};
+});
+
+DottedLine.displayName = "DottedLine";
+
+// Optimized pagination component to prevent full slider re-renders on activeIndex changes
+const PaginationDots = memo(({ total, activeIndex, onDotClick }: { total: number; activeIndex: number; onDotClick: (index: number) => void }) => (
+  <div className="flex justify-center mt-10 gap-3 z-50 relative">
+    {Array.from({ length: total }).map((_, index) => (
+      <button
+        key={index}
+        onClick={() => onDotClick(index)}
+        aria-label={`Go to slide ${index + 1}`}
+        className={`w-4 h-4 rounded-full border border-black transition-all ${
+          activeIndex === index ? "bg-white scale-110" : "bg-transparent opacity-60"
+        }`}
+      />
+    ))}
+  </div>
+));
+
+PaginationDots.displayName = "PaginationDots";
 
 export function LogosSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [swiperRef, setSwiperRef] = useState<any>(null);
+  const swiperRef = useRef<any>(null);
+
+  const handleSlideChange = useCallback((swiper: any) => {
+    setActiveIndex(swiper.activeIndex);
+  }, []);
+
+  const handleDotClick = useCallback((index: number) => {
+    swiperRef.current?.slideTo(index);
+  }, []);
 
   return (
-    <div className="container w-full max-w-6xl  md:px-5 mx-auto py-10 relative">
-      {/* Slider */}
+    <div className="container w-full max-w-6xl md:px-5 mx-auto py-10 relative">
       <div className="relative z-10 mt-14 px-10 pb-20 mx-auto">
-
         <Swiper
           modules={[Navigation, Autoplay]}
-          onSwiper={setSwiperRef}
+          onSwiper={(swiper) => { swiperRef.current = swiper; }}
           spaceBetween={30}
           slidesPerView={1}
           autoplay={{
-            delay: 2500, // Auto scroll every 2.5 seconds
+            delay: 2500,
             disableOnInteraction: false,
           }}
           navigation={{
             prevEl: ".blog-prev-btn",
             nextEl: ".blog-next-btn",
           }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onSlideChange={handleSlideChange}
           className="relative"
           breakpoints={{
             640: { slidesPerView: 4 },
@@ -189,35 +212,20 @@ export function LogosSlider() {
         >
           {clientLogos.map((item, index) => (
             <SwiperSlide key={index}>
-                <div className="flex h-32 md:h-40 w-full items-center justify-center">
-                  <Image
-                    src={item.src}
-                    width={200}
-                    height={200}
-                    alt=""
-                    className="object-contain"
-                  />
-                </div>
+              <div className="flex h-32 md:h-40 w-full items-center justify-center">
+                <Image
+                  src={item.src}
+                  width={200}
+                  height={200}
+                  alt=""
+                  className="object-contain"
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Radio Dots */}
-        <div className="flex justify-center mt-10 gap-3 z-50 relative">
-          {clientLogos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => swiperRef?.slideTo(index)}
-              className={`w-4 h-4 rounded-full border border-black transition-all
-                ${
-                  activeIndex === index
-                    ? "bg-white scale-110"
-                    : "bg-transparent opacity-60"
-                }`}
-            ></button>
-          ))}
-        </div>
-
+        <PaginationDots total={clientLogos.length} activeIndex={activeIndex} onDotClick={handleDotClick} />
       </div>
     </div>
   );
@@ -227,32 +235,35 @@ export function ClientLogosSlider() {
   return (
     <div className="w-full max-w-6xl mx-auto py-12">
       <div className="relative overflow-hidden py-8 whitespace-nowrap">
-        <div className="absolute top-0 left-0 w-16 md:w-32 h-full z-10 bg-gradient-to-r from-white via-transparent to-transparent" />
-        <div className="inline-block animate-slide">
+        <div className="absolute top-0 left-0 w-16 md:w-32 h-full z-10 bg-gradient-to-r from-white via-transparent to-transparent pointer-events-none" />
+        <div className="inline-block animate-slide" style={{ willChange: "transform" }}>
           {logosSlider.map((src, index) => (
             <img
-              key={index}
-              src={src}
-              alt={`logo-${index}`}
-              className="h-14 md:h-20 mx-4 md:mx-6 inline-block transition-transform duration-300 ease-in-out hover:scale-110 hover:drop-shadow-lg"
-            />
+  loading="lazy"
+  decoding="async"
+  key={index}
+  src={src}
+  alt={`logo-${index}`}
+  width={160}
+  height={80}
+  className="h-14 md:h-20 w-auto mx-4 md:mx-6 inline-block transition-transform duration-300 ease-in-out hover:scale-110 hover:drop-shadow-lg"
+/>
           ))}
         </div>
-
-        <div className="absolute top-0 right-0 w-16 md:w-32 h-full z-10 bg-gradient-to-l from-white via-transparent to-transparent" />
+        <div className="absolute top-0 right-0 w-16 md:w-32 h-full z-10 bg-gradient-to-l from-white via-transparent to-transparent pointer-events-none" />
       </div>
     </div>
   );
 }
 
 function useMediaQuery(query: string): boolean {
-  const [matches, setMatches] = useState(false); // default to false
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // SSR guard
+    if (typeof window === "undefined") return;
 
     const media = window.matchMedia(query);
-    setMatches(media.matches); // initial value
+    setMatches(media.matches);
 
     const listener = (e: MediaQueryListEvent) => setMatches(e.matches);
     media.addEventListener("change", listener);
@@ -287,18 +298,10 @@ export function AnimatedList() {
           },
         }
       );
-
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom center",
-        // pin: true,
-      });
     }
   }, [isTabletOrMobile]);
 
   if (isTabletOrMobile) {
-    // Render simplified version for tablet or mobile
     return (
       <div className="flex flex-col items-center space-y-0 px-4 pt-0">
         <div
@@ -313,23 +316,23 @@ export function AnimatedList() {
           <p className="w-[45%] text-center text-[clamp(0.75rem,1.5vw,1.2rem)] leading-tight">
             We start with a quick, free analysis of your architecture, applying
             a pragmatic approach to identify gaps.
-            <br />
-            <br />
+            <br /><br />
             We propose advanced business models to enhance efficiency,
             scalability, and overall performance.
           </p>
         </div>
         <div className="flex flex-col space-y-6 items-center w-full">
           {howWeWork.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col text-2xl font-bold items-center"
-            >
+            <div key={index} className="flex flex-col text-2xl font-bold items-center">
               <img
-                src={item.image.src}
-                alt={item.image.alt}
-                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
-              />
+  loading="lazy"
+  decoding="async"
+  src={item.image.src}
+  alt={item.image.alt}
+  width={80}
+  height={80}
+  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 aspect-square"
+/>
               <span className="mt-2 text-[clamp(1rem,2vw,1.5rem)] text-center leading-tight">
                 {item.text}
               </span>
@@ -340,7 +343,6 @@ export function AnimatedList() {
     );
   }
 
-  // Render animated version for larger screens
   return (
     <div
       className="h-screen flex flex-col items-center space-y-8 md:space-y-0 md:flex-row md:items-start"
@@ -359,26 +361,30 @@ export function AnimatedList() {
           <p className="w-[45%] text-center text-[clamp(0.75rem,1.5vw,1.2rem)] leading-tight">
             We start with a quick, free analysis of your architecture, applying
             a pragmatic approach to identify gaps.
-            <br />
-            <br />
+            <br /><br />
             We propose advanced business models to enhance efficiency,
             scalability, and overall performance.
           </p>
         </div>
         <div
           ref={listRef}
-          className="flex flex-col items-center md:items-start w-full md:w-auto "
+          className="flex flex-col items-center md:items-start w-full md:w-auto"
         >
           {howWeWork.map((item, index) => (
             <div
               key={index}
               className={`flex flex-col md:flex-row process-list-item text-2xl font-bold opacity-20 items-center ${item.styles.largeScreens}`}
+              style={{ willChange: "transform, opacity" }}
             >
-              <img
-                src={item.image.src}
-                alt={item.image.alt}
-                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
-              />
+             <img
+  loading="lazy"
+  decoding="async"
+  src={item.image.src}
+  alt={item.image.alt}
+  width={80}
+  height={80}
+  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 aspect-square"
+/>
               <DottedLine />
               <span className="ml-2 text-[clamp(1rem,2vw,1.5rem)] text-center md:text-left leading-tight">
                 {item.text}
@@ -403,10 +409,7 @@ export function FunFacts() {
           observer.disconnect();
         }
       },
-      {
-        root: null,
-        threshold: 0.5, // Adjust this value as needed
-      }
+      { root: null, threshold: 0.5 }
     );
 
     if (funFactsRef.current) {
@@ -424,314 +427,37 @@ export function FunFacts() {
     <div
       ref={funFactsRef}
       className="min-h-[250px] container xl:max-w-[1200px]"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
     >
-      <div
-        className="flex flex-col sm:flex-row w-full justify-between text-white"
-        // style={{
-        //   gap: '16px', // Add spacing between items for vertical stacking
-        // }}
-      >
+      <div className="flex flex-col sm:flex-row w-full justify-between text-white">
         <div className="flex-1 text-center p-4">
           <h2 className="md:text-3xl text-xl mb-2 font-bold">
-            <AnimatedNumber
-              value={8}
-              duration={2000}
-              digitHeight={60}
-              startAnimation={startAnimation}
-            />
-            +
+            <AnimatedNumber value={8} duration={2000} digitHeight={60} startAnimation={startAnimation} />+
           </h2>
-          <p className="text-lg md:text-base sm:text-sm mb-2">
-            Years Serving Globally
-          </p>
+          <p className="text-lg md:text-base sm:text-sm mb-2">Years Serving Globally</p>
         </div>
         <div className="flex-1 text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-300">
           <h2 className="md:text-3xl text-xl mb-2 font-bold">
-            <AnimatedNumber
-              value={98}
-              duration={2000}
-              digitHeight={60}
-              startAnimation={startAnimation}
-            />
-            %
+            <AnimatedNumber value={98} duration={2000} digitHeight={60} startAnimation={startAnimation} />%
           </h2>
-          <p className="text-lg md:text-base sm:text-sm mb-2">
-            Customer Satisfaction
-          </p>
+          <p className="text-lg md:text-base sm:text-sm mb-2">Customer Satisfaction</p>
         </div>
         <div className="flex-1 text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-300">
           <h2 className="md:text-3xl text-xl mb-2 font-bold">
-            <AnimatedNumber
-              value={90}
-              duration={2000}
-              digitHeight={60}
-              startAnimation={startAnimation}
-            />
-            +
+            <AnimatedNumber value={90} duration={2000} digitHeight={60} startAnimation={startAnimation} />+
           </h2>
-          <p className="text-lg md:text-base sm:text-sm mb-2">
-            Projects Completed
-          </p>
+          <p className="text-lg md:text-base sm:text-sm mb-2">Projects Completed</p>
         </div>
         <div className="flex-1 text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-300">
           <h2 className="md:text-3xl text-xl mb-2 font-bold">
-            <AnimatedNumber
-              value={20}
-              duration={2000}
-              digitHeight={60}
-              startAnimation={startAnimation}
-            />
-            +
+            <AnimatedNumber value={20} duration={2000} digitHeight={60} startAnimation={startAnimation} />+
           </h2>
-          <p className="text-lg md:text-base sm:text-sm mb-2">
-            Countries We Serve
-          </p>
+          <p className="text-lg md:text-base sm:text-sm mb-2">Countries We Serve</p>
         </div>
       </div>
     </div>
   );
 }
-
-/* export function PinnedProgressSection() {
-  const containerRef = useRef(null);
-  // const slideRefs = useRef([]);
-  // const dotRefs = useRef([]);
-  // const svgRef = useRef(null);
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const dotRefs = useRef<(SVGCircleElement | null)[]>([]);
-
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const totalSlides = industriesData.length;
-      const totalScrollDuration = 4000;
-      const isTabletOrSmaller = window.matchMedia("(max-width: 768px)").matches;
-
-      // 1) Set up the slide timeline with snapping and custom SVG dot onUpdate
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: `+=${totalScrollDuration}`,
-          pin: true,
-          scrub: 1,
-          snap: {
-            snapTo: "labels",
-            duration: { min: 0.2 },
-            ease: "power1.inOut",
-          },
-          onUpdate: (self) => {
-            const currentIndex = Math.floor(self.progress * totalSlides);
-            dotRefs.current.forEach((dot, i) => {
-              if (i <= currentIndex) {
-                // filled circles for past slides
-                gsap.to(dot, { opacity: 1, attr: { r: 6 }, duration: 0.3 });
-                gsap.set(dot, { stroke: "none", fill: "#0FB6AE" });
-              } else if (i === currentIndex + 1) {
-                // highlighted double-circle for upcoming slide
-                gsap.to(dot, { opacity: 1, attr: { r: 8 }, duration: 0.3 });
-                gsap.set(dot, {
-                  stroke: "#0FB6AE",
-                  strokeWidth: 2,
-                  fill: "none",
-                });
-              } else {
-                // hide all later dots
-                gsap.to(dot, { opacity: 0, duration: 0.3 });
-              }
-            });
-          },
-        },
-      });
-
-      // 2) Build slide-in / slide-out animations, labeling each
-      industriesData.forEach((slide, i) => {
-        const slideEl = slideRefs.current[i];
-        if (!slideEl) return;
-        const imageEl = slideEl.querySelector(".image-container");
-        const textEl = slideEl.querySelector(".text-container");
-        const dotEl = dotRefs.current[i];
-        const label = `slide-${i}`;
-
-        tl.addLabel(label);
-
-        if (i === 0) {
-          gsap.set(imageEl, { x: 0, opacity: 1 });
-          gsap.set(textEl, { x: isTabletOrSmaller ? 10 : 100, opacity: 1 });
-        } else {
-          tl.fromTo(
-            imageEl,
-            { x: -200, opacity: 0 },
-            { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-            label
-          );
-          tl.fromTo(
-            textEl,
-            { x: 200, opacity: 0 },
-            {
-              x: isTabletOrSmaller ? 10 : 100,
-              opacity: 1,
-              duration: 0.8,
-              ease: "power2.out",
-            },
-            label
-          );
-        }
-
-        if (i < totalSlides - 1) {
-          const nextLabel = `slide-${i + 1}`;
-          tl.to(
-            imageEl,
-            { x: -100, opacity: 0, duration: 0.5, ease: "power2.in" },
-            `${nextLabel}-=0.2`
-          );
-          tl.to(
-            textEl,
-            {
-              x: isTabletOrSmaller ? 10 : 100,
-              opacity: 0,
-              duration: 0.5,
-              ease: "power2.in",
-            },
-            `${nextLabel}-=0.2`
-          );
-          tl.to(
-            dotEl,
-            {
-              backgroundColor: "#cbd5e1",
-              scale: 1,
-              boxShadow: "none",
-              duration: 0.5,
-            },
-            `${nextLabel}-=0.2`
-          );
-        }
-      });
-
-      // 3) Custom SVG path drawing & dot placement
-      if (!svgRef.current) return;
-
-      const svgPath = svgRef.current.querySelector("path");
-      if (!svgPath) return;
-
-      const pathLength = svgPath.getTotalLength();
-
-      gsap.set(svgPath, {
-        strokeDasharray: pathLength,
-        strokeDashoffset: pathLength,
-      });
-
-      gsap.to(svgPath, {
-        strokeDashoffset: 0,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: `+=${totalScrollDuration}`,
-          scrub: 1,
-        },
-        ease: "none",
-      });
-
-      // position each dot along the custom SVG path
-      const spacing = pathLength / industriesData.length;
-      dotRefs.current.forEach((dot, i) => {
-        const pt = svgPath.getPointAtLength(i * spacing);
-        gsap.set(dot, { cx: pt.x, cy: pt.y, opacity: 0 });
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, [industriesData]);
-
-  return (
-    <section
-      ref={containerRef}
-      className="w-[95%] relative h-screen overflow-hidden bg-white"
-    >
-      
-      {industriesData.map((slide, i) => (
-        <div
-          key={slide.id}
-          ref={(el: HTMLDivElement | null) => {
-            slideRefs.current[i] = el;
-          }}
-          className="absolute inset-0 flex flex-wrap md:flex-nowrap items-center justify-between"
-        >
-          <div className="image-container w-full md:w-1/2 h-2/5 md:h-full flex items-center justify-center z-10">
-            <img
-              src={slide.image}
-              alt={slide.industry}
-              className="w-full h-[90%] rounded object-cover"
-            />
-          </div>
-          <div className="text-container w-full md:w-1/2 md:h-full flex flex-col items-start justify-center p-3 md:p-12 md:pl-5 lg:pl-20 xl:pl-40">
-            <h2 className="text-xl md:text-3xl 2xl:text-5xl font-bold mb-4">
-              {slide.heading}
-            </h2>
-            <p className="mb-4 2xl:text-2xl">
-              <strong className="text-teal-500">{slide.number}</strong>{" "}
-              {slide.industry}
-            </p>
-            <p className="mb-10 lg:w-[30vw] 2xl:text-2xl">{slide.content}</p>
-
-
-          </div>
-        </div>
-      ))}
-
-
-      <div
-        className="
-    pointer-events-none
-    absolute z-0 hidden lg:block
-
-  
-    lg:left-[65%] lg:top-[50%]
-    lg:w-300 lg:h-300
-
-
-    xl:left-[65.5%]
-    xl:w-[448px] xl:h-[465px]
-
-    2xl:left-[60%]
-
-
-    transform -translate-x-1/2 -translate-y-1/2
-  "
-      >
-        <svg
-          ref={svgRef}
-          className="w-full h-full"
-          viewBox="0 0 448 475"
-          fill="none"
-        >
-          <path
-            d="M2,2 A230,230 0 0 1 2,462"
-            stroke="#0FB6AE"
-            strokeWidth="4"
-            strokeLinejoin="round"
-          />
-          {industriesData.map((_, i) => (
-            <circle
-              key={i}
-              r="6"
-              fill="#0FB6AE"
-              ref={(el: SVGCircleElement | null) => {
-                dotRefs.current[i] = el;
-              }}
-            />
-          ))}
-        </svg>
-      </div>
-    </section>
-  );
-} */
 
 export function PinnedProgressSection() {
   const containerRef = useRef<HTMLElement | null>(null);
@@ -848,8 +574,6 @@ export function PinnedProgressSection() {
         }
       });
 
-      // --- SAFE GUARD START: prevents production crash when SVG path
-      // isn't ready/visible yet (hidden lg:block, hydration timing) ---
       if (!svgRef.current) return;
       const svgPath = svgRef.current.querySelector("path");
       if (!svgPath) return;
@@ -858,11 +582,9 @@ export function PinnedProgressSection() {
       try {
         pathLength = svgPath.getTotalLength();
       } catch (e) {
-        console.warn("PinnedProgressSection: getTotalLength failed, skipping path animation", e);
         return;
       }
       if (!pathLength) return;
-      // --- SAFE GUARD END ---
 
       gsap.set(svgPath, {
         strokeDasharray: pathLength,
@@ -904,17 +626,21 @@ export function PinnedProgressSection() {
           }}
           className="absolute inset-0 flex items-center justify-between"
         >
-          <div className="image-container w-full md:w-1/2 h-2/5 md:h-full flex items-center justify-center z-20">
+          <div className="image-container w-full md:w-1/2 h-2/5 md:h-full flex items-center justify-center z-20" style={{ willChange: "transform, opacity" }}>
             <img
-              src={slide.image}
-              alt={slide.industry}
-              className="w-full h-[90%] rounded object-cover"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
-            />
+  loading="lazy"
+  decoding="async"
+  src={slide.image}
+  alt={slide.industry}
+  width={800}
+  height={600}
+  className="w-full h-[90%] rounded object-cover"
+  onError={(e) => {
+    (e.target as HTMLImageElement).style.display = "none";
+  }}
+/>
           </div>
-          <div className="text-container w-full md:w-1/2 h-full flex flex-col items-start justify-center p-3 md:p-12 lg:pl-20 xl:pl-40 z-20">
+          <div className="text-container w-full md:w-1/2 h-full flex flex-col items-start justify-center p-3 md:p-12 lg:pl-20 xl:pl-40 z-20" style={{ willChange: "transform, opacity" }}>
             <h2 className="text-xl md:text-3xl 2xl:text-5xl font-bold mb-4">
               {slide.heading}
             </h2>

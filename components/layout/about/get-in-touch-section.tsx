@@ -121,7 +121,7 @@ const GetInTouchSection: NextPage = () => {
               <div className="w-auto">
                 <div className="leading-[30px] capitalize">Phone Number</div>
                 <div className="text-[15px] tracking-[0.01em] leading-[100%] lowercase font-medium text-silver mt-2 md:mt-0">
-                  <a href="tel:+31107660786">+31 10 766 0786</a>
+                  <a href="tel:+923195815278">+92 319 5815278</a>
                 </div>
               </div>
             </div>

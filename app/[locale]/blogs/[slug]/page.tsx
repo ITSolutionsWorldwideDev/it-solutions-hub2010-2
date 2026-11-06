@@ -28,7 +28,7 @@ export default async function BlogPostPage({
       </p>
 
       {blog.content.featuredImage && (
-        <img
+        <img loading="lazy" decoding="async"
           src={blog.content.featuredImage}
           alt={blog.content.title}
           className="w-full h-auto rounded-lg mb-10"
@@ -88,7 +88,7 @@ export default async function BlogPostPage({
             )}
 
             {section.image && (
-              <img
+              <img loading="lazy" decoding="async"
                 className="w-full h-auto object-cover object-top mb-4"
                 src={section.image}
                 // alt={section.title}

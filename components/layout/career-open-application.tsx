@@ -241,7 +241,7 @@ export default function CareerOpenApplication() {
                     <input
                       type="tel"
                       required
-                      placeholder="+31 6 1234 5678"
+                      placeholder="+92 319 5815278"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAFAFA] border border-gray-200 rounded-xl text-xs sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2B8A99]/20 focus:border-[#2B8A99] transition"

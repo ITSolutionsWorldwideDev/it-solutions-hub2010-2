@@ -1,13 +1,16 @@
 // app/[locale]/career/page.tsx
+import dynamicImport from "next/dynamic";
 import initServerI18n from "@/utils/serverTranslation";
 import { Metadata } from "next";
 
-// Correct imports matching components/layout/ folder paths
+// Keep Hero static for instant LCP on mobile
 import CareerHeroSection from "@/components/layout/career-hero-section";
-import CtaSplitSection from "@/components/layout/cta-split-section";
-import CareerGrowthSection from "@/components/layout/career-growth-section";
-import CareerJobsSection from "@/components/layout/career-jobs";
-import CareerOpenApplication from "@/components/layout/career-open-application";
+
+// Lazy load all below-the-fold components to reduce main-thread execution time
+const CtaSplitSection = dynamicImport(() => import("@/components/layout/cta-split-section"));
+const CareerGrowthSection = dynamicImport(() => import("@/components/layout/career-growth-section"));
+const CareerJobsSection = dynamicImport(() => import("@/components/layout/career-jobs"));
+const CareerOpenApplication = dynamicImport(() => import("@/components/layout/career-open-application"));
 
 // ISR revalidation time
 export const revalidate = 3600;
@@ -36,7 +39,7 @@ export default async function Career(props: {
 
   return (
     <div>
-      {/* CAREER HERO */}
+      {/* CAREER HERO - Loaded immediately for optimal LCP */}
       <CareerHeroSection
         eyebrow="Join Our Team"
         heading="Build Your Career. Make Work Matter."
@@ -51,10 +54,10 @@ export default async function Career(props: {
           { label: "Home", href: "/" },
           { label: "Careers" },
         ]}
-        backgroundImage="/assets/images/career/c_bg.webp"
+        backgroundImage="/assets/images/career/c_bg"
       />
 
-      {/* CTA SPLIT SECTION */}
+      {/* DYNAMICALLY LOADED BELOW-THE-FOLD SECTIONS */}
       <CtaSplitSection
         eyebrow="Our Work · Portfolio"
         heading="Let's Build Something Exceptional Together."
@@ -65,13 +68,10 @@ export default async function Career(props: {
         overlayText="Career Open."
       />
 
-      {/* CAREER GROWTH SECTION */}
       <CareerGrowthSection />
 
-      {/* JOBS SECTION */}
       <CareerJobsSection />
 
-      {/* OPEN APPLICATION SECTION */}
       <CareerOpenApplication />
     </div>
   );

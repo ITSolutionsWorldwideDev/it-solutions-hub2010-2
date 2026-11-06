@@ -39,11 +39,11 @@ export default function DeferredScripts() {
       `;
       document.head.appendChild(gtmScript);
 
-      // 3. TikTok Pixel
+      // 3. TikTok Pixel (Fixed document selector)
       const tikTokScript = document.createElement("script");
       tikTokScript.innerHTML = `
         !function (w, d, t) {
-          w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){ttq[t]=function(){t=="instance"?ttq.instances.push(e):ttq.push([t].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq.methods[i],ttq.instances[i]);ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._scale="",ttq._i[e]._loading=!1,ttq._i[e].instanceId=e,ttq.load=e,ttq.async=!0,ttq.src=i;var n=d.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;var o=d.resolve?d.resolve("script")[0]:d.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)};
+          w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){ttq[t]=function(){t=="instance"?ttq.instances.push(e):ttq.push([t].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq.methods[i],ttq.instances[i]);ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._scale="",ttq._i[e]._loading=!1,ttq._i[e].instanceId=e,ttq.load=e,ttq.async=!0,ttq.src=i;var n=d.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;var o=d.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)};
           ttq.load('D4U48FJC77U9L5PJ11G0');
           ttq.page();
         }(window, document, 'ttq');

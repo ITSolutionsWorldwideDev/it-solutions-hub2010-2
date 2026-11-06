@@ -573,7 +573,7 @@ export default function JobDetailPage({
 
               <div className="flex-1 pt-1.5">
                 <h2 className="text-xl font-bold text-[#06282C] mb-5">
-                  Why IT Solutions Worldwide
+                  Why IT Solutions Hub
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

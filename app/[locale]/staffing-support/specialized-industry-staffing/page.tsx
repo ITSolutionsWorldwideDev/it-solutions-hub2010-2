@@ -138,7 +138,7 @@ export default async function SpecializedIndustryStaffing({
         borderColor="#ebf2f3"
       />
       {/* <LogosSlider images={logos} /> */}
-      <ClientLogosSlider />
+      {/* <ClientLogosSlider /> */}
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <ConsultationSection
         slides={slidesData2}

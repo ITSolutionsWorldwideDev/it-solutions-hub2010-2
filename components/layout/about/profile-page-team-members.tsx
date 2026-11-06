@@ -133,11 +133,11 @@ const ProfilePgTeamMember: React.FC<ProfilePgTeamMemberProps> = ({
                         </div>
                         <div className="tracking-[0.01em] lowercase mt-1 text-[#898989] text-justify font-lexend text-[18px] not-italic font-normal leading-normal">
                           <Link
-                            href="https://wa.me/+31107660786"
+                            href="https://wa.me/+923195815278"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            +31 10 766 0786
+                            +92 319 5815278
                           </Link>
                         </div>
                       </div>

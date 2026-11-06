@@ -215,6 +215,7 @@ export default function SegmentTabs() {
               <select
                 value={selectedService}
                 onChange={(e) => setSelectedService(e.target.value)}
+                aria-label="Select a Service"
                 className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
               >
                 <option value="">-- Select Service --</option>
@@ -260,6 +261,7 @@ export default function SegmentTabs() {
               <select
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
+                aria-label="Select Option"
                 className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
               >
                 <option value="">-- Select Option --</option>
@@ -322,6 +324,7 @@ export default function SegmentTabs() {
                   name="email"
                   placeholder="Email (required)"
                   required
+                  aria-label="Email"
                   value={formData.email}
                   onChange={handleFormChange}
                   className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
@@ -330,6 +333,7 @@ export default function SegmentTabs() {
                   type="text"
                   name="name"
                   placeholder="Name"
+                  aria-label="Name"
                   value={formData.name}
                   onChange={handleFormChange}
                   className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
@@ -338,6 +342,7 @@ export default function SegmentTabs() {
                   type="text"
                   name="phone"
                   placeholder="Phone"
+                  aria-label="Phone"
                   value={formData.phone}
                   onChange={handleFormChange}
                   className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
@@ -346,6 +351,7 @@ export default function SegmentTabs() {
                   name="country"
                   value={formData.country}
                   onChange={handleFormChange}
+                  aria-label="Country"
                   className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"
                 >
                   {euCountries.map((c) => (
@@ -358,6 +364,7 @@ export default function SegmentTabs() {
                   type="text"
                   name="city"
                   placeholder="City"
+                  aria-label="City"
                   value={formData.city}
                   onChange={handleFormChange}
                   className="border px-3 py-2 rounded shadow-sm focus:ring-2 focus:ring-[#467a7e]"

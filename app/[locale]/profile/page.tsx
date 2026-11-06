@@ -101,7 +101,7 @@ export default async function ProfilePage({
       {
         question: "How can I get in touch with you?",
         answer:
-          "You can email us at  info@itsolutionshub2010.com or call us at +31 10 766 0786. We are always ready to assist you!",
+          "You can email us at  info@itsolutionshub2010.com or call us at +92 319 5815278. We are always ready to assist you!",
       },
       {
         question: "Do you offer ongoing support after service delivery?",

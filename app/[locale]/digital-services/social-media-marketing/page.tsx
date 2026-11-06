@@ -136,7 +136,7 @@ export default async function SocialMediaMarketing({
         textColor="#000"
       />
       {/* <LogosSlider images={logos} headingColor="#9B51E0" /> */}
-      <ClientLogosSlider />
+      {/* <ClientLogosSlider /> */}
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <MarketingBanner
         imageSrc="/assets/images/socialmedia4.webp"

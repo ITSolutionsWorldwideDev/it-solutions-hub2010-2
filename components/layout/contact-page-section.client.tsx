@@ -3,6 +3,7 @@
 import {
   Mail,
   Phone,
+  MapPin,
   Facebook,
   Twitter,
   Linkedin,
@@ -150,12 +151,25 @@ export default function ContactCardClient({ translations }: Props) {
                     <p className="text-sm">{t.contactephone}</p>
                     <p className="font-medium">
                       <Link
-                        href="https://wa.me/+31107660786"
+                        href="https://wa.me/+923195815278"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        +31 10 766 0786
+                        +92 319 5815278
                       </Link>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-[#29A1B6] p-3 rounded-full hover:bg-[#236b7a] transition flex-shrink-0 mt-1">
+                    <MapPin className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="text-sm">Address</p>
+                    <p className="font-medium text-sm md:text-base leading-snug">
+                      Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000
                     </p>
                   </div>
                 </div>

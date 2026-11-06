@@ -1,11 +1,11 @@
 // app/[locale]/contact-us/page.tsx
+import dynamicImport from "next/dynamic";
 import initServerI18n from "@/utils/serverTranslation";
 import BannerSection from "@/components/layout/banner-section";
 import ContactCard from "@/components/layout/contact-page-section";
-import LocationMap from "@/components/layout/location-map";
-// import Herosection from '../../components/Herosection2';
-// import ContactSection from '../../components/Contact';
-// import LocationMap from '../../components/Location';
+
+// Lazy load heavy map components below the fold to save main-thread execution time
+const LocationMap = dynamicImport(() => import("@/components/layout/location-map"));
 
 export default async function ContactUs({
   params,
@@ -28,10 +28,6 @@ export default async function ContactUs({
       <BannerSection slides={slides} />
       <ContactCard locale={locale} />
       <LocationMap />
-
-      {/* <Herosection slides={slides} />
-      <ContactSection />
-      <LocationMap /> */}
     </div>
   );
 }

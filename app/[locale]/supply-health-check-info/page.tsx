@@ -65,9 +65,9 @@ export default async function SupplyHealth() {
         "The supply chain health check begins with a thorough supply chain diagnostic process designed to identify strengths, weaknesses, and potential risks within your operations. This process involves collecting data from multiple sources, including suppliers, logistics, inventory, and production. Our supply chain analysis steps then evaluate key performance indicators such as lead times, cost efficiency, and supplier reliability. Using advanced operational efficiency tools, the system analyzes this data to pinpoint bottlenecks, inefficiencies, and areas for improvement. The results are presented in a clear, actionable report that highlights risks and opportunities across the supply chain. This structured approach enables businesses to make informed decisions, optimize workflows, and enhance overall supply chain resilience. By regularly conducting this health check, companies can stay ahead of disruptions, reduce costs, and continuously improve their supply chain’s agility and responsiveness.",
     },
     {
-      title: "Why Choose ITWW in the Netherlands for Supply Chain Optimization",
+      title: "Why Choose ITSH in the Netherlands for Supply Chain Optimization",
       content:
-        "ITWW stands out as a leading provider of supply chain consulting in the Netherlands, offering tailored solutions to optimize your supply chain operations. With a team of experienced supply chain experts in the Netherlands, ITWW brings deep industry knowledge and local market insight to help businesses navigate complex logistics and regulatory challenges. Their expertise spans end-to-end supply chain management, ensuring efficient and resilient operations. ITWW also specializes in automation and SCM services in the Netherlands, leveraging the latest technologies to streamline processes, reduce costs, and improve accuracy. Whether you’re looking to enhance visibility, boost operational efficiency, or implement sustainable practices, ITWW delivers innovative, data-driven solutions customized for your business needs. Partnering with ITWW means gaining a trusted advisor committed to driving continuous improvement and helping your supply chain thrive in a competitive and fast-evolving market.",
+        "ITSH stands out as a leading provider of supply chain consulting in the Netherlands, offering tailored solutions to optimize your supply chain operations. With a team of experienced supply chain experts in the Netherlands, ITSH brings deep industry knowledge and local market insight to help businesses navigate complex logistics and regulatory challenges. Their expertise spans end-to-end supply chain management, ensuring efficient and resilient operations. ITSH also specializes in automation and SCM services in the Netherlands, leveraging the latest technologies to streamline processes, reduce costs, and improve accuracy. Whether you’re looking to enhance visibility, boost operational efficiency, or implement sustainable practices, ITSH delivers innovative, data-driven solutions customized for your business needs. Partnering with ITSH means gaining a trusted advisor committed to driving continuous improvement and helping your supply chain thrive in a competitive and fast-evolving market.",
     },
     {
       title: "Start Your Supply Chain Health Check Today ",
@@ -96,7 +96,7 @@ export default async function SupplyHealth() {
                 )} */}
                 <p className="text-gray-700 mt-2 mb-4">{section.content}</p>
                 {/* {section.image && (
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={section.image}
                     alt={section.title}
                     className="w-full h-[500px] object-cover object-top mb-4"

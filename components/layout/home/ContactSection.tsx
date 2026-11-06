@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 import {
   FaPhoneAlt,
   FaEnvelope,
+  FaMapMarkerAlt,
   FaLinkedin,
   FaFacebook,
   FaInstagram,
@@ -124,10 +125,10 @@ const ContactSection: React.FC = () => {
                     <FaPhoneAlt className="text-xl text-white" />
                   </span>
                   <Link
-                    href="https://wa.me/+31107660786?text=I%27m%20interested%20in%20your%20services"
+                    href="https://wa.me/+923195815278?text=I%27m%20interested%20in%20your%20services"
                     className="text-lg"
                   >
-                    +31 10 766 0786
+                    +92 319 5815278
                   </Link>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -140,6 +141,14 @@ const ContactSection: React.FC = () => {
                   >
                     info@itsolutionshub2010.com
                   </Link>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="bg-white/20 p-3 rounded-full flex-shrink-0">
+                    <FaMapMarkerAlt className="text-xl text-white" />
+                  </span>
+                  <span className="text-base text-white/90 pt-1">
+                    Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000
+                  </span>
                 </div>
               </address>
 

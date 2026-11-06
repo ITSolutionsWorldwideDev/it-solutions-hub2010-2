@@ -146,7 +146,7 @@ export default async function TemporaryStaffing({
       />
 
       {/* <LogosSlider images={logos} /> */}
-      <ClientLogosSlider />
+      {/* <ClientLogosSlider /> */}
       <FAQSection2 questions={questions} gradientColors={gradientColors} />
       <ConsultationSection
         slides={slidesData2}

@@ -1,16 +1,12 @@
 "use client";
 import Image from 'next/image';
-// components/layout/nav-bar.tsx
 import Link from "next/link";
 import React, { useState, useRef } from "react";
 import { menuItems } from "@/lib/menu";
 
 export default function NavbarHome() {
-  //   const [hoveredItem, setHoveredItem] = useState(null);
-  //   const [hideTimeout, setHideTimeout] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
-
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const hideTimeout = useRef<NodeJS.Timeout | null>(null);
 
@@ -26,27 +22,36 @@ export default function NavbarHome() {
     const timeout = setTimeout(() => {
       setHoveredItem(null);
     }, 300);
-
     hideTimeout.current = timeout;
   };
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-  const toggleDropdown = (itemLabel: any) => {
+  const toggleDropdown = (itemLabel: string) => {
     setOpenDropdown((prev) => (prev === itemLabel ? null : itemLabel));
   };
 
   return (
     <>
-      <nav className="relative z-10 flex items-center justify-between px-4 py-5 text-white 2xl:text-xl lg:px-8 gap-5">
+      <nav className="relative z-50 flex items-center justify-between px-4 py-5 text-white 2xl:text-xl lg:px-8 gap-5">
         <div className="flex items-center space-x-2 w-32">
           <Link href="/">
-            <Image src="/assets/images/main-logo.svg" alt="IT Solutions Hub 2010 Logo" width={500} height={500} loading="lazy"  />
+            <Image 
+              src="/assets/images/main-logo.svg" 
+              alt="IT Solutions Hub 2010 Logo" 
+              width={500} 
+              height={500} 
+              loading="lazy" 
+            />
           </Link>
         </div>
 
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none cursor-pointer">
+          <button 
+            onClick={toggleMenu} 
+            aria-label={menuOpen ? "Close Navigation Menu" : "Open Navigation Menu"}
+            className="focus:outline-none cursor-pointer"
+          >
             <svg
               className="h-6 w-6"
               fill="none"
@@ -57,9 +62,7 @@ export default function NavbarHome() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d={
-                  menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
-                }
+                d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
               />
             </svg>
           </button>
@@ -78,7 +81,7 @@ export default function NavbarHome() {
               </Link>
               {item.dropdown && hoveredItem === item.label && (
                 <ul
-                  className="absolute left-0 mt-1 w-48 bg-white text-black shadow-lg rounded z-20"
+                  className="absolute left-0 mt-1 w-48 bg-white text-black shadow-xl rounded z-50 py-1"
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -97,6 +100,7 @@ export default function NavbarHome() {
             </li>
           ))}
         </ul>
+        
         <div className="hidden md:block">
           <Link href="/contact-us">
             <button className="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors cursor-pointer">
@@ -111,9 +115,9 @@ export default function NavbarHome() {
           <div
             className="fixed inset-0 bg-black/50 z-10"
             onClick={toggleMenu}
-          ></div>
+          />
           <div className="fixed top-16 left-0 w-full h-screen bg-white shadow-lg z-20 overflow-y-auto">
-            <ul className="flex flex-col space-y-4 p-4 ">
+            <ul className="flex flex-col space-y-4 p-4 text-black">
               {menuItems.map((item, idx) => (
                 <li key={idx} className="relative">
                   <div className="flex items-center justify-between">
@@ -127,10 +131,11 @@ export default function NavbarHome() {
                     {item.dropdown && (
                       <button
                         onClick={() => toggleDropdown(item.label)}
-                        className="focus:outline-none cursor-pointer"
+                        aria-label={`Toggle ${item.label} submenu`}
+                        className="focus:outline-none cursor-pointer p-1"
                       >
                         <svg
-                          className={`h-5 w-5 transform ${
+                          className={`h-5 w-5 transform transition-transform ${
                             openDropdown === item.label ? "rotate-180" : ""
                           }`}
                           fill="none"
@@ -148,13 +153,13 @@ export default function NavbarHome() {
                     )}
                   </div>
                   {item.dropdown && openDropdown === item.label && (
-                    <ul className="pl-4 space-y-2">
+                    <ul className="pl-4 space-y-2 mt-2">
                       {item.dropdown.map((subItem, sIdx) => (
                         <li key={sIdx}>
                           <Link
                             href={subItem.link}
                             onClick={toggleMenu}
-                            className="hover:underline"
+                            className="hover:underline block py-1"
                           >
                             {subItem.label}
                           </Link>
@@ -168,7 +173,7 @@ export default function NavbarHome() {
                 <Link
                   href="/contact-us"
                   onClick={toggleMenu}
-                  className="bg-[#278083] text-white px-4 py-2 rounded-md transition hover:bg-[#278083]"
+                  className="inline-block bg-[#278083] text-white px-4 py-2 rounded-md transition hover:bg-[#20696c]"
                 >
                   Contact Us
                 </Link>

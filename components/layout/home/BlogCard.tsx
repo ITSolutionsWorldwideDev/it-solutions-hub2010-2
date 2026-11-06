@@ -46,7 +46,7 @@ export default function BlogCard({ post, locale }: Props) {
       itemType="http://schema.org/BlogPosting"
     >
       <div className="w-full lg:w-2/4 mb-4 lg:mb-0">
-        <img
+        <img loading="lazy" decoding="async"
           src={getFeaturedImage()}
           alt={post.content.title}
           className="w-full h-[350px] object-cover object-center rounded-lg"

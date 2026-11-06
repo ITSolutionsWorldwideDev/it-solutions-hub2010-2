@@ -47,14 +47,14 @@ const InfoSection: FC<InfoSectionProps> = ({
             className="rounded-lg shadow-lg p-4 flex flex-col items-start "
           >
             {card.image && (
-              <img
+              <img loading="lazy" decoding="async"
                 src={card.image}
                 alt={card.title}
                 className="w-auto h-auto object-cover mb-4 rounded-t-lg"
               />
             )}
             {card.icon && (
-              <img
+              <img loading="lazy" decoding="async"
                 src={card.icon}
                 alt={card.title}
                 className="w-20 h-auto object-cover mb-4 rounded-t-lg"

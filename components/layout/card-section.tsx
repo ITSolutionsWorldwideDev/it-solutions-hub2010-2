@@ -14,16 +14,9 @@ type CardSectionProps = {
 const cards = [
   {
     title: "Our Office",
-    phone: "+31107660786",
-    phoneLink: "https://wa.me/31107660786",
-    address: "Mandenmakerstraat 100C, 3194DG, Hoogvliet Rotterdam",
-    image: "/assets/images/1 2.webp",
-  },
-  {
-    title: "Our Partner Office",
-    phone: "+923187192053",
-    phoneLink: "https://wa.me/923187192053",
-    address: "Seventeen Square Block A Multi Gardens B-17 Islamabad, Pakistan",
+    phone: "+92 319 5815278",
+    phoneLink: "https://wa.me/923195815278",
+    address: "Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000",
     image: "/assets/images/2 1.webp",
   },
 ];
