@@ -185,12 +185,6 @@ const COMPANY_PERKS: {
   description: string;
 }[] = [
   {
-    icon: "wifi",
-    title: "Remote-First",
-    description:
-      "Full flexibility — work from wherever you do your best thinking.",
-  },
-  {
     icon: "cert",
     title: "Cert Budget",
     description:
@@ -576,7 +570,7 @@ export default function JobDetailPage({
                   Why IT Solutions Hub
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {COMPANY_PERKS.map((perk, i) => (
                     <div
                       key={i}
