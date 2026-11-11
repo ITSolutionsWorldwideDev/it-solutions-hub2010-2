@@ -19,7 +19,7 @@ export default function Footer() {
               className="w-auto h-12 object-contain" 
             />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
-              IT Solutions Hub 2010 delivers innovative IT solutions in supply
+              IT Solutions Hub delivers innovative IT solutions in supply
               chain management, IT support, digital marketing, and provides
               operational excellence.
             </p>
@@ -144,15 +144,25 @@ export default function Footer() {
 
         {/* Bottom row: disclaimers/contact info */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-sm text-[#236b7a]">
-          <p>© ITSolutionsHub. All rights reserved</p>
+          <p>© ITSolutionsHub2010. All rights reserved</p>
           <Link
             href="mailto:info@itsolutionshub2010.com"
             className="hover:underline"
           >
             info@itsolutionshub2010.com
           </Link>
-          <Link href="/iso-certified" className="hover:underline">
-            ISO Registration Number: IC-QM-2507032
+          <Link
+            href="/iso-certified"
+            className="inline-flex items-center gap-2 hover:underline"
+          >
+            <Image
+              src="/assets/iso_logo.png"
+              alt="ISO Certified Logo"
+              width={24}
+              height={22}
+              className="w-6 h-auto object-contain"
+            />
+            <span>ISO Registration Number: IC-QM-2507032</span>
           </Link>
         </div>
       </div>

@@ -169,7 +169,7 @@ export default function ContactCardClient({ translations }: Props) {
                   <div>
                     <p className="text-sm">Address</p>
                     <p className="font-medium text-sm md:text-base leading-snug">
-                      Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000
+                      Seventeen Square Ground Floor, Sector B17, 44000, Islamabad, Pakistan
                     </p>
                   </div>
                 </div>

@@ -147,7 +147,7 @@ const ContactSection: React.FC = () => {
                     <FaMapMarkerAlt className="text-xl text-white" />
                   </span>
                   <span className="text-base text-white/90 pt-1">
-                    Seventeen Square Ground Floor, Sector B17, Islamabad, Pakistan, 44000
+                    Seventeen Square Ground Floor, Sector B17, 44000, Islamabad, Pakistan
                   </span>
                 </div>
               </address>
